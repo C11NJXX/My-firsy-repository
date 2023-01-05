@@ -1,0 +1,31 @@
+<svg id="shape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29 16" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+	<style>
+		<![CDATA[#shape-rect1_tr {animation: shape-rect1_tr__tr 1500ms linear infinite normal forwards}@keyframes shape-rect1_tr__tr { 0% {transform: translate(22.522734px,10.140592px) rotate(0deg)} 66.666667% {transform: translate(22.522734px,10.140592px) rotate(0deg)} 100% {transform: translate(22.522734px,10.140592px) rotate(90deg)}}]]>
+	</style>
+	<defs>
+		<linearGradient id="ekW9SI5zh4t5-fill" x1="1" y1="0.432294" x2="0" y2="0.444938" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
+			<stop id="ekW9SI5zh4t5-fill-0" offset="0%" stop-color="#525FF2">
+				<animate attributeName="stop-color" values="#525FF2; #9352F2; #E952F2; #F25252; #FF6400; #FFDE11; #59A6FF; #FFDE11; #FF6400; #F25252; #E952F2; #9352F2; #525FF2" dur="6s" fill="freeze" repeatCount="indefinite" />
+			</stop>
+			<stop id="ekW9SI5zh4t5-fill-1" offset="100%" stop-color="#59A6FF">
+				<animate attributeName="stop-color" values="#59A6FF; #525FF2; #9352F2; #E952F2; #F25252; #FF6400; #FFDE11; #FF6400; #F25252; #E952F2; #9352F2; #525FF2; #59A6FF" dur="6s" fill="freeze" repeatCount="indefinite" />
+				<animate attributeName="offset" values=".95;.80;.60;.40;.20;0;.20;.40;.60;.80;.95" dur="6s" repeatCount="indefinite" />
+			</stop>
+		</linearGradient>
+		<mask xmlns="http://www.w3.org/2000/svg" id="cut">
+			<rect width="100%" height="100%" fill="white" />
+			<g id="shape-rect1_tr" transform="translate(22.522734,10.140592) rotate(0)">
+				<rect id="shape-rect1" width="5.539934" height="5.539934" rx="0" ry="0" transform="translate(-2.769967,-2.769967)" fill="black" stroke-width="0" />
+			</g>
+		</mask>
+	</defs>
+	<g id="shape-symbols" mask="url(#cut)">
+		<g id="shape-top-2" transform="translate(-889-17)">
+			<g id="shape-nav" transform="translate(299 5)">
+				<g id="shape-go" transform="translate(440 12)">
+					<path id="shape-shape" d="M157.297352,15.624791c1.723629,0,3.158464-.225993,4.304504-.677979c1.031436-.406787,1.87182-.889611,2.521151-1.448474l.209368-.189104.664539-6.01836h-7.101034l-.257984,2.336417h3.073938l-.299446,2.711913c-.265428.17384-.616375.312913-1.052842.417217s-1.02405.156457-1.762748.156457c-1.024646,0-1.78542-.321605-2.282321-.964815-.455493-.58961-.653186-1.353047-.593077-2.290314l.022785-.259928.352424-3.191713c.114404-1.036089.493256-1.877478,1.136558-2.524165s1.433589-.97003,2.370862-.97003c.913444,0,1.576578.180794,1.989402.542383.375295.328716.546053.81547.512273,1.46026l-.01627.198179h3.776893l.030739-.062583c.205562-1.501983-.2098-2.685837-1.246084-3.551563s-2.662473-1.298589-4.878567-1.298589c-2.057235,0-3.803275.580628-5.238121,1.741883-1.355132,1.09674-2.160401,2.491199-2.415806,4.183376l-.039364.30171-.350121,3.170852c-.203469,1.84271.302251,3.341216,1.51716,4.495518s2.898639,1.731452,5.051189,1.731452ZM173.113286,3.9933c1.960171,0,3.425221.547055,4.395151,1.641165.912876,1.029751,1.311108,2.345203,1.194698,3.946358l-.027858.303565-.024791.224524c-.192824,1.7463-.894815,3.164722-2.105972,4.255269s-2.788916,1.635819-4.733279,1.635819c-1.968075,0-3.437274-.545273-4.407598-1.635819-.913246-1.026397-1.311326-2.343231-1.19424-3.950502l.02799-.304767.024792-.224524c.192037-1.739172.89383-3.155813,2.105381-4.249923s2.793459-1.641165,4.745726-1.641165Z" fill="url(#ekW9SI5zh4t5-fill)" fill-rule="evenodd" />
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

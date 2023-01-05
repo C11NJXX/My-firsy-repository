@@ -1,0 +1,2057 @@
+<!DOCTYPE html>
+<!-- saved from url=(0131)https://gitee.com/C-11nJxxs-web/study/edit/master/%E6%89%AB%E9%9B%B7(%E5%B7%B2%E4%BC%98%E5%8C%96%EF%BC%89/%E6%89%AB%E9%9B%B7/game.c -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.tippy-iOS{cursor:pointer!important}.tippy-notransition{transition:none}.tippy-popper{transition-timing-function:cubic-bezier(.165,.84,.44,1);max-width:calc(100% - 10px);pointer-events:none;outline:0}.tippy-popper[x-placement^=top] .tippy-backdrop{border-radius:40% 40% 0 0}.tippy-popper[x-placement^=top] .tippy-roundarrow{bottom:-8px;-webkit-transform-origin:50% 0;transform-origin:50% 0}.tippy-popper[x-placement^=top] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(180deg);transform:rotate(180deg)}.tippy-popper[x-placement^=top] .tippy-arrow{border-top:8px solid #333;border-right:8px solid transparent;border-left:8px solid transparent;bottom:-7px;margin:0 6px;-webkit-transform-origin:50% 0;transform-origin:50% 0}.tippy-popper[x-placement^=top] .tippy-backdrop{-webkit-transform-origin:0 25%;transform-origin:0 25%}.tippy-popper[x-placement^=top] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-55%);transform:scale(1) translate(-50%,-55%)}.tippy-popper[x-placement^=top] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-50%,-45%);transform:scale(.2) translate(-50%,-45%);opacity:0}.tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateY(-20px);transform:translateY(-20px)}.tippy-popper[x-placement^=top] [data-animation=perspective]{-webkit-transform-origin:bottom;transform-origin:bottom}.tippy-popper[x-placement^=top] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateY(-10px) rotateX(0);transform:perspective(700px) translateY(-10px) rotateX(0)}.tippy-popper[x-placement^=top] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) translateY(0) rotateX(60deg);transform:perspective(700px) translateY(0) rotateX(60deg)}.tippy-popper[x-placement^=top] [data-animation=fade][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateY(0);transform:translateY(0)}.tippy-popper[x-placement^=top] [data-animation=scale]{-webkit-transform-origin:bottom;transform-origin:bottom}.tippy-popper[x-placement^=top] [data-animation=scale][data-state=visible]{-webkit-transform:translateY(-10px) scale(1);transform:translateY(-10px) scale(1)}.tippy-popper[x-placement^=top] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateY(-10px) scale(.5);transform:translateY(-10px) scale(.5)}.tippy-popper[x-placement^=bottom] .tippy-backdrop{border-radius:0 0 30% 30%}.tippy-popper[x-placement^=bottom] .tippy-roundarrow{top:-8px;-webkit-transform-origin:50% 100%;transform-origin:50% 100%}.tippy-popper[x-placement^=bottom] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(0);transform:rotate(0)}.tippy-popper[x-placement^=bottom] .tippy-arrow{border-bottom:8px solid #333;border-right:8px solid transparent;border-left:8px solid transparent;top:-7px;margin:0 6px;-webkit-transform-origin:50% 100%;transform-origin:50% 100%}.tippy-popper[x-placement^=bottom] .tippy-backdrop{-webkit-transform-origin:0 -50%;transform-origin:0 -50%}.tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-45%);transform:scale(1) translate(-50%,-45%)}.tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-50%);transform:scale(.2) translate(-50%);opacity:0}.tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateY(20px);transform:translateY(20px)}.tippy-popper[x-placement^=bottom] [data-animation=perspective]{-webkit-transform-origin:top;transform-origin:top}.tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateY(10px) rotateX(0);transform:perspective(700px) translateY(10px) rotateX(0)}.tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) translateY(0) rotateX(-60deg);transform:perspective(700px) translateY(0) rotateX(-60deg)}.tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateY(0);transform:translateY(0)}.tippy-popper[x-placement^=bottom] [data-animation=scale]{-webkit-transform-origin:top;transform-origin:top}.tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=visible]{-webkit-transform:translateY(10px) scale(1);transform:translateY(10px) scale(1)}.tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateY(10px) scale(.5);transform:translateY(10px) scale(.5)}.tippy-popper[x-placement^=left] .tippy-backdrop{border-radius:50% 0 0 50%}.tippy-popper[x-placement^=left] .tippy-roundarrow{right:-16px;-webkit-transform-origin:33.33333333% 50%;transform-origin:33.33333333% 50%}.tippy-popper[x-placement^=left] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(90deg);transform:rotate(90deg)}.tippy-popper[x-placement^=left] .tippy-arrow{border-left:8px solid #333;border-top:8px solid transparent;border-bottom:8px solid transparent;right:-7px;margin:3px 0;-webkit-transform-origin:0 50%;transform-origin:0 50%}.tippy-popper[x-placement^=left] .tippy-backdrop{-webkit-transform-origin:50% 0;transform-origin:50% 0}.tippy-popper[x-placement^=left] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-50%);transform:scale(1) translate(-50%,-50%)}.tippy-popper[x-placement^=left] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-75%,-50%);transform:scale(.2) translate(-75%,-50%);opacity:0}.tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateX(-20px);transform:translateX(-20px)}.tippy-popper[x-placement^=left] [data-animation=perspective]{-webkit-transform-origin:right;transform-origin:right}.tippy-popper[x-placement^=left] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateX(-10px) rotateY(0);transform:perspective(700px) translateX(-10px) rotateY(0)}.tippy-popper[x-placement^=left] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) translateX(0) rotateY(-60deg);transform:perspective(700px) translateX(0) rotateY(-60deg)}.tippy-popper[x-placement^=left] [data-animation=fade][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateX(0);transform:translateX(0)}.tippy-popper[x-placement^=left] [data-animation=scale]{-webkit-transform-origin:right;transform-origin:right}.tippy-popper[x-placement^=left] [data-animation=scale][data-state=visible]{-webkit-transform:translateX(-10px) scale(1);transform:translateX(-10px) scale(1)}.tippy-popper[x-placement^=left] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateX(-10px) scale(.5);transform:translateX(-10px) scale(.5)}.tippy-popper[x-placement^=right] .tippy-backdrop{border-radius:0 50% 50% 0}.tippy-popper[x-placement^=right] .tippy-roundarrow{left:-16px;-webkit-transform-origin:66.66666666% 50%;transform-origin:66.66666666% 50%}.tippy-popper[x-placement^=right] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(-90deg);transform:rotate(-90deg)}.tippy-popper[x-placement^=right] .tippy-arrow{border-right:8px solid #333;border-top:8px solid transparent;border-bottom:8px solid transparent;left:-7px;margin:3px 0;-webkit-transform-origin:100% 50%;transform-origin:100% 50%}.tippy-popper[x-placement^=right] .tippy-backdrop{-webkit-transform-origin:-50% 0;transform-origin:-50% 0}.tippy-popper[x-placement^=right] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-50%);transform:scale(1) translate(-50%,-50%)}.tippy-popper[x-placement^=right] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-25%,-50%);transform:scale(.2) translate(-25%,-50%);opacity:0}.tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateX(20px);transform:translateX(20px)}.tippy-popper[x-placement^=right] [data-animation=perspective]{-webkit-transform-origin:left;transform-origin:left}.tippy-popper[x-placement^=right] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateX(10px) rotateY(0);transform:perspective(700px) translateX(10px) rotateY(0)}.tippy-popper[x-placement^=right] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) translateX(0) rotateY(60deg);transform:perspective(700px) translateX(0) rotateY(60deg)}.tippy-popper[x-placement^=right] [data-animation=fade][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateX(0);transform:translateX(0)}.tippy-popper[x-placement^=right] [data-animation=scale]{-webkit-transform-origin:left;transform-origin:left}.tippy-popper[x-placement^=right] [data-animation=scale][data-state=visible]{-webkit-transform:translateX(10px) scale(1);transform:translateX(10px) scale(1)}.tippy-popper[x-placement^=right] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateX(10px) scale(.5);transform:translateX(10px) scale(.5)}.tippy-tooltip{position:relative;color:#fff;border-radius:4px;font-size:.9rem;padding:.3rem .6rem;line-height:1.4;text-align:center;will-change:transform;background-color:#333}.tippy-tooltip[data-size=small]{padding:.2rem .4rem;font-size:.75rem}.tippy-tooltip[data-size=large]{padding:.4rem .8rem;font-size:1rem}.tippy-tooltip[data-animatefill]{overflow:hidden;background-color:transparent}.tippy-tooltip[data-interactive],.tippy-tooltip[data-interactive] path{pointer-events:auto}.tippy-tooltip[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-tooltip[data-inertia][data-state=hidden]{transition-timing-function:ease}.tippy-arrow,.tippy-roundarrow{position:absolute;width:0;height:0}.tippy-roundarrow{width:24px;height:8px;fill:#333;pointer-events:none}.tippy-backdrop{position:absolute;will-change:transform;background-color:#333;border-radius:50%;width:calc(110% + 2rem);left:50%;top:50%;z-index:-1;transition:all cubic-bezier(.46,.1,.52,.98);-webkit-backface-visibility:hidden;backface-visibility:hidden}.tippy-backdrop:after{content:"";float:left;padding-top:100%}.tippy-backdrop+.tippy-content{transition-property:opacity;will-change:opacity}.tippy-backdrop+.tippy-content[data-state=visible]{opacity:1}.tippy-backdrop+.tippy-content[data-state=hidden]{opacity:0}</style>
+<title>扫雷(已优化）/扫雷/game.c · 编辑文件 · 不止于过去/study  - Gitee.com</title>
+<meta content="on" http-equiv="x-dns-prefetch-control">
+<link href="https://e.gitee.com/" rel="dns-prefetch">
+<link href="https://files.gitee.com/" rel="dns-prefetch">
+<link href="https://toscode.gitee.com/" rel="dns-prefetch">
+<link href="https://cn-assets.gitee.com/" rel="dns-prefetch">
+<link href="https://portrait.gitee.com/" rel="dns-prefetch">
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://gitee.com/assets/favicon_message.ico?1581387642851">
+<link rel="canonical" href="https://gitee.com/C-11nJxxs-web/study">
+<meta content="gitee.com/C-11nJxxs-web/study git https://gitee.com/C-11nJxxs-web/study.git" name="go-import">
+
+<meta content="always" name="referrer">
+<meta content="Gitee" property="og:site_name">
+<meta content="Object" property="og:type">
+<meta content="https://gitee.com/C-11nJxxs-web/study/edit/master/%E6%89%AB%E9%9B%B7(%E5%B7%B2%E4%BC%98%E5%8C%96%EF%BC%89/%E6%89%AB%E9%9B%B7/game.c" property="og:url">
+<meta content="https://gitee.com/static/images/logo_themecolor.png" itemprop="image" property="og:image">
+<meta content="扫雷(已优化）/扫雷/game.c · 编辑文件 · 不止于过去/study  - Gitee.com" itemprop="name" property="og:title">
+<meta content="Gitee.com（码云） 是 OSCHINA.NET 推出的代码托管平台，支持 Git 和 SVN，提供免费的私有仓库托管。目前已有超过 800 万的开发者选择 Gitee。" property="og:description">
+<meta content="码云,Gitee,代码托管,Git,Git@OSC,Gitee.com,开源,内源,项目管理,版本控制,开源代码,代码分享,项目协作,开源项目托管,免费代码托管,Git代码托管,Git托管服务" name="Keywords">
+<meta content="Gitee.com（码云） 是 OSCHINA.NET 推出的代码托管平台，支持 Git 和 SVN，提供免费的私有仓库托管。目前已有超过 800 万的开发者选择 Gitee。" itemprop="description" name="Description">
+<meta content="pc,mobile" name="applicable-device">
+
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="hXqtm6bWcP3bd5bi88JzvO7IqB6bEtfjNmPRZJV9gq0vkH8cHRknvprdTVGiUNPjQOjO2nIQsgvaix/VmXV3XQ==">
+
+<link rel="stylesheet" media="all" href="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/application-0be8fed9cc10242771cd7e1480911002.css">
+<script charset="utf-8" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/UrlChangeTracker.js.下载"></script><script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/hm.js.下载"></script><script async="" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/sensors-sdk-2f850fa5b654ad55ac0993fda2f37ba5.js.下载" charset="UTF-8"></script><script>
+//<![CDATA[
+window.gon = {};gon.locale="zh-CN";gon.sentry_dsn=null;gon.baidu_register_hm_push=null;gon.sensor={"server_url":"https://haveaniceday.gitee.com:3443/sa?project=production","sdk_url":"https://cn-assets.gitee.com/assets/static/sensors-sdk-2f850fa5b654ad55ac0993fda2f37ba5.js","page_type":"其他"};gon.info={"controller_path":"blob","action_name":"edit","current_user":{"id":11579182,"name":"不止于过去","username":"C-11nJxxs-web","official":false,"admin":false,"avatar_url":"no_portrait.png#不止于过去-C-11nJxxs-web"}};gon.tour_env={"current_user":"C-11nJxxs-web","action_name":"edit","original_url":"https://gitee.com/C-11nJxxs-web/study/edit/master/%E6%89%AB%E9%9B%B7(%E5%B7%B2%E4%BC%98%E5%8C%96%EF%BC%89/%E6%89%AB%E9%9B%B7/game.c","controller_path":"blob"};gon.http_clone="https://gitee.com/C-11nJxxs-web/study.git";gon.user_project="C-11nJxxs-web/study";gon.manage_branch="管理分支";gon.manage_tag="管理标签";gon.enterprise_id=0;gon.create_reaction_path="/C-11nJxxs-web/study/reactions";gon.ipipe_base_url="https://go-api.gitee.com";gon.artifact_base_url="https://go-repo.gitee.com";gon.gitee_go_remote_url="https://go.gitee.com/assets";gon.gitee_go_active=false;gon.current_project_is_mirror=false;gon.show_repo_comment=false;
+//]]>
+</script>
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/sensor-6269b9ad61bbcdaff20078e5dcff62d5.js.下载"></script>
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/sentry-5.1.0-a823fb0be1b61c5d7ca4a89f0536cb0a.js.下载"></script>
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/application-ff0f9f8b8f0003012e31971c44b7c92a.js.下载"></script>
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/jquery.timeago.zh-CN-4a4818e98c1978d2419ab19fabcba740.js.下载"></script>
+
+<link rel="stylesheet" type="text/css" data-name="vs/editor/editor.main" href="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/editor.main.css"><link rel="stylesheet" media="all" href="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/application-46b94c31ba11ae8c37eacce2bdb5603e.css">
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/app-5f24e1622c848c71c9e84ebc5aad15ba.js.下载"></script>
+
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/jweixin-1.2.0.js.下载"></script>
+<script>
+  var title = document.title.replace(/( - Gitee| - 码云)$/, '')
+      imgUrl = '';
+  
+  document.addEventListener('DOMContentLoaded', function(event) {
+    var imgUrlEl = document.querySelector('.readme-box .markdown-body > img, .readme-box .markdown-body :not(a) > img');
+    imgUrl = imgUrlEl && imgUrlEl.getAttribute('src');
+  
+    if (!imgUrl) {
+      imgUrlEl = document.querySelector('meta[itemprop=image]');
+      imgUrl = imgUrlEl && imgUrlEl.getAttribute('content');
+      imgUrl = imgUrl || "https://gitee.com/static/images/logo_themecolor.png";
+    }
+  
+    wx.config({
+      debug: false,
+      appId: "wxff219d611a159737",
+      timestamp: "1668741184",
+      nonceStr: "214058d9a5265e1a6f4d732469f16c46",
+      signature: "8c598dc9feb72a47bb9670de7421ff9a860af2fb",
+      jsApiList: [
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage'
+      ]
+    });
+  
+    wx.ready(function () {
+      wx.onMenuShareTimeline({
+        title: title, // 分享标题
+        link: "https://gitee.com/C-11nJxxs-web/study/edit/master/%E6%89%AB%E9%9B%B7(%E5%B7%B2%E4%BC%98%E5%8C%96%EF%BC%89/%E6%89%AB%E9%9B%B7/game.c", // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        imgUrl: imgUrl // 分享图标
+      });
+      wx.onMenuShareAppMessage({
+        title: title, // 分享标题
+        link: "https://gitee.com/C-11nJxxs-web/study/edit/master/%E6%89%AB%E9%9B%B7(%E5%B7%B2%E4%BC%98%E5%8C%96%EF%BC%89/%E6%89%AB%E9%9B%B7/game.c", // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        desc: document.querySelector('meta[name=Description]').getAttribute('content'),
+        imgUrl: imgUrl // 分享图标
+      });
+    });
+    wx.error(function(res){
+      console.error('err', res)
+    });
+  })
+</script>
+
+<script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [["$$","$$"],["\\[","\\]"]],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+    ignoreClass: "container|files",
+    processClass: "markdown-body"
+  }
+});
+</script>
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/MathJax.js.下载"></script>
+
+<script>
+  (function () {
+    var messages = {
+      'zh-CN': {
+        addResult: '增加 <b>{term}</b>',
+        count: '已选择 {count}',
+        maxSelections: '最多 {maxCount} 个选择',
+        noResults: '未找到结果',
+        serverError: '连接服务器时发生错误'
+      },
+      'zh-TW': {
+        addResult: '增加 <b>{term}</b>',
+        count: '已選擇 {count}',
+        maxSelections: '最多 {maxCount} 個選擇',
+        noResults: '未找到結果',
+        serverError: '連接服務器時發生錯誤'
+      }
+    }
+  
+    if (messages[gon.locale]) {
+      $.fn.dropdown.settings.message = messages[gon.locale]
+    }
+  }());
+</script>
+
+<script>
+  var userAgent = navigator.userAgent;
+  var isLessIE11 = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1;
+  if(isLessIE11){
+    var can_access = ""
+    if (can_access != "true"){
+      window.location.href = "/incompatible.html";
+    }
+  }
+  document.addEventListener("error", function (ev) {
+    var elem = ev.target;
+    if (elem.tagName.toLowerCase() === 'img') {
+      elem.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAAAAACIM/FCAAACh0lEQVR4Ae3ch5W0OgyG4dt/mQJ2xgQPzJoM1m3AbALrxzrf28FzsoP0HykJEEAAAUQTBBBAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQAABBBBAAAEEkKK0789+GK/I2ezfQB522PnS1qc8pGgXvr4tE4aY0XOUWlGImThWgyCk6DleixzE7qwBkg/MGiDPlVVAyp1VQGrPKiACDhFI6VkF5LmzCki+sg7IwDoglnVAil0IMkeG9CyUiwsxLFUVFzJJOQaKCjFCDN9RXMjIX7W6ztZXZDKKCyn8sWJvH+nca7WHDN9lROlAliPH9iRKCPI4cswFJQWxB46toLQgQ9jhn5QYZA9DOkoMUoQde5YapAxDWkoNYsOQR3KQd9CxUnIQF4S49CB9ENKlBxmDEKsFUgMCCCCAAHIrSF61f6153Ajy8nyiPr8L5MXnmm4CyT2fzN4DUvHZ+ntA2tOQBRBAAAEEEEAAAQQQ7ZBaC6TwSiDUaYHQ2yuB0MN+ft+43whyrs4rgVCjBUKTFshLC6TUAjGA3AxSaYFYLZBOC2RUAsk8h5qTg9QcbEoOsoQhQ2qQhsO5xCD5dgB5JQaZ+KBKGtKecvR81Ic0ZDjByKdDx0rSEDZ/djQbH+bkIdvfJFm98BfV8hD2zprfVdlu9PxVeyYAkciREohRAplJCaRSAplJCcQogTjSAdlyHRBvSAekJR0QRzogA+mADJkOiCPSAPEtqYBshlRAXC43hxix2QiOuEZkVERykGyNo9idIZKE0HO7XrG6OiMShlDWjstVzdPgXtUH9v0CEidAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQP4HgjZxTpdEii0AAAAASUVORK5CYII=";
+    }
+  }, true);
+</script>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><script async="async" type="text/javascript" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/editor.main.js.下载"></script><style type="text/css">#screenShotContainer{position:absolute;top:0;left:0;cursor:crosshair}#toolPanel{height:24px;background:#fff;z-index:9999;position:absolute;top:0;left:0;padding:10px}#toolPanel .item-panel{width:24px;height:24px;margin-right:15px;float:left}#toolPanel .item-panel:last-child{margin-right:0}#toolPanel .square{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAElBMVEUAAABtbW1nZ2dmZmZmZmZmZmbm2CNMAAAABnRSTlMAHKbm/+1DRvRuAAAAQUlEQVR4AWMYToBR2QUJGAnAJURdUEAgXEIFVcIJLmGCKuEMl3BBA0RJIJw4nCVGJchOJZgJjlASxUzUuLPBMAIAmahQ49nxQhcAAAAASUVORK5CYII=);background-size:cover}#toolPanel .square:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAYElEQVR42u3WsQ2AMAxE0Rsk83s0d5khiIIOKQ7RSSD+d+/XnkREdzWFUmPxUqFWe9+Xn1/XK0Q8fn9ezIHcAnIOjM17F1ANAAAAAAAAwAt8c1XYh5d9OtrHr32+E/2vA8lyXsPJ9ILxAAAAAElFTkSuQmCC)}#toolPanel .square-active,#toolPanel .square:active{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAPJJREFUaAXtmDEOwjAMRRuEVCFWJm7D1r0cgiNxlG7chokVoU4hkTJWcdQfKCovY2x/x+9nctNwIAABCEDgnwk4a/jjzR/G8XUNeZ33fm/l14g7555BZ2jb3eV+co+c5jYXjLH4+PDw3sqrGU+g+tA7yp5z2ptcMMW6gpxPpZi9zQG+9W2mCJT0NgeYEv6lOwZY2g0cwAGRAF9IBCiX44CMUBTAARGgXI4DMkJRAAdEgHI5DsgIRQEcEAHK5TggIxQFcEAEKJev34G0aJVJzREo6V3iwDCneaUas7e5nY4r7rQlXmS9XgkEMhCAAAQgsFICb9uiLZTmm16RAAAAAElFTkSuQmCC)}#toolPanel .round{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAV1BMVEUAAACAgIBoaGhnZ2dnZ2dmZmZnZ2dqampmZmZnZ2dmZmZtbW1mZmZmZmZnZ2dpaWlmZmZmZmZmZmZmZmZmZmZra2tqampnZ2dmZmZnZ2dmZmZ2dnZmZmZwdqJ9AAAAHXRSTlMABkeVv9nzGJbx/weC9Mcu4y36qlomDK4j/XUN8jz+zUEAAADcSURBVHgB7VQDdsBQEIxt6/7XLHbjj2Ye6nmeNY1/fFeYlu24nuc6tmU+UPeDMNoRBv4H6nGSRhekSax1n0UCMk2QvIgkKEqlf9YXLRQx4i2fqm7armubutqykteRrOJ+2JihX6lEmhD3Z5zO5DRyr2RJBexsurITs4Gob4acz53nrEJx5hbXO9z5gSu3BAOb+FoMXZPAFniH+EY0aEjgCLxLfCsatCRwBd4jvhMNOhJ4zw1mEix4SnjReFvxweGrgS8fvt74AeEnij8B/M3gjwx/lfgzBt/91+Mfr97+GQDfPFmMAAAAAElFTkSuQmCC);background-size:cover}#toolPanel .round:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAABJ0lEQVR42u2Wvc2DMBCGnyppSE+PRJeswQ7swQLsAENQsAJlZqDOBHykihSRIop0Jj8+ktiKPvl1+96d/Z7vBwICAnRYkVHR0TMy0tNRkbH6jvOYmoHpwRmoiT9zvqbk+ND57RwpWb9/9/1L57ezf+8dOw4q9xMTB7bLb693fw0RL9N+Ls6JhpyUiIiUnIbTnVALclHOjFuSO05CO2OVennkzzlTPGUWnI0fpZSpNu5VvOQWBrfWVe1giGNDa5SeorozI7WJlZ8Y6c7sASpBb1SSNsKistM7Qc9VAXJh0dnpvaCnqgCpsOjt9FHQI1WASFiMLgJshMXfD0jkPMnOv6nzQnPeKpw3Ow/t2vnA8TAynQ99D2uLh8XLw+roYfn1sr4HBPx/XAA8p+U+DU7i1gAAAABJRU5ErkJggg==)}#toolPanel .round-active,#toolPanel .round:active{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAqJJREFUaAXtWDFLHEEUfrNn3LsIIRYGOcQml8YDu0BKr7BREKzzL2wDFopt/kXqQCBdwDZgKWeTsxE5FRsREr2Eu8l8uzewCLvvzbp7q9xMM3M7b973vjdzM+89It+8B7wHvAe8B6bZA6oo8u2unr0+G3SGNNoiRSukqWn6ZqRfU9+M++bbSY2CbwvL4WG3rf4Wgf1oAguHenE0uN8lPfqoiV5JjDKgt6SCL0FY37vuqEvJmjSZ3ARav3R4c/rnkya1o7WeSwPI+q6U+q1If3799uVB750aZMmmzeUiEHn9/u6rJv0hTbHLd0XqZ1BvbOfZDWcCb34MVof/ht+N8UsuRnKyhsT5zExt42o9POZkk/NOBMaePyraeGsQSJideO+yE4FdzPU486P42BTq+SQuHAMMYCW/Z43FBOI/bDFnPssg/K+AlSWTnBMdofiqvOvlvW2SgJIxbqcgbLQkR0m0A7jnJ2U8CAIrelsEbFkCeGHxSAl0FStiMCNsRitLAOGB9IVlsJymgQlsbhFLIIptOC0lzUuwWQJRYFaSgaxaBIVM4wkgqqyqCbB5AjYkroKEAJsnUIXhFtO8anaY1vMEkIxU1y44aJ4AMqmqmgCbJ2DSwKrsRwrKYbMEkMNySsqal2CzBJCAm4jvtiwj0/QCE9hp8/Y7SyCqHpgE3C6YWG8wJZULlgAMRvUAIe6kjI/D6fqeBE9EAHE5qgcShUXIAEuSCwBLRACCKH2geoBxmQ0YwJJiiAmgboPSBxJvqXJXuXFSv+1SIxITgDHY1tqL2mYZJKATZRXp0bHOEeXEVtj2T6mw5bQDlgC8NN9qrAWK9h9zO0W3jdEBXa6et7bk2gG7GH1csXiGxd0kCYyrKq8/tMP/9h7wHvAe8B6YLg/8B7td+kBEJNs9AAAAAElFTkSuQmCC)}#toolPanel .right-top{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAxUlEQVR42u2WvRGDMAxGv4kyBZ2zQBaQ4jaejAGYwD3pWIKKBtLkAtwJKCzljkOf+/fkH+kMeDyeS+V550wDTcIa6c2PYryIXqxCBecjAbVlgv5QMFrvYCoSUDAWABQ2X5GO4CdKpoJtvIpgD68g2MeXX3KyfaYSPqkJZDygJJDw/AKAVV8M6vj1AOGsejjCAAnK1c8DhHvOavi5epu2cvxf8LEyxQPcmOIB6kzxANWmeCDeFiNMH/9V1NRxEyv/kXs8p8gHU6QbjbKE6LEAAAAASUVORK5CYII=);background-size:cover}#toolPanel .right-top:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAsUlEQVR42u2WvQ3CMBBG30RMkc4swBrcZBkgE7iHLkukShNTIAQRRi58nxDiPvfv+ed8NkQikf/KkcxKqYyNK6d+fGmMTkVuCi59gqUp2NQrKH2CpBZA+lhFToJHTCsw7QpMu0WmPWTTVlENb36COh4vQQ1/Btjdi9Ufv28g2Xdz3htI8p79s4EsZD+8+T2Rgf8eftDiYdLiYdbiYdTi4fDSwgT4u2JkZmKID3kk8hO5AUMjeGfiup/PAAAAAElFTkSuQmCC)}#toolPanel .right-top-active,#toolPanel .right-top:active{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAjBJREFUaAXtmDlLA0EUgN/brMaINiEqgoIoglEEQf+A4AXWlja2WuRPWPtPBLXywsZSS402NlYeSSPGHJt9zrisSOIeM9llR5wpsuy8zcz3vTmYXQBddAZ0BnQGdAb+cwYwKfmZG+ouPdYn69jMA2EegNgVRsGA/fJq715YrtgFcpfUT9XKFFgGA2SQCBw0TwATDDrVCoqI1dJab6a13uve9ArI1udO3heIcPMLlmXWfquMOG3ZzoWR+xUWfvGLt8YiF6Am7BLQitNRAG0rDbtHouIv1Z5VhmdENmCaBUR4lv07ICYrUFpOF8k0F2Ulkh8BlvryUvpWVgINI9kRcKeOrIQBPXduG2Gu0a+BH70KSyCUn1ZRaP3EKsBduISV7loPtSZIbAHz9mMXGDipz5m1xiEhbgdKoNgWGrsAh2/ajXMiGEYbFoMWtqHSCLjw7NiQZceDg7GBTCFoTYjuQLGNQBt8LrNxvYAN3qGfRMoWn0KRH+b84LmAW7JntWm0rAs2vQZ5HQJWXtcyfWy0hM4fkS7isPAcuH0k6F4UnrcTmYAIPO+YF1eC5f+B7VBHTq3YbyRTSAZeDNP76Y4FkoTnWh0JJA3fkYAK8NICqsBLCagELyygGryQgIrwoQVUhQ8loDJ8oIDq8L4CfwGeC7R9m+SVQ6e1Wcu2Lr5fRn6c53lcpfLrp8WGZe0wSOdNSmF4z0QOnVXHs8cfW/NX1OX5kA7oDOgM6AzoDOgMKJCBTz35SoU1TFsiAAAAAElFTkSuQmCC)}#toolPanel .brush{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAA00lEQVR42u2XIQ7CQBBFv6vEorgAaDhKUZV/NpA60DThAnCMit6jvUJFHeiaOpLFEJKWVnXHkPnr39vMfDOAxWKZGUmkZiv5YamCdxn95zVcaeI1FAN8aMVxzdePwLMJtIs0AiQeU0geZDhScTGhaAPNfkohdbDVjiskCdmccqhwWehi9hTh8T2FDv6rcBstvKdnmUaaeM+L4f8Ur9d7w7utKh6QWLE5ACAnxd8DgNxU8YAUqnhAKlU8wIcqHmCnigfkyo5PqaTgnWe3586OFItlbt6EZUdgrAGhiQAAAABJRU5ErkJggg==);background-size:cover}#toolPanel .brush:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAuklEQVR42u2XIQ7CQBBFn6vEorgAaDhKUT0FaDbhAnCMit6DvUJFHeiaOpJWQEI2bVXnGzJv/Xub2TELjuMspaCmpWSt0Qf672nYKPWSRKo3T2x5jwI9jdVbZEA+mShthhNZzSRaq9nPJWq7p51OFJab8xglgvVipglzfZqQ6H+JnUr/SWRKfc/F9f+qD66X6fdaPeTKzQE4KW8PcNPqodLqIWr18NTqodPq4UrHi0jFnTNHDv5HcZylDMAxkfDxR59FAAAAAElFTkSuQmCC)}#toolPanel .brush-active,#toolPanel .brush:active{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAA45JREFUaAXtmFtPE0EUx8/ZFuwuQS5yE9EYjJdoiLeoL2rYUpAPZXwwfgA/DiBQ1BfjXcQbKhoFREQsUXYLpXs8U9xkQzLb2d22+LDtw+zOnDPz+59zdnZagPgTRyCOQByBOAIRIoARfCO7dt2j9oKVv0lEfQxyP6npt75fw/UgE++agO5R62DegSkA6nWBEfFhU0IfmhvENbevXKuVM6jGeGvW6tlwIOuFF+twJi6uFe2x3jvUpLpuzTOwb8I6AJtwl4COyCCDZKKmGSjBF2DKDz5oJmqWgbax9W5ycIrL5Kgs8jv7RSaSqKf9HuyaZKAEX8RsEHg3E1uOfX2nMO991QW0jdB+jvwkl80x78Kq1wRw2c+2qgLas9RFYE9y5I/7QfiNcRnN+I1XTUDHOHU6G7YomxN+AL5jiJ/qjNQNP5uqCBDwxS0rGjzgXCqB/UtX8YefgITfYJixzlHqKBYZHuBkGP9tH4bXoH9xyPhabo6KCiidbQoWv2HhVLmFZeMI+BFS0L+cMeZlNt7+ipWQgN+0rEmgCPCIH4jhV001eCGkIhnozlLbhs3wAH3e6AS55t3mPdSBuZo2FoL4Rc6AgM/nrYlI8ICzqFH/z4Fg8EJopAwcGKd9+UIJ/nSQqHltueZnMUHmylDDordf9Tr0WahnhFotYHiCM6qL7bTjsnmHoJsrw/ht55jqfVLV0Gsn4G2yxrkvCvxbbY9u/jBxyTt30OvAz8Ch+9Rig3WH9/mzQRdz7RHhTSXgxXyBBAj49XWGJzjnwgRtuWZfJ5JG5Mi76yoLOJyl5n/w513nwC3Cq6RmmMsZ/B7YV+Kg9AwI+N95W5RNJPg6NMSPk2UJS6jusruQ+IG9tiXg6UKoFYQTwky9YaTLHczCzO9bQq0PaK/4lyASPMDLasFvx0Yim0+VDVtkT/B5/pLERKV7OpUyBhZNXFExDmMjzUBBs/siwSO80OuMdDXhhWCpgERRaw4TkZIPwnM9aQwsZPBn6DkUHaUCCJ1QAnhXeGZAbeCFRqkA/p8vsAB+wz7V0cjMD+OqYgAjm0nfA0RaC4CjvADDP2loMAa/XMFfyk4VMJRnANUzsFvwQr9UAO9ASiXE5/nHjXuMTK0j7yZPKgBRK1s/DP+oMaUPfjYx505Y61b6DCDhbT77aHwM4C/m+D4H6HCr5VAT906O6vVphv9Ta+h4vTgCcQTiCPw/EfgLJV9RSXPyCEcAAAAASUVORK5CYII=)}#toolPanel .mosaicPen{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAHlBMVEUAAAD///9oaGhmZmZnZ2dmZmZmZmZnZ2dmZmZtbW004KMDAAAACnRSTlMAAWXI8/8ZvbYcHEn/BAAAAF5JREFUeAFjGFZAyCQUDpwVEeJspaFIIDwBLiEeigIK4RKqqBJBcAnT0E6EuTNCg+Fs19AJCAnO0BA4OzQUSoMAkBxJElAxEBhBEpiJgVDywUxwhJIoZqLGmQ2GEwAA7OprDZR1JoIAAAAASUVORK5CYII=);background-size:cover}#toolPanel .mosaicPen:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAj0lEQVR42u2WsQ3AIAwEnzGQWI8V6ei9DwOQIhBRJMJBMiny7xL4MzISD1AUdS+HCEFBVVaBIMJp7T2y2nqsDK/rfs3+RChuEZftKyriHCBta0JQzywgtVMy39xHG149i3CNe6p+2dn6WJpzBBBAwFeAJ7OVxggggICdAPNP3zy2mAcv8+hoHn43xHeK+psOlApo2xDq5Z0AAAAASUVORK5CYII=)}#toolPanel .mosaicPen-active,#toolPanel .mosaicPen:active{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAV9JREFUaAXtmU1KBDEQhauiC9GdIih4Add6BhnmHOKhxHOoeAY9hjAgLkfcTGo6Mo2ZpivW2F3GgZdNJ5VKVfK9XuSHCAUEQAAEahJgLfnx0+c0xngnIqeaz1/Ymfg17ISbt6u9+758u33GZFtN/kTr38TOTC+b+K/5Cp3HRbxtbGdr9lVDXcA3ef4gkv2+wVbb++Tg0urb9Tt6nD+L0EXX3rZDW9G/wyavxx2nx7CAcRJ5RcECvMha40IBKykvPyjgRdYaFwpYSXn5QQEvsta4UMBKystP3U6PmfDwYS6/jddspYtl63+hogLpJDXkMDKEfBF71rn1CmABmZpVqlCgCvYsKRTIYFSpQoEq2LOkUCCDUaUKBapgz5L+cwXS1X65qNvp9DJCzeNCup8vh9B7fzqM6CPbnq+rfWHmWWvpftUFpGed9DJSelzoBvNop8mHEK49YiMmCIAACAwnsARsm0C5E2sdIAAAAABJRU5ErkJggg==)}#toolPanel .separateLine{width:1px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAoCAYAAADUgSt0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABlJREFUeNpi4WUQTWMAAiYGKBhl0IIBEGAA+zwA23Qf36YAAAAASUVORK5CYII=);background-size:cover}#toolPanel .text{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAANlBMVEUAAABpaWlmZmZmZmZnZ2dnZ2eAgIBmZmZ0dHRmZmZnZ2dmZmZxcXFoaGj///9nZ2dra2tnZ2e4FhbPAAAAEnRSTlMASeP/wjQE4AuETRkSRwG6Jp66pYBaAAAAcUlEQVR4Ae3POQ7DMBBD0bHl3Vrvf9kUTNSEGUhA4Ebza76CMmDWNDvaPAkPeyaE5372R7Cs24ditq2LBvaj0jo7dgWc8g3kVMDFwKWAm4GbA8QAMmDgEeABfDMIAEEaiwkgRWkqF/eu5I7HqB8Mm/UC2GYEc6RJ/NYAAAAASUVORK5CYII=);background-size:cover}#toolPanel .text:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAmElEQVR42u3WuwmAMBSF4ROws7NzASdwB7FwK+fIIJZOImSQWIhg8HkvCYqcP/39yKMIwBj7by0cvGA5tDJANn4hRHnF+iIwokZ2iK5lqDFqgQn56a625Zh0QH9xbGG9DugeA50OKB8DpRy4e1lJIkCAAIH3gSIAivhAEwBN7PEGQwAMMDHHV7C7P4RFleZ6k1x1coAx9u1mYuQiZvp4kucAAAAASUVORK5CYII=)}#toolPanel .text-active,#toolPanel .text:active{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABFBJREFUaAXtWd1rHFUUv2e/srumSpNNUkrUirSglbwU6UulhriJglRERIVWKmgltiCITxYhhfY/EBWKDwr65ENFhWxTuwU/HsQH8aMqSMFqimmaQtLd+Whm5/ib2S7sTnYyc+/cfajsPOzMPffe3zm/c8+5XytE/+l7oO+Bvgf+lx4YPmtODc3XV4cr9ZO9JJjqGXiD3xYs7hRMrz/LnO6Vnp4QGDpnP8iC93tGM/NgtWI9d1sRIKfxWrvBrsBo9Ogh3bgjVR50LWORBcKn9RAhhlK7lh/P/9kS6XprDyG2jYMdxnuWMlNDuKd0Gd2Oo52Ay2K2XUHrG6SeGv+OC62yrrdWAiML5j4YNiEQMkEDiXnAWLOPBOVJy1oJNBrcTF6ETHfD+M3ucnVpiCJ5wLEKj6675t+CRNaL+TAEytHelani92H1snJtI+Cw9TKyNbeZ8b5x66Q1mbUQmGNOYcGKFd8s3MnxeR6S9XRYey0E3pk3noT37+2WvBsUs0ibwnhjg1xRoIWASyIieTutY0GzGLHQPOlsvXkpMYHRr6z7haBpqNkwdYaqZh4aXbCfCK2XqEhMwFl3Z28lrpRHXXZPSNgZ2lRKaRBlR5Xza7axCN8rJCVxPkM7rpQLl4O4MuVEI3DDsp5XM94zkclyxVsyxnZrm4gAjOjYNndTsJkM24tDu3/F2pHgUSZQqtT34NDyMBLYVdWPmaj47z/WC6r9vX7KBJjF0aZiVsbw+oPE8SaO2q9SEt/zNW+t10wcWvRsj7OZzMRSeeBnFQoZlU5GzXzJN57EdXhgSQXD78NiKxaPbU7D9XKp6zkiClt6BLwVtFQx/8B7ZyolDlybuePzKCVh9cML9gPsOBeJqEaDhe3X9tGNsLZhcun4hdKyZzz2PZePTRe/DAOOI18pD/wG46vAG+Sa8WKcPsE20gTI9YdbENP7c6Q+A7UMwY7oXe8boaQUQlIEtleMuzH7YOdJNzOp/ActI5K8J3KFMxiFK2Cwu3TW3C+LJUXAZn4VvkoTiU+XZuiqrLJu7S9MkoMF7bRX57ryC2NsAnt+4Cx04NQlRDrVHHbvW8fDOTqNnHKA9TTulbbJYMYm8NeK+QzCZwzgP12dLn4roySqLc7Ii5gOP8Oqlm3Y1itR7dvrYxPAfY+/70EHP+naQbR8E/m4CKcjMpfBsQiMVeyH4J1H4KU1yhc/1mJwAGRlpnAeyfw7Fsjx8wvmgUB1aDEWAYebUyfi9KPlSaqFoiWtYPGeDyGRzJEESt/wFnj/oAfMmXRTQVJDQ/rflSl8iFGo48w8VTpn7Qpp1iGOJMB14xCGdQuAL1x/bOBiR2/NhUtlWoWuT+AwEg6OqjGeaAIs/PsezEC9Sd6AkelU1teD/xQOxznsRBLAluEmrgt/uW+kcCagqyfF5encj1gov8CEYa6uiuR/TXlTmsy0poPVHG76Hq2y0lZfh/4+Rt8Dt5MH/gPfHXmcyfgZhQAAAABJRU5ErkJggg==)}#toolPanel .save{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAABEUlEQVR42u2WLw7CMBjF2V1AzM5zACwBOwHJ92CXAC4wMYJYwhGQnALTSQwCwQ1YJipKMAtjsK3/EhL6PvvaX17br22v5+Tk9EGYEAMn0V7gyGgqP72QrJUUgJg0QCzWMgm4PEAKUQ66Y4+ksXZ0U0CUG7hv9y6HCilKQNLujfoK260FEB0OrR4AmW0At71E4ncAtO3QlAOdBBeMl6PmQqqTQLEcwCqgQLqYYY6UCgsAnCO/PP8+zoYB4BRUXMG3h0k1wbHmO5pNsKl18cZsgrjmi80CTjXfyfQpCisLFJrvgxyR8J4O4SGi3E4nX+lAB7pqdbLax0vmyWRadxGz8fl9TTAx+n1/u0xYp+mdnP5QD3iqMYarLOEvAAAAAElFTkSuQmCC);background-size:cover}#toolPanel .save:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAA+UlEQVR42u2WLQ7CMABG3+4CYnaeA2AJWAQ4LgFcAAFBLOEISE6B6SQGgeAGLBMVRY2wjJ/+JiT0++xrX7a1ayEmJuZVhggkSqOSgpH59MqwczOBMBYoFiYCaSEwUtRDbuxYf+yWq42iHrDTYHs2T1Hjaw22Y/O5XQRKZ9G6CYrQAhlaoH5IsNEQdF0EZwb0vzR3Edg2CkIKKnImTMmpQghOpA8m5eRbIMkaVPb2YLIUHFrcwa9g2eKWfgWrFrfyKzi2uKPvVTRuUGP/y7RkRgJAwowyzE6+sGfPxW0nS6cfhcaRKZwEIsTl97lDv9f35ssRetPHxPxf7otQ7hZUI05dAAAAAElFTkSuQmCC)}#toolPanel .save:active{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAmNJREFUaAXtWL9rFEEUft/mcne7AYuY0v8gpDsQ7A7h7oIK6bxCi5AfrZDCLoWFjX+Bhf9BijRB0wixEVOkEIykDTkuGHKbNMkpqJO3p5tsuNnM3OwMKMzBcbPvx/fe+97sG26I/Mcz4BlwxsDk5tlG8nUWgIFLLsFJ0AOn+AweuA7gGt8X4JphFb7vgIoh13rfAdcMq/B9B1QMudb7DrhmWIXvO6BiyLX+v+8ATBm6vXn+SQhx19Q/6wfQTq81UcvKdNfGHRAkTnSDKO0ETpU2OQbGBVAFSwSKc3D1xaDTchkL+g7XLY0LiOtRBwEW/8BBXIfVeMJfH4Hlw/vhvoaH1MS4gASt14jWgeA1kRj9XRLsA3oTz0Zr0sw0hYUKSGKEt6ornMiuZrxLMwB71ano2aXAcFG4gM499MdRanNC33VzYOp/jFGp3a3hXNcnz65wAQnwt2blC0GsDIKke1sW8Ur3/KhV/iwzGVU2tHfTe5y4NfFwVDA+G9b5bJi7yY9n/gbP/Ec32ch0eXkN3wsVuMsJKVzoU7/GZ8QdWRKc/GGlEs3LdEpZTl5WtlAavNNCjDE8IcJvutourE5GJsuC4Gm3juPU3sav1QKShI4b4YcA4iUNxmR6Pggmn171GuF7G0lnMawXkIDXm9EL7sDHQRH8zBNqe6YarmYD21o7KWAN+FUFtZn1r8m8L4/j8VYdP20lncUZfomz2gLrbjM6YPfpAhBark46oBXZkpEvwBKRxjC+A8bUWXL0HbBEpDFM7jkw+e5s9L+JxmmYO8q20FtzOOee/3Juzov3ATwDMgYuAKebdW38MyGrAAAAAElFTkSuQmCC)}#toolPanel .close{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAyUlEQVR42u2WwRGEIAxFLYgisBJvf+iRPiiEGc7sYXccEILGTW75HpH3RpCEbbNYLJb3wYGEjBjc6q3gEJGRcPDx9feU4Em8Rznf4ymQzomkosNXJJ4gN1OnCuwdviLzBLGbPCgGfEVkCYIbAI3isjjfUcfc5inEr0dEFGJ4YqWLIJ74Ckn8reJ//FIhgycVcnh1gfISKW+y8m86O7WCB025VCgXu3W5ntUoZrm+aziTr+A1HP2W+aDpXxTMpq99bVG/eFksFkubD7ijNamCUMb6AAAAAElFTkSuQmCC);background-size:cover}#toolPanel .close:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAu0lEQVR42u2WwQ3FIAxDPRBDhEk6KHswCBJneqkq+gv0R8S3uMcmfgLaGMDlcrk2dCCjICEsqwISCjIOvX27ngqZVgnqXadE5LtxjujtG7IOULrWMSI+7BuKDpAezW/Er31D0gHCy6BHyOBt0B6zTBGyhG8jzOzHO10t7cerMLX/QhjYrxBG9jOEoT0dQN4i8iGTP1Ph/mjkUUEedutxHffH9VfgyG7g0CPzn9CPO6FPv7bQL14ul8vV6QSg74KmDBfNdQAAAABJRU5ErkJggg==)}#toolPanel .undo-disabled{background-size:cover;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAABy0lEQVR42u1WS0sCURR2YSpFu8RVkIty1b8QggiiRcvCbNG+oAciuGvTQnGh+Auqn9BGC1q0C6JA6nwjDjMGgpXTfqKx5pF3xrk2s4jmO6sL557vvO65JxQKECCAK6gRSlMRV/RICilooo4ypdXwWMZohaqtpHHuxHFCfVKHBT2UOnF+gldSIdGC5nmYCqSwjOvSR16N8BEMvJORQgKXjsa/5RoJbgJS0YHkyvyniLTITTCU8Rec0aGwRVnkcD5UFdF1FEzzT9i09owaFTLUtibKZS0YvtfUKEtTiKFm0cuPR/CGlL22cGDuKFdNy4hAHjQtG+YoUBqzBpDEedsYYkYt0HPxum266N4hTRmTXnokAW6YMdw6TKqo8dpRHknwPCWsYt0qrTV5xtGpc52g4cu0RU4naPpCQFk9mcrfJPA9RaYi1/34UPnalB+cD43bPO+osFzeoaOR+TeP7CJf6fa0S8eOLvCPa723d/WL1e60hx/OAK1ly7BrY0Oe9OjL/PJujsQfE1XBKRWwbfPpt7lWFy2GJATXa0ubY20xIM3SnQ+LlyXTE8I+3j1eHRlxVKjr4fLLjCQsLFEFF3igvra+N36xvgcI8A/xAdgOd9HtG0mSAAAAAElFTkSuQmCC)}#toolPanel .undo{background-size:cover;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAB1UlEQVR42u1WTUsCURRtYSpFu8RVkIty1b8QggiiRcuiD7jnTTkIFVaIMLs2LRQXir+g+glttKBFuyAKpCBQtEVg5bQ3/GjGyec4z5xFNPeuBt69Z9695953RkYcc8wxS6a4pRASuKJHqFCpgBylpJDiGigZW6RMOKB/yz46oRrVux1VSso+YQB6pzqVd2abf+5iClRecs1rFFfcYgCtwIoUjPhxaZr8268jfnGAOl6obCl9w0s0JwzQ5W84o0NssE0Wo/OurpQs34Kb/AlrRs7IHraOorFQFnvBYUtW9nDJ60XWcDI+EAA+pGDv0zjoZJQl0nIKVGmRtgdE5y2Sg/agjJmeU+7Ve4Gqhenmcwj3JrO/rp+TQn0BcMMFuO0dIXs6pj3VF2B/HEu0YnS2TJOmtz7XAPK2bFsW0wAK9gBsaqVU/yiA3SXSm4ycDekFaTpAgcQGTVgQiK4Kw78BR30nv2PZISHWur1m2LFpevF1rYXuaoGZ6MQQH5x2+gXDqiuyVRob0pPZrv40lX7sUxWnTMEW/9FHUUi6NCwcwLNV2YKigGzRbXsKdzYILwOPRlmUPocsHTn3SNPrEMUvl5AuNo80LuiBag35TvlfyHfHHPuH9gVuq4MuDOEQhQAAAABJRU5ErkJggg==)}#toolPanel .undo:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABnUlEQVR4Ae3YA8hdYRjA8eG7vjddhZnpZrtmO87MNRtptrfMIbvZSrNtexnP/jOPz/MO3/uvX9bBywa2mLLZbDZbEh2xEgdxFW8/u4x9WIOOqIOxemIjWuJ3lbEUbyA+vcAqlKHeKwjuox2+VId5eAsJ6Q1mIwm15DsP0B5VHIDE5Aiq+g8APMR9SMzuoqb/AN5eYhumYQRGYia2442Ph6j+qQe4hqGog1MpDMcdj98pafoBNiMFv6WxGeJgtskHeI32CNNUl9mpbPILPEA7hMnpS6wyPQbuoy2ClnYYEy9QZ3oWOo8wDYf8RkdE7gTEp1MIU8phRV+DyOXQB4M89EMJYdsO+cl+/DPNhPzkMv6ZRkJ+8tY+gP2Fog3ifTCb8jSqn/JCpp/CVkKtcZiOqG2G/MZKqDUR8tkCkMJ2WqkJkJ9sREH/QBO97hAHdzAEWb0jZfRa4C7ExVtsxTyMCniov4MqVGuJm5CY3UENRmqKs7oXW/olMAXv9K8W9b/GBjzVvdzVrw5dsAE7cQFv8BaXsT/u63WbzWaz2d4D2omvLpJYj6kAAAAASUVORK5CYII=)}#toolPanel .confirm{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAzElEQVR42u3WPQ6CQBAF4JGWW+gJuIeFLQn1PKwolgPQcwQ4hV7DeBFuICFjoZ3hJ+5MYsy8/n0PSHYDkcfj8fxZygwtdyhkZ8KjwsjCwoKLwQSHF/6eKEx5Fu5seUFry49lZsizoDLlOWyq1ul53yRGfJ2ix8TCA3KTp0e/Xon6OJjWahE8ER/WqlE8UZPwsFSP5ImIkM8TCvwSo8TPntCrGj/7Fnr8polgc9fo8YsT4RduzK8ndPmPCX2eiKg84sYP3Pnk/38ej0c9T8qbtsk88JfxAAAAAElFTkSuQmCC);background-size:cover}#toolPanel .confirm:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAtklEQVR42u3WsQ2DMBCF4T+0bJFMwB4p0iKxA4XHYASYIqwRZRE2CEKXIqkiYSx8J0XoHvX7nuXCAjwej+doqejoaTjZ8C0zgiDcLSbCF/98jS0v9La80NnyM5UlL7S2fEirlpwprPiSgQVhorY5/ZBQybqcZbOWwcNls5rFQ8EUrWfyAHWEUOBjjBK/NjHq8WsTinzKRLB5axT52ET4ixdz74Qy/zthwANcefDiyc1//zwej3reZoErqC4lD3AAAAAASUVORK5CYII=)}.ico-panel{width:0;height:0;border-right:6px solid transparent;border-left:6px solid transparent;border-top:6px solid #fff;position:absolute;top:0;left:23px;transform:rotate(180deg)}.ico-panel img{width:100%;height:100%}#optionPanel{height:20px;top:6px;left:0;border-radius:5px;background:#fff;z-index:9999;position:absolute;padding:10px}#optionPanel .brush-select-panel{height:20px;float:left}#optionPanel .brush-select-panel .item-panel{width:20px;height:20px;margin-right:18px;float:left}#optionPanel .brush-select-panel .item-panel:first-child{margin-left:2px}#optionPanel .brush-select-panel .item-panel:last-child{margin-right:0}#optionPanel .brush-select-panel .brush-small{background-size:cover;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAKlJREFUeNrs18EKgkAUhWEnwmW1amObHqKeo0ftOfIh3OSmlba0xXSEK4SICAoz4X/gINwL8sE4C533Pok5myTyAAQIECBAgAAB/jdwO/cFO3dsH3v1qmY2LtWHWr/9KyxQOag3Nf2ZnQ17V6vQR3zp4bqktgv+DWYjuxO3eELKkd0zBmCuNgPzxnbBgZXd1kL9WIslbnAbx38xQIAAAQIECBDgqoFfAQYAhLQbgzDvXkAAAAAASUVORK5CYII=)}#optionPanel .brush-select-panel .brush-small-active,#optionPanel .brush-select-panel .brush-small:active,#optionPanel .brush-select-panel .brush-small:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAALhJREFUeNpi/P//P8NgBkwMgxyMOnDUgaMOHHXgqANHHTjqwFEHDm0HslBqAB+jGIhSBeIOIHaBCu8B4gogvv3p/yuKzGektMEKdKA6kDoBxAJoUh+A2ALowJsDHcVtWBzHABVro9RwaoTgRxCFQ/oLMAR5R3MxAbAHj9yuweDAamiGYMCSSaoHgwNvgHIrEK8D4s9QvA4qdmPAM8loVTfqwFEHjjpw1IGjDhx14KgDRx04pB0IEGAAHeMoHW2kl/cAAAAASUVORK5CYII=)}#optionPanel .brush-select-panel .brush-medium{background-size:cover;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAS9JREFUeNrs2EsLgkAQB/BWupQQHXpczbp36/EB6ptH1M2D17RLhx6XQG9lszCBxEa5zoTQDPxvjv52RR1UWZbVqlxOreIlQAEKUID/Dqx/e2BL9d4t0MP0IS7kBkkgZ0iMub82XrMjLdBQGjXTdgO6jRlpC2QDiX51ixVkClkacMbNhyywR/0COIGMLfrG2MsK9C1xeaTPBdTHzgkezHmR6zoFd88lAOpzDDmAHuHrzeMA9giBXQ5ggxDY5ADeq/4tTgmvm3IAL4TAEwcwJgTGHMAdTillK8FzsTwkawLgGkcylm+xXnlQAhcU2T3baWYLCS36QuzlmahzpX/mrCAHnPE+zYRXhO1strzMRK0n5D0OEQNIJzdMPEf+CGHWL3klf7cEKEABClCApeohwADD8zb9WRTsHgAAAABJRU5ErkJggg==)}#optionPanel .brush-select-panel .brush-medium-active,#optionPanel .brush-select-panel .brush-medium:active,#optionPanel .brush-select-panel .brush-medium:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAU9JREFUeNpi/P//P8NgBkwMgxyMOnDUgaMOHHXgSHcgC7EK+RjFsAmzAXEAFFsCsRQQ/wLiJ0B8HojXA/FGqBgK+PT/FVH2MhJb1WFxYCAQdwGxCgGtd4C4HIjXkeNAcqKYGYg7oRaqEKEepGYtVA8zzaIYCbQBcRkZ+mB6ymmZSULIdByyI0NI0UBKGgRliLtALENhxnwKxErANPiL2iEYSgXHgYA0EIfRIooDqFi8BdDCgaZUdKAJLRwoQUUHStLCgb8YBgCQ4sDnVLT3OS0ceImKDjxDCwduoKIDN9DCgauhrRRKwVOoWTTJJEVUcGAhEP+kVV0M8nk3BY7rJiX0yG1uVQLxFDL0TYXqpXmT/y8Q50JbJXeIUH8HWo/nQPWSBChpUcOa/KHQ1rUxtCEAywhnoU3+1XRp8o/26kYdOOrAUQeOOnDUgVgBQIABAPYuSgtJpajwAAAAAElFTkSuQmCC)}#optionPanel .brush-select-panel .brush-big{background-size:cover;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAaNJREFUeNrcmMFKw0AQhpOqRdGUCloD2lMv1T6B6RMI4sOK4BM0b1Clh56skFahpVaUaln/wBQkzKYmTbJTB75TSPJlN7uzM7ZSypIc9sYIVuxa0nsdUAcuqIIDUKZrczADExCAJ/CW5OFTNUolaIMGaIGThB80BF3QByoPwVPQptFaJ8JR7YDnrAS3gAfOM/69HoEPFusI7oIrcJzTGngB9+AzjWAod5PBlP5lym+jkqsEt8E1qBW0m4Q2d+A7KljS3OAVKGfRuzzuQkmzWpsG9uQmvTtW0KatxFS0yUEr2ChgUcRFlRy0ghcC0m9LJ+hQXjUdYQqtcIJ1QYeYM07QFSTocoKHggSrnOC+IEGHEywLEtyJyySi4rfgXJDXFyf4LkhwxgmOBQmOOcFAkGDACQ4ECQ44wamQURySC7vNPAgQ7MYdt/pUxJiKCTloBRUV1abCj3YduEwSVvw9A3I9bqHqUl2HSsGiYqSbuY0t3JexR62Po5zkXqn18ZG2N7PsMlxaQptH0TrBs7Jpv/mrMte/bGByx/LiWsBSQ7zgjwADAPqYqQ1c9nN+AAAAAElFTkSuQmCC)}#optionPanel .brush-select-panel .brush-big-active,#optionPanel .brush-select-panel .brush-big:active,#optionPanel .brush-select-panel .brush-big:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAhRJREFUeNrUmLtPAkEQh+/UghCxw06JNuCjJURBK+OjsNVEW4KF6P+iYKGF9rYWhmClKKGg8wGNRu2kA4M25PyNGRKFPb0Fjlsm+SKG3MyXLLezs7phGJrK0acpHgP1D0P6sOyzY2AJRMAE8AEPf1cBz+ABZEAKPMkkLxtv33/1+hJbFOwHayAOZuh5i/WoSBYkwSmo2SG4ABIg0OaqFcAOuLAiaOU36AKHIN0BOY1zpDmnq92XxAsuQcyG33+Mc3tbFaQHr0DQxpc0yDW8soJucAb8XdhJ/FzLLSO4B0Jd3O5CXNOSIL2tUQf25CjX/lOQ/t93sHEkeK81FVznruBUBLgRmApuK9B+42aC1FtnFRCkFjouElyW6K12hs6HkCbBsEKnrLBIcEohwUmR4IhCgj6RoEchwcGeOfL/FKwo5PUuEnxVSPBFJHivkOCdSDCjkOC1SDDF05fTYbBLk+AjuFFAMMsuwm3mQAHB5K/G3DAX02HxtkPjZasz8zQN9mZzcY2Haqdit/HWQdRJaOI/cUDumAd6S1MdnWpzXZTLma2cmWAVrIJiF+SKXKsqe7NQAvMgb6NcnmuUWrn6oKBXaQ4c2SBHOSNcQ2tVkOIDbIHFDi15kXNRzk+Z49Z/keaxYIN3e9m2SM9sco605QlK8oZVaxhTV3iZaGMfpTT8XZmPTAU+hJxr7V4B98KJWsn4EmAAKPJ2SXt/mW0AAAAASUVORK5CYII=)}#optionPanel .right-panel{float:left;display:flex;align-items:center;margin-left:39px}#optionPanel .right-panel .color-panel{width:72px;display:flex;justify-content:center;flex-wrap:wrap;background:#fff;border:1px solid #e5e6e5;border-radius:5px;position:absolute;top:-225px;right:28px}#optionPanel .right-panel .color-panel .color-item{width:62px;height:20px;margin-bottom:5px}#optionPanel .right-panel .color-panel .color-item:first-child{margin-top:5px;background:#f53440}#optionPanel .right-panel .color-panel .color-item:nth-child(2){background:#f65e95}#optionPanel .right-panel .color-panel .color-item:nth-child(3){background:#d254cf}#optionPanel .right-panel .color-panel .color-item:nth-child(4){background:#12a9d7}#optionPanel .right-panel .color-panel .color-item:nth-child(5){background:#30a345}#optionPanel .right-panel .color-panel .color-item:nth-child(6){background:#facf50}#optionPanel .right-panel .color-panel .color-item:nth-child(7){background:#f66632}#optionPanel .right-panel .color-panel .color-item:nth-child(8){background:#989998}#optionPanel .right-panel .color-panel .color-item:nth-child(9){background:#000}#optionPanel .right-panel .color-panel .color-item:nth-child(10){border:1px solid #e5e6e5;background:#feffff}#optionPanel .right-panel .color-select-panel{width:62px;height:20px;background:#f53340;border:1px solid #e5e6e5}#optionPanel .right-panel .pull-down-arrow{width:15px;height:8px;margin-left:10px;background-size:cover;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAQCAYAAAABOs/SAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANNJREFUeNq01TEKwjAUxvHXOAhKJ3Fwc9PVzbWipxCdHLyMV9AD6A2EegRdvYBOnd3E70ELIcT2JU0C/1BI4AeB8pKUhlMiOqAtKijuGqEj2ne61D/jY1V2QZ+IaI7maKywrdETzdAVDSKi/Lp3tGP4hRYRcRPlly1Uech4FgG3onygtEvvwDijNxtqwiHxCp3YUBscAm9E/8FtcBFaB/vgYrQJdsGdUAkswZ1RKVyH6+hDivJKMCTa/CY9DV26DBlX2MTJB/WFK/yEvmjjM05/AgwANuZSRB8r5twAAAAASUVORK5CYII=)}#textInputPanel{min-width:20px;min-height:30px;line-height:30px;padding:5px;box-sizing:border-box;position:absolute;outline:none;top:0;left:0;color:red;border:1px solid red}</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css" media="screen"></style><script async="async" type="text/javascript" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/editor.main.nls.zh-cn.js.下载"></script><style type="text/css" media="screen"></style><style type="text/css" media="screen" class="monaco-tokens-styles">
+.mtk1 { color: #000000; }
+.mtk2 { color: #FFFFFF; }
+.mtk3 { color: #808080; }
+.mtk4 { color: #FF0000; }
+.mtk5 { color: #0451A5; }
+.mtk6 { color: #0000FF; }
+.mtk7 { color: #09885A; }
+.mtk8 { color: #008000; }
+.mtk9 { color: #DD0000; }
+.mtk10 { color: #383838; }
+.mtk11 { color: #CD3131; }
+.mtk12 { color: #863B00; }
+.mtk13 { color: #AF00DB; }
+.mtk14 { color: #800000; }
+.mtk15 { color: #E00000; }
+.mtk16 { color: #3030C0; }
+.mtk17 { color: #666666; }
+.mtk18 { color: #778899; }
+.mtk19 { color: #FF00FF; }
+.mtk20 { color: #A31515; }
+.mtk21 { color: #4F76AC; }
+.mtk22 { color: #008080; }
+.mtk23 { color: #001188; }
+.mtk24 { color: #4864AA; }
+.mtki { font-style: italic; }
+.mtkb { font-weight: bold; }
+.mtku { text-decoration: underline; }</style><script async="async" type="text/javascript" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/cpp.js.下载"></script></head>
+
+<body class="git-project lang-zh-CN webkit dimmable" style=""><div id="MathJax_Message" style="display: none;"></div>
+<header class="common-header fixed noborder" id="git-header-nav">
+<div class="ui container">
+<div class="ui menu header-menu header-container">
+<div class="git-nav-expand-bar">
+<i class="iconfont icon-mode-table"></i>
+</div>
+<div class="gitee-nav__sidebar">
+<div class="gitee-nav__sidebar-container">
+<div class="gitee-nav__sidebar-top">
+<div class="gitee-nav__avatar-box">
+<a href="https://gitee.com/C-11nJxxs-web"><img class="ui avatar image C-11nJxxs-web-avatar" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAYAAAA4TnrqAAAAAXNSR0IArs4c6QAABPJJREFUeF7tmXtsFFUUxr/p9rXQbenSdtk+RCJBY7RIYon+oYk0oCZKkSBkqQkWfFWJSKMQSDSmEQpGEUiIrxY0IKQ2gUJMRGPRoInGSiA2Cr4gLet2u610YVva7nY75k6zQ7cLdU/n7iPxzH9tv3vmnN985865U6VtGVTwFRUBhWFFxUkTMazoWTEsAiuGxbAoBAha3rMYFoEAQcrOYlgEAgQpO4thEQgQpOwshkUgQJCysxgWgQBBys5iWAQCBCk7i2ERCBCk7CyGRSBAkEp1VnZZBSxlFVBMqYQUYiNVg8PwtR7Fldaj0m4gFVbBilrkL9kIJTVdWoKTDaQO+9HdvB2extcmGyJiHcMioJQKy7qoGrnla6CY0ggpRErTrEUwWabrfxj2ujF82UOKqQYD6G1pwKUv3yWtm0gsFZaMrARwW2UdTFNytHDBfi/cBzag96sPZYQ3FCOpYGXY56Ck5lNk3jx3tChVxeXvm3DxnRWGipS1OKlgFa/9GDn3VUJJMWn1+Tv/QPubSzDk/FVWvYbiJA0s66LnYFtZB9PUaVpBI/4BdDfVort5m6ECZS5OClhT5tyD4nUHkV4wS28/36nP0L59scxaDcdKOKwUswU3vXwYWXeWA4oy2n6eC3DuWomrv/9guECZARIOa/w+Jdrv0vE9GDh/ClfPfYfAP06Z9RqKlVBYNscW5D1aAyUtM6KIkQEfXPUvwHtyv6ECZS5OGKzxG7o6EoTf/ScyCm8d3eDHwMoovh3CgWLm8jS+mrD2TAis8aDEPNXX1oJATwdyF6yOgFWyvhE59z6u7WlBXw96jr2lnfvifcUdlgbKsQWmLKte62D7z7i406G1ZO6CNWGwxA8zVr2N1Oz8a2xUFQMXTqPr0Gb0nfkibsziCuu6oDra4Hr/Ga21iqrrI2CJPSvrrgdhc2yFedY8/Y0ZmsW8J/bCfXCT1raxvuIGK69iA/KXbtbPfKEJvXPfOvhOf67VeSNYIQg2xxuwPrQ2LIZoYX/XeXQfqUPviYaY8ooLLPvq3cgtfwop6Wa9mCHnWbjqn0f/L9/ov/svWEIoBlj7kzthnj0/zGVqYBBXfmyGe/8rMRs3YgpLDJxF1Q3Inv9Y2NfTwTGtN9YK0cCa0GVioBUuO7w1Ji6LGSzNAVW7Yb7l7msOEBvzX61w7qm67uGYAktAE3vZjMptyJw5N9xl4pPyT8cgWlzmUBsTWHmP1CB/6SaYLHm6ccQc1XfmuPbWu9FmTIUlggv32lftwLT7n4gYbodcv8H13tPoP/utlL1MKqy06cUofPYDZJUuDGs7cYTpbalH594XJ0x6MrBCAcXIUbD8dYgctEtVIfswLg2WGAtEsqk5tjAg4pOwp6k2qs+7RmCJm4pJ3161C1PveAD+v8+hY8dyqd/CpMESiZa8dAiZM0v1Jyvs3/XJxqiPJ0ZhhZ6SeGji6OQ9eUBK+4WCSIMlAlrmPay1odhHvF/vQ+dH60nJyoJFuilBLBWW9oYqXYiRQV/Ubprs6ECoUZpUOiwjmf3vnMWwjBAgrGVnMSwCAYKUncWwCAQIUnYWwyIQIEjNs8uQUXjb6Dk4GOD/GxLYJZ00qSb4pKMzLiGGRXhCDIthEQgQpOwshkUgQJCysxgWgQBBys5iWAQCBCk7i2ERCBCk7CyGRSBAkLKzGBaBAEHKziLA+hfpQtCMXaWcrQAAAABJRU5ErkJggg==" alt="不止于过去-C-11nJxxs-web">
+</a></div>
+<div class="gitee-nav__info-box">
+<a href="https://gitee.com/C-11nJxxs-web">不止于过去</a>
+</div>
+</div>
+<div class="gitee-nav__sidebar-middle">
+<div class="gitee-nav__sidebar-list">
+<ul>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/C-11nJxxs-web"><i class="iconfont icon-ic-dashboard"></i>
+<span class="gitee-nav__sidebar-name">个人主页</span>
+</a></li>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/explore"><i class="iconfont icon-ic-discover"></i>
+<span class="gitee-nav__sidebar-name">开源软件</span>
+</a></li>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/enterprises"><i class="iconfont icon-ic-enterprise"></i>
+<span class="gitee-nav__sidebar-name">企业版</span>
+</a></li>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/education"><i class="iconfont icon-ic-education"></i>
+<span class="gitee-nav__sidebar-name">高校版</span>
+</a></li>
+<li class="gitee-nav__sidebar-item split-line"></li>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/search"><i class="iconfont icon-ic-search"></i>
+<span class="gitee-nav__sidebar-name">搜索</span>
+</a></li>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/help"><i class="iconfont icon-help-circle"></i>
+<span class="gitee-nav__sidebar-name">帮助中心</span>
+</a></li>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/terms"><i class="iconfont icon-file"></i>
+<span class="gitee-nav__sidebar-name">使用条款</span>
+</a></li>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/about_us"><i class="iconfont icon-issuepx"></i>
+<span class="gitee-nav__sidebar-name">关于我们</span>
+</a></li>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/profile/account_information"><i class="iconfont icon-edit"></i>
+<span class="gitee-nav__sidebar-name">设置</span>
+</a></li>
+<li class="gitee-nav__sidebar-item">
+<a rel="nofollow" data-method="delete" href="https://gitee.com/logout"><i class="iconfont icon-ic-logout"></i>
+<span class="gitee-nav__sidebar-name">
+退出
+</span>
+</a></li>
+</ul>
+</div>
+</div>
+<div class="gitee-nav__sidebar-bottom">
+<div class="gitee-nav__sidebar-close-button">
+<i class="fa fa-angle-double-left"></i>
+</div>
+</div>
+</div>
+</div>
+
+<div class="item gitosc-logo">
+<a href="https://gitee.com/"><img alt="Gitee — 基于 Git 的代码托管和研发协作平台" class="ui inline image" height="28" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/logo.svg" title="Gitee — 基于 Git 的代码托管和研发协作平台" width="95">
+<img alt="Gitee — 基于 Git 的代码托管和研发协作平台" class="ui inline black image" height="28" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/logo-black.svg" title="Gitee — 基于 Git 的代码托管和研发协作平台" width="95">
+</a></div>
+<a title="开源软件" class="item " href="https://gitee.com/explore">开源软件
+</a><a title="企业版" class="item " sa_evt="click_GiteeCommunity_tab_En" href="https://gitee.com/enterprises">企业版
+<img alt="&lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: zh-CN.特惠&quot;&gt;特惠&lt;/span&gt;" class="event-slogan-gif-label" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/label-6526af12dd82dc69d6473835a3190a41.gif">
+</a><a title="高校版" class="item " href="https://gitee.com/education">高校版
+</a><a title="私有云" class="item" target="_blank" href="https://gitee.cn/?utm_source=giteecom">私有云
+</a><a title="博客" class="item" id="gitee-blog" target="_blank" href="https://blog.gitee.com/?utm_sources=site_nav">博客
+</a><a title="持续集成流水线" class="item" id="gitee-go" target="_blank" href="https://gitee.com/features/gitee-go"><img width="29" height="16" style="margin-top:1px;" alt="持续集成流水线" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/giteego-6c61c00c7ee85e118ecfd749bb3b3c13.svg">
+</a><div class="dropdown item ui" id="my-gitee-dropdown" tabindex="0">
+<a href="https://gitee.com/">我的</a>
+<i class="dropdown icon"></i>
+<div class="menu" tabindex="-1">
+<div class="ui active dimmer inverted js-my-gitee-dropdown-loader">
+<div class="ui loader"></div>
+</div>
+<div class="header user-enterprises">
+<a class="pull-right" target="_blank" href="https://gitee.com/C-11nJxxs-web/dashboard/enterprises">全部</a>
+企业
+<span class="count"></span>
+</div>
+<div class="disabled item tip user-enterprises">
+无企业
+</div>
+<div class="header user-groups">
+<a class="pull-right" target="_blank" href="https://gitee.com/C-11nJxxs-web/dashboard/groups">全部</a>
+组织
+<span class="count"></span>
+</div>
+<div class="disabled item tip user-groups">
+无组织
+</div>
+<div class="header user-programs">
+项目
+<span class="count"></span>
+</div>
+<div class="disabled item tip user-programs">
+<span class="translation_missing" title="translation missing: zh-CN.layouts.header.empty_programs">Empty Programs</span>
+</div>
+<div class="header user-projects">
+<a class="pull-right" target="_blank" href="https://gitee.com/C-11nJxxs-web/projects">全部</a>
+仓库
+<span class="count"></span>
+</div>
+<div class="disabled item tip user-projects">
+无项目
+</div>
+</div>
+</div>
+<div class="center responsive-logo">
+<a href="https://gitee.com/"><img alt="Gitee — 基于 Git 的代码托管和研发协作平台" class="ui inline image" height="24" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/logo.svg" title="Gitee — 基于 Git 的代码托管和研发协作平台" width="85">
+<img alt="Gitee — 基于 Git 的代码托管和研发协作平台" class="ui inline black image" height="24" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/logo-black.svg" title="Gitee — 基于 Git 的代码托管和研发协作平台" width="85">
+</a></div>
+<div class="right menu userbar right-header" id="git-nav-user-bar">
+<form class="ui item" id="navbar-search-form" data-text-require="搜索关键字不能少于1个" data-text-filter="搜索格式不正确" action="https://gitee.com/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+<input type="hidden" name="type" id="navbar-search-type">
+<input type="hidden" name="fork_filter" id="fork_filter" value="on">
+<div class="ui search header-search">
+<input type="text" name="q" id="navbar-search-input" value="" class="prompt" placeholder="搜开源" autocomplete="off">
+<div class="results"></div></div>
+</form>
+
+<script>
+  var can_search_in_repo = 0,
+      repo = "",
+      reponame = "";
+  
+  $(function() {
+    var $search = $('#navbar-search-form .ui.search');
+    $search.search({
+      apiSettings: {
+        url: '/search/relative_project?q={query}',
+        onResponse: function (res) {
+          if (res && res.status === 200 && res.data) {
+            var query = htmlSafe($search.search('get value'));
+  
+            res.data.map(function (item) {
+              item.path_ns = '/' + item.path_ns;
+              item.icon = 'iconfont icon-project-public';
+            });
+            res.data.unshift({
+              name_ns: "在全站搜索 <b class='hl'>" + query +"</b> 相关项目",
+              path_ns: '/search?fork_filter=on&q=' + query,
+              icon: 'iconfont icon-search'
+            });
+            return res;
+          } else {
+            return { data: [] };
+          }
+        }
+      },
+      fields: {
+        results: 'data',
+        description: 'name_ns',
+        url: 'path_ns',
+        icon: 'icon'
+      },
+      minCharacters: 1,
+      maxResults: 10,
+      searchDelay: 250,
+      showNoResults: false,
+      transition: 'fade'
+    });
+  });
+</script>
+
+<div class="item ui dropdown empty" data-count-path="/notifications/unread_count" data-enable="" data-mark-notice-path="/notifications/mark" id="notice-dropdown" tabindex="0">
+<a class="remind-button" href="https://gitee.com/notifications"><i class="iconfont icon-remind"></i>
+<div class="notice-count total visible">1</div>
+</a><div class="notice-dropdown-panel menu" tabindex="-1" style="left: -222.575px;">
+<div class="notice-dropdown-panel-header">
+<div class="tab active" data-data-path="/notifications/notices?scope=referer" data-html-path="/notifications/referer" data-scope="referer">
+<div class="content">
+@ 我
+<div class="notice-count referer"></div>
+</div>
+</div>
+<div class="tab" data-data-path="/notifications/notices?scope=infos" data-html-path="/notifications/infos" data-scope="infos">
+<div class="content">
+通知
+<div class="notice-count infos"></div>
+</div>
+</div>
+<div class="tab" data-data-path="/notifications/notices?scope=messages" data-html-path="/notifications/messages" data-scope="messages">
+<div class="content">
+私信
+<div class="notice-count messages visible">1</div>
+</div>
+</div>
+</div>
+<div class="item notice-dropdown-panel-container">
+<div class="ui dimmer over active">
+<div class="ui loader"></div>
+</div>
+<div class="notice-list"></div>
+<div class="notice-dropdown-panel-blank">
+暂没有新消息
+</div>
+</div>
+<div class="notice-dropdown-panel-footer">
+<div class="action">
+<div class="side left">
+<a class="mark-notices" href="javascript: void(0);">当前标记为已读
+</a></div>
+<div class="side right">
+<a class="load-all" target="_blank" href="javascript: void(0);">查看全部
+</a></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="ui item" id="feature-update-notice">
+<div class="notice-update-icon">
+<a class="notice-update-popup click-knowed" title="" href="https://gitee.com/help/articles/4380"><img alt="功能更新" title="" class="bubl_icon bubl-off-icon" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/bulb_off-24ee940be20998aace89a3f040cbc704.svg" style="display: block;">
+<img alt="功能更新" title="" class="bubl_icon bubl-on-icon" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/bulb_on-3986b1dc417285398e3d15671bd8f261.svg" style="display: none;">
+</a></div>
+<div class="feature-update-notice-panel menu" style="left: -168.6px;">
+<div class="notice-img">
+<img alt="" title="" class="notice-img-show" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/333.gif">
+</div>
+<div class="notice-update-title">Gitee 已支持 CLA 协议签署</div>
+<div class="notice-update-des"><p>✍️第一方功能集成，签署流程更高效<br>
+📃内置可自定义的协议模板<br>
+⚖️让开源贡献也能有据可依</p></div>
+<div class="notice-btn-list d-flex-between">
+<button name="button" type="button" class="ui basic orange button btn-notice btn-knowed click-knowed" style="margin-right: 0">我知道了</button>
+<a class="ui button orange btn-notice btn-details click-knowed" target="_blank" href="https://gitee.com/help/articles/4380">查看详情</a>
+</div>
+</div>
+</div>
+
+<div class="ui dropdown link item" id="git-nav-create" tabindex="0">
+<i class="iconfont icon-add-thin"></i>
+<div class="right menu" tabindex="-1">
+<a class="item" href="https://gitee.com/projects/new"><i class="add square icon"></i>
+新建仓库
+</a><a class="item" href="https://gitee.com/C-11nJxxs-web/codes/new"><i class="code icon"></i>
+发布代码片段
+</a><a class="item" href="https://gitee.com/organizations/new"><i class="group icon"></i>
+创建组织
+</a><a class="item" sa_evt="click_GiteeCommunity_tab_plus_EnSignup" href="https://gitee.com/enterprises/new"><i class="icon iconfont icon-enterprise"></i>
+开通企业版
+</a><a class="item" href="https://gitee.com/projects/import/url"><i class="github icon"></i>
+从 GitHub / GitLab 导入仓库
+</a></div>
+</div>
+<div class="ui dropdown item" id="git-nav-user" tabindex="0">
+<img class="ui avatar image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAYAAAA4TnrqAAAAAXNSR0IArs4c6QAABPJJREFUeF7tmXtsFFUUxr/p9rXQbenSdtk+RCJBY7RIYon+oYk0oCZKkSBkqQkWfFWJSKMQSDSmEQpGEUiIrxY0IKQ2gUJMRGPRoInGSiA2Cr4gLet2u610YVva7nY75k6zQ7cLdU/n7iPxzH9tv3vmnN985865U6VtGVTwFRUBhWFFxUkTMazoWTEsAiuGxbAoBAha3rMYFoEAQcrOYlgEAgQpO4thEQgQpOwshkUgQJCysxgWgQBBys5iWAQCBCk7i2ERCBCk7CyGRSBAkEp1VnZZBSxlFVBMqYQUYiNVg8PwtR7Fldaj0m4gFVbBilrkL9kIJTVdWoKTDaQO+9HdvB2extcmGyJiHcMioJQKy7qoGrnla6CY0ggpRErTrEUwWabrfxj2ujF82UOKqQYD6G1pwKUv3yWtm0gsFZaMrARwW2UdTFNytHDBfi/cBzag96sPZYQ3FCOpYGXY56Ck5lNk3jx3tChVxeXvm3DxnRWGipS1OKlgFa/9GDn3VUJJMWn1+Tv/QPubSzDk/FVWvYbiJA0s66LnYFtZB9PUaVpBI/4BdDfVort5m6ECZS5OClhT5tyD4nUHkV4wS28/36nP0L59scxaDcdKOKwUswU3vXwYWXeWA4oy2n6eC3DuWomrv/9guECZARIOa/w+Jdrv0vE9GDh/ClfPfYfAP06Z9RqKlVBYNscW5D1aAyUtM6KIkQEfXPUvwHtyv6ECZS5OGKzxG7o6EoTf/ScyCm8d3eDHwMoovh3CgWLm8jS+mrD2TAis8aDEPNXX1oJATwdyF6yOgFWyvhE59z6u7WlBXw96jr2lnfvifcUdlgbKsQWmLKte62D7z7i406G1ZO6CNWGwxA8zVr2N1Oz8a2xUFQMXTqPr0Gb0nfkibsziCuu6oDra4Hr/Ga21iqrrI2CJPSvrrgdhc2yFedY8/Y0ZmsW8J/bCfXCT1raxvuIGK69iA/KXbtbPfKEJvXPfOvhOf67VeSNYIQg2xxuwPrQ2LIZoYX/XeXQfqUPviYaY8ooLLPvq3cgtfwop6Wa9mCHnWbjqn0f/L9/ov/svWEIoBlj7kzthnj0/zGVqYBBXfmyGe/8rMRs3YgpLDJxF1Q3Inv9Y2NfTwTGtN9YK0cCa0GVioBUuO7w1Ji6LGSzNAVW7Yb7l7msOEBvzX61w7qm67uGYAktAE3vZjMptyJw5N9xl4pPyT8cgWlzmUBsTWHmP1CB/6SaYLHm6ccQc1XfmuPbWu9FmTIUlggv32lftwLT7n4gYbodcv8H13tPoP/utlL1MKqy06cUofPYDZJUuDGs7cYTpbalH594XJ0x6MrBCAcXIUbD8dYgctEtVIfswLg2WGAtEsqk5tjAg4pOwp6k2qs+7RmCJm4pJ3161C1PveAD+v8+hY8dyqd/CpMESiZa8dAiZM0v1Jyvs3/XJxqiPJ0ZhhZ6SeGji6OQ9eUBK+4WCSIMlAlrmPay1odhHvF/vQ+dH60nJyoJFuilBLBWW9oYqXYiRQV/Ubprs6ECoUZpUOiwjmf3vnMWwjBAgrGVnMSwCAYKUncWwCAQIUnYWwyIQIEjNs8uQUXjb6Dk4GOD/GxLYJZ00qSb4pKMzLiGGRXhCDIthEQgQpOwshkUgQJCysxgWgQBBys5iWAQCBCk7i2ERCBCk7CyGRSBAkLKzGBaBAEHKziLA+hfpQtCMXaWcrQAAAABJRU5ErkJggg==" alt="不止于过去-C-11nJxxs-web">
+<i class="dropdown icon"></i>
+<div class="right menu" tabindex="-1">
+<a class="item" href="https://gitee.com/C-11nJxxs-web"><i class="iconfont icon-ic-home"></i>
+个人主页
+</a><a class="item" href="https://gitee.com/C-11nJxxs-web/starred"><i class="iconfont icon-star"></i>
+我的星选集
+</a><a class="item" sa_evt="recommenderClick" sa_click_location="头像-成为推荐官" href="https://gitee.com/profile/cps/overview"><img src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/cps_icon-9c17338b5d65451ce5190ddb75fce3c7.svg" alt="Cps icon">
+成为推荐官
+</a><a class="item" href="https://gitee.com/profile/account_information"><div class="mayun-icon my-ic-edit my-ic-edit-dims"></div>
+设置
+</a><div class="divider"></div>
+<a class="item" target="_blank" href="https://gitee.com/help"><div class="mayun-icon my-ic-help my-ic-help-dims"></div>
+帮助
+</a><div class="divider"></div>
+<a class="item destroy-user-session" rel="nofollow" data-method="delete" href="https://gitee.com/logout"><div class="mayun-icon my-ic-exit my-ic-exit-dims"></div>
+退出
+</a></div>
+</div>
+<script>
+  $('.destroy-user-session').on('click', function() {
+    $.cookie('access_token', null, { path: '/' });
+  })
+</script>
+
+</div>
+</div>
+</div>
+</header>
+<script>
+  Gitee.initNavbar()
+  Gitee.initRepoRemoteWay()
+  $.cookie('user_locale',null)
+</script>
+
+<script>
+  var userAgent = navigator.userAgent;
+  var isLessIE11 = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1;
+  if(isLessIE11){
+    var can_access = ""
+    if (can_access != "true"){
+      window.location.href = "/incompatible.html";
+    }
+  }
+</script>
+
+<div class="fixed-notice-infos">
+<div class="all-messages">
+<div class="ui info message" id="git-bulletin">
+<a href="https://wj.qq.com/s2/11022804/f3c0/" target="_blank">【有奖问卷】填写 OSCHINA 2022 中国开源开发者问卷，全套周边等你拿&gt;&gt;&gt;</a>
+<i class="icon remove" id="remove-bulletin"></i>
+</div>
+</div>
+<div class="ui container">
+<div class="flash-messages" id="messages-container"></div>
+</div>
+<script>
+  (function() {
+    $(function() {
+      var $error_box, alertTip, notify_content, notify_options, template;
+      template = '<div data-notify="container" class="ui {0} message" role="alert">' + '<i data-notify="dismiss" class="close icon"></i>' + '<span data-notify="message">{2}</span>' + '</div>';
+      notify_content = null;
+      notify_options = {};
+      alertTip = '';
+      $error_box = $(".flash_error.flash_error_box");
+      if (notify_options.type === 'error' && $error_box.length > 0 && !$.isEmptyObject(notify_content.message)) {
+        if (notify_content.message === 'captcha_fail') {
+          alertTip = "验证码不正确";
+        } else if (notify_content.message === 'captcha_expired') {
+          alertTip = "验证码已过期，请点击刷新";
+        } else if (notify_content.message === 'not_found_in_database') {
+          alertTip = "帐号或者密码错误";
+        } else if (notify_content.message === 'not_found_and_show_captcha') {
+          alertTip = "帐号或者密码错误";
+        } else if (notify_content.message === 'phone_captcha_fail') {
+          alertTip = "手机验证码不通过";
+        } else {
+          alertTip = notify_content.message;
+        }
+        return $error_box.html(alertTip).show();
+      } else if (notify_content) {
+        if ("edit" === 'third_party_binding') {
+          return $('#third_party_binding-message').html(notify_content.message).addClass('ui message red');
+        }
+        notify_options.delay = 3000;
+        notify_options.template = template;
+        notify_options.offset = {
+          x: 10,
+          y: 30
+        };
+        notify_options.element = '#messages-container';
+        return $.notify(notify_content, notify_options);
+      }
+    });
+  
+  }).call(this);
+</script>
+
+</div>
+<script>
+  (function() {
+    $(function() {
+      var setCookie;
+      setCookie = function(name, value) {
+        $.cookie(name, value, {
+          path: '/',
+          expires: 365
+        });
+      };
+      $('#remove-bulletin, #remove-bulletin-dashboard').on('click', function() {
+        setCookie('remove_bulletin', "gitee-maintain-1668593238");
+        $('#git-bulletin').hide();
+      });
+      $('#remove-member-bulletin').on('click', function() {
+        setCookie('remove_member_bulletin', "gitee_member_bulletin");
+        $(this).parent().hide();
+      });
+      return $('#remove-gift-bulletin').on('click', function() {
+        setCookie('remove_gift_bulletin', "gitee-gift-bulletin");
+        $(this).parent().hide();
+      });
+    });
+  
+  }).call(this);
+</script>
+<script>
+  function closeMessageBanner(pthis, type, val) {
+    var json = {}
+  
+    val = typeof val === 'undefined' ? null : val
+    $(pthis).parent().remove()
+    if (type === 'out_of_enterprise_member') {
+      json = {type: type, data: val}
+    } else if (type === 'enterprise_overdue') {
+      json = {type: type, data: val}
+    }
+    $.post('/profile/close_flash_tip', json)
+  }
+</script>
+
+<div class="site-content">
+<div class="git-project-header">
+<div class="fixed-notice-infos">
+<div class="ui info icon floating message green" id="fetch-ok" style="display: none">
+<div class="content">
+<div class="header status-title">
+<i class="info icon status-icon"></i>
+代码拉取完成，页面将自动刷新
+</div>
+</div>
+</div>
+<div class="ui info icon floating message error" id="fetch-error" style="display: none">
+<div class="content">
+<div class="header status-title">
+<i class="info icon status-icon"></i>
+<span class="error_msg"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="ui container">
+
+<div class="git-project-header-details">
+<div class="git-project-header-container">
+<div class="git-project-header-actions">
+<span class="ui buttons basic watch-container">
+<div class="ui dropdown button js-project-watch" data-watch-type="watching" tabindex="0">
+<input type="hidden" value="watching">
+<i class="iconfont icon-watch"></i>
+<div class="text">Watching</div>
+<i class="dropdown icon"></i>
+<div class="menu" tabindex="-1">
+<a data-value="unwatch" class="item" data-remote="true" rel="nofollow" data-method="post" href="https://gitee.com/C-11nJxxs-web/study/unwatch"><i class="iconfont icon-msg-read"></i>
+不关注
+</a><a data-value="watching" class="item active selected" data-remote="true" rel="nofollow" data-method="post" href="https://gitee.com/C-11nJxxs-web/study/watch"><i class="iconfont icon-msg-read"></i>
+关注所有动态
+</a><a data-value="releases_only" class="disabled item" data-remote="true" rel="nofollow" data-method="post" href="https://gitee.com/C-11nJxxs-web/study/release_only_watch"><i class="iconfont icon-msg-read"></i>
+仅关注版本发行动态
+</a><a data-value="ignoring" class="item" data-remote="true" rel="nofollow" data-method="post" href="https://gitee.com/C-11nJxxs-web/study/ignoring_watch"><i class="iconfont icon-msg-read"></i>
+关注但不提醒动态
+</a></div>
+</div>
+<style>
+  .js-project-watch .text .iconfont {
+    display: none; }
+  .js-project-watch a, .js-project-watch a:hover {
+    color: #000; }
+  .js-project-watch .item > .iconfont {
+    visibility: hidden;
+    margin-left: -10px; }
+  .js-project-watch .selected .iconfont {
+    visibility: visible; }
+  .js-project-watch .menu {
+    margin-top: 4px !important; }
+</style>
+<script>
+  $('.js-project-watch').dropdown({
+    action: 'select',
+    onChange: function(value, text, $selectedItem) {
+      var type = value === 'unwatch' ? 'Watch' : 'Watching';
+      $(this).children('.text').text(type);
+      $(this).dropdown('set selected', value)
+    }
+  });
+</script>
+
+<a class="ui button action-social-count" title="1" href="https://gitee.com/C-11nJxxs-web/study/watchers">1
+</a></span>
+<span class="basic buttons star-container ui">
+<a class="ui button unstar disabled" sa_evt="clickStar" sa_location="其他" sa_url="" sa_repo_id="25569735" data-remote="true" rel="nofollow" data-method="post" href="https://gitee.com/C-11nJxxs-web/study/unstar"><i class="iconfont icon-star-solid"></i>
+Starred
+</a><a class="ui button star disabled" sa_evt="clickStar" sa_location="其他" sa_url="" sa_repo_id="25569735" data-remote="true" rel="nofollow" data-method="post" href="https://gitee.com/C-11nJxxs-web/study/star"><i class="iconfont icon-star"></i>
+Star
+</a><a class="ui button action-social-count disabled" title="0" href="https://gitee.com/C-11nJxxs-web/study/stargazers">0
+</a></span>
+<span class="ui basic buttons fork-container" title="">
+<a id="fork-top-button" class="ui button fork " sa_evt="repoFork" sa_repo_id="25569735" sa_is_self="true" sa_is_member="true" href="https://gitee.com/C-11nJxxs-web/study/edit/master/%E6%89%AB%E9%9B%B7(%E5%B7%B2%E4%BC%98%E5%8C%96%EF%BC%89/%E6%89%AB%E9%9B%B7/game.c#"><i class="iconfont icon-fork"></i>
+Fork
+</a><a class="ui button action-social-count " title="0" href="https://gitee.com/C-11nJxxs-web/study/members">0
+</a></span>
+</div>
+<h2 class="git-project-title mt-0 mb-0">
+<span class="project-title"><i class="project-icon iconfont icon-lock" title="这是一个私有仓库"></i> <a title="不止于过去" class="author" href="https://gitee.com/C-11nJxxs-web">不止于过去</a> / <a title="study " class="repository" target="" style="padding-bottom: 0px; margin-right: 4px" sa_evt="repoClick" sa_location="其他" sa_url="" sa_repo_id="25569735" href="https://gitee.com/C-11nJxxs-web/study">study </a></span><span class="project-badges"><style>
+  .gitee-modal {
+    width: 500px !important; }
+</style>
+</span>
+<input type="hidden" name="project_title" id="project_title" value="不止于过去/study ">
+</h2>
+</div>
+</div>
+</div>
+
+<script>
+  var title_import_url = "false";
+  var title_post_url = "/C-11nJxxs-web/study/update_import";
+  var title_fork_url = "/C-11nJxxs-web/study/sync_fork";
+  var title_project_path = "study";
+  var title_p_name = "study ";
+  var title_p_id= "25569735";
+  var title_description = "DESKTOP";
+  var title_form_authenticity_token = "DaPCjEJKi2rp9n4xJUW4GaW9fWEu3rFBaUY+jbW/OkunSRAL+YXcKahcpYJ01xhGC50bpcfc1KmFrvA8ubfPuw==";
+  var watch_type = "watching";
+  var checkFirst = false;
+  
+  $('.js-project-watch').dropdown('set selected', watch_type);
+  $('.checkbox.sync-wiki').checkbox();
+  $('.checkbox.team-member-checkbox').checkbox();
+</script>
+<script>
+  $(function () {
+    // SemticUI 校验表单等地方要求直接return 值, 对异步支持非常不友好...
+    // 从提交表单处 再用异步校验 ,控制是否提交
+    var $modalFork = $('#modal-fork-project');
+    var $okBtn = $modalFork.find('.ui.ok.button');
+    var $currentTarget = null;
+    var isSameProject = false;
+  
+    $('#fork-top-button, #fork-btm-button').on('click', function (e) {
+      e.preventDefault();
+      $modalFork.modal('show');
+      setTimeout(function () {
+        $.ajax({ url: '/C-11nJxxs-web/study/fork_project_info' }).done(function () {
+          // 自定义错误消息模板,  inline : true 每个输入框后面都插入消息提示, 而非集中到一处提醒
+          $.fn.form.settings.templates.prompt = function (errors) {
+            return $('<div />').addClass('ui error message custom prompt label').html(errors[0]);
+          };
+          // 表单的内容是异步传输的js动态生成的....
+          var $repoForm = $('#modal-fork-project .repo-form');
+          $repoForm.form({
+            on: 'change',
+            inline: true,
+            fields: {
+              projectName: {
+                identifier: 'project-name',
+                rules: [
+                  {
+                    type: 'empty',
+                    prompt: "仓库名不能为空"
+                  },
+                  {
+                    type: 'regExp',
+                    value: window.giteeRegex.projectName,
+                    prompt: "仓库名只允许包含中文、字母、数字或者下划线(_)、中划线(-)、英文句号(.)、加号(+)，必须以字母或数字开头，不能以下划线/中划线结尾，且长度为2~191个字符"
+                  },
+                  {
+                    type: 'maxLength[255]',
+                    prompt: "仓库名只允许包含中文、字母、数字或者下划线(_)、中划线(-)、英文句号(.)、加号(+)，必须以字母或数字开头，不能以下划线/中划线结尾，且长度为2~191个字符"
+                  }
+                ]
+              },
+              projectPath: {
+                identifier: 'project-path',
+                rules: [
+                  {
+                    type: 'empty',
+                    prompt: "路径不能为空"
+                  },
+                  {
+                    type: 'regExp',
+                    value: window.giteeRegex.projectPath,
+                    prompt: "路径只允许包含字母、数字或者下划线(_)、中划线(-)、英文句号(.)，必须以字母或数字开头，且长度为2~191个字符"
+                  }
+                ]
+              }
+            }
+          });
+  
+          $modalFork.find('.namespace-img-area.ui.checkbox').checkbox({
+            onChecked: function () {
+              $currentTarget = $(this).closest('.ui.checkbox');
+              // 当前选中的空间
+              isSameProject = $currentTarget[0].hasAttribute('data-any-same-projects');
+              var conflictProjectName = $currentTarget.data('conflict-project-title');
+              var conflictProjectUrl = $currentTarget.data('conflict-project-url');
+              var conflictProjectNameSpacePath = $currentTarget.data('conflict-namespace');
+              var conflictPathType = $currentTarget.find('.path-type').text();
+              // fork目标
+              var targetProjectName = $currentTarget.data('target-project-name');
+              var targetProjectPath = $currentTarget.data('target-project-path');
+              // 命名空间名称(@xxx)
+              var conflictNameSpaceName = $currentTarget.find('.path-name').text();
+              var $forkTargetNamespace = $('.fork-target-namespace-area');
+              var $forkTargetNamespaceItem = $(this).closest('.fork-target-namespace-item')
+              // 冲突 显示修改表单
+              if (isSameProject) {
+                //$forkTargetNamespace.addClass('same-name-editing');
+                $('.fork-target-namespace-item').removeClass('same-name-editing')
+                $forkTargetNamespaceItem.addClass('same-name-editing')
+                $forkTargetNamespace
+                  .find('.conflict-namespace-name')
+                  .attr('href', `/${conflictProjectNameSpacePath}`)
+                  .text(conflictNameSpaceName);
+                $forkTargetNamespace
+                  .find('.conflict-path')
+                  .attr('href', `${conflictProjectUrl}`)
+                  .text(`${conflictProjectNameSpacePath}/${targetProjectPath}`);
+                $forkTargetNamespace
+                  .find('.prefix-path')
+                  .text(`${window.location.origin}/${conflictProjectNameSpacePath}/`);
+                $forkTargetNamespace
+                  .find('.conflict-path-type')
+                  .text(conflictPathType.toLowerCase())
+                var $nameInput = $forkTargetNamespace.find('[name="project-name"]');
+                var $pathInput = $forkTargetNamespace.find('[name="project-path"]');
+                $nameInput.val(targetProjectName);
+                $pathInput.val(targetProjectPath);
+                checkFirst = true
+                // 立即校验一次
+                asyncValidateForkRepoForm();
+              } else {
+                $('.fork-target-namespace-item').removeClass('same-name-editing')
+                $forkTargetNamespaceItem.addClass('same-name-editing');
+              }
+              $okBtn.removeClass('disabled');
+            }
+          });
+        });
+      }, 500);
+    });
+    // 异步校验
+    function asyncValidateForkRepoForm (successCallback) {
+      var $repoForm = $('#modal-fork-project .same-name-editing .repo-form');
+      var $forkTargetNamespace = $('.fork-target-namespace-area .same-name-editing');
+      var $nameInput = $forkTargetNamespace.find('[name="project-name"]');
+      var $pathInput = $forkTargetNamespace.find('[name="project-path"]');
+      var name = $nameInput.val().trim();
+      var path = $pathInput.val().trim();
+      var namespace = $currentTarget ? $currentTarget.data('conflict-namespace') : '';
+      if (!name || !path) return;
+      $okBtn.addClass('loading');
+      $.ajax('/projects/check_fork_form', {
+        type: 'get',
+        data: { project_name: name, project_path: path, target_namespaces: namespace },
+        success: function (data) {
+          if (data.status == 0) {
+            successCallback && successCallback();
+          } else if (data.status == -1 && Array.isArray(data.conflict_keys)) {
+            if (!checkFirst) {
+              data.conflict_keys.includes('name') && $repoForm.form('add prompt', 'project-name', "已存在相同仓库名");
+              data.conflict_keys.includes('path') && $repoForm.form('add prompt', 'project-path', "已存在相同路径");
+            } else {
+              data.conflict_keys.includes('name') && data.new_name && $nameInput.val(data.new_name);
+              data.conflict_keys.includes('path') && data.new_path && $pathInput.val(data.new_path);
+            }
+          } else {
+            Flash.error("校验失败");
+          }
+          checkFirst = false
+        },
+        error: function (err) {
+          Flash.error(err.responseJSON.message);
+        },
+        complete: function () {
+          $okBtn.removeClass('loading');
+          // 添加提示 弹窗变高后 刷新弹窗位置
+          $modalFork.modal('refresh');
+        }
+      });
+    }
+    function forkSubmit () {
+      $modalFork.modal('hide');
+      // 构造一些 input 用于表单提交
+      var $form = $('<form></form>');
+      var $input = $('<input type="hidden" name="authenticity_token" />');
+      var $inputCheck = $('<input type="hidden" name="members" />');
+      var $inputCheck2 = $('<input type="hidden" name="namespace_path" />');
+      var checkedPath = $('.checkbox.checked > input[name=namespace_path]').val();
+      // fork存在冲突, 修改后的表单:
+      if (isSameProject) {
+        // 获取最新表单数据
+        var $forkTargetNamespace = $('.fork-target-namespace-area .same-name-editing');
+        var name = $forkTargetNamespace.find('[name="project-name"]').val().trim();
+        var path = $forkTargetNamespace.find('[name="project-path"]').val().trim();
+        var $projectName = $('<input type="hidden" name="name" />');
+        var $projectPath = $('<input type="hidden" name="path" />');
+        $projectName.val(name);
+        $projectPath.val(path);
+        $form.append($projectName);
+        $form.append($projectPath);
+      }
+      $form.hide();
+      $form.attr('method', 'post');
+      $form.attr('action', '/' + checkedPath + '/fork_project/C-11nJxxs-web/study');
+      $input.attr('value', $('meta[name="csrf-token"]').attr('content'));
+      $inputCheck.attr('value', $('.checkbox.checked > input[name=members]').val());
+      $inputCheck2.attr('value', checkedPath);
+      $form.append($input);
+      $form.append($inputCheck);
+      $form.append($inputCheck2);
+      $form.appendTo('body');
+      $form.submit();
+    }
+    $modalFork.modal({
+      transition: 'fade',
+      closable: true,
+      centered: false,
+      observeChanges:true,
+      onApprove: function () {
+        // 存在同名冲突时, 需要修改仓库信息, 再进行校验同名
+        // 判断当前选中的空间类型, 用于决定是否需要修改路径仓库名,验证表单
+        if (isSameProject) {
+          var $repoForm = $('#modal-fork-project .same-name-editing .repo-form');
+          $repoForm.form('validate form');
+          var isRepoInfoValid = $repoForm.form('is valid'); // 前端校验通过
+          // 由于是form提交和ajax检测结合..., 防止意外篡改 提交前必定校验一次, 通过后自动submit
+          if (isRepoInfoValid) {
+            // SemticUI add prompt 自定义验证连续执行太快, 会消失掉重复再出现再消失.
+            setTimeout(function () {
+              asyncValidateForkRepoForm(function () {
+                forkSubmit();
+              });
+            }, 200);
+          } else {
+            $repoForm.form('validate form');
+          }
+        } else {
+          // 正常 frok
+          forkSubmit();
+        }
+        return false;
+      }
+    });
+    $modalFork.find('.close-button').on('click', function () {
+      $modalFork.modal('hide');
+    });
+  });
+</script>
+<style>
+  i.loading, .icon-sync.loading {
+    -webkit-animation: icon-loading 1.2s linear infinite;
+    animation: icon-loading 1.2s linear infinite;
+  }
+  .qrcode_cs {
+    float: left;
+  }
+  .check-sync-wiki {
+    float: left;
+    height: 28px;
+    line-height: 28px;
+  }
+  .sync-wiki-warn {
+    color: #e28560;
+  }
+</style>
+
+
+<div class="git-project-nav">
+<div class="ui container">
+<div class="ui secondary pointing menu">
+<a class="item active" href="https://gitee.com/C-11nJxxs-web/study"><i class="iconfont icon-code"></i>
+代码
+</a><a class="item " href="https://gitee.com/C-11nJxxs-web/study/issues"><i class="iconfont icon-task"></i>
+Issues
+<span class="ui mini circular label">
+0
+</span>
+</a><a class="item " href="https://gitee.com/C-11nJxxs-web/study/pulls"><i class="iconfont icon-pull-request"></i>
+Pull Requests
+<span class="ui mini circular label">
+0
+</span>
+</a><a class="item " href="https://gitee.com/C-11nJxxs-web/study/wikis"><i class="iconfont icon-wiki"></i>
+Wiki
+</a><a class="item  " href="https://gitee.com/C-11nJxxs-web/study/repository/stats/master"><i class="iconfont icon-statistics"></i>
+统计
+</a><a class="item " href="https://gitee.com/C-11nJxxs-web/study/gitee_go"><i class="iconfont icon-workflow"></i>
+流水线
+</a><div class="item">
+<div class="ui pointing top right dropdown git-project-service" tabindex="0">
+<div>
+<i class="iconfont icon-service"></i>
+服务
+<i class="dropdown icon"></i>
+</div>
+<div class="menu" style="display:none" tabindex="-1">
+<a class="item" href="https://gitee.com/C-11nJxxs-web/study/pages"><img src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/logo-en.svg" alt="Logo en">
+<div class="item-title">
+Gitee Pages
+</div>
+</a><a class="item" href="https://gitee.com/C-11nJxxs-web/study/javadoc"><img src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/maven-bd58aee84f266d64d4b8ce5b006a9fcf.png" alt="Maven">
+<div class="item-title">
+JavaDoc
+</div>
+</a><a class="item" href="https://gitee.com/C-11nJxxs-web/study/phpdoc"><img src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/phpdoc-a99f87c2feaa2fd99e5065377a39487e.png" alt="Phpdoc">
+<div class="item-title">
+PHPDoc
+</div>
+</a><a class="item" href="https://gitee.com/C-11nJxxs-web/study/quality_analyses?platform=sonar_qube"><img src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/sonar_mini-5e1b54bb9f6c951d97fb778ef623afea.png" alt="Sonar mini">
+<div class="item-title">
+质量分析
+</div>
+</a><a class="item" href="https://gitee.com/C-11nJxxs-web/study/quality_analyses?platform=codesafe"><img width="100%" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/codesafe_mini-accbe1e555e9864c552620240d10e4de.png" alt="Codesafe mini">
+<div class="item-title">
+奇安信代码卫士
+</div>
+</a><a class="item" href="https://gitee.com/C-11nJxxs-web/study/gitee_scans"><img src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/giteescan-cd9ab4076bd751faf7e30888eb10f782.png" alt="Giteescan">
+<div class="item-title">Gitee Scan</div>
+</a><a class="item" target="_blank" href="https://gitee.com/help/articles/4193"><img src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/jenkins_for_gitee-554ec65c490d0f1f18de632c48acc4e7.png" alt="Jenkins for gitee">
+<div class="item-title">
+Jenkins for Gitee
+</div>
+</a><a class="item" target="_blank" href="https://gitee.com/help/articles/4285"><img src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/baidu_efficiency_cloud-81a98c2eb67fac83b1453ca3d2feb326.svg" alt="Baidu efficiency cloud">
+<div class="item-title">
+百度效率云
+</div>
+</a><a class="item" target="_blank" href="https://gitee.com/help/articles/4318"><img src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/cloudbase-1197b95ea3398aff1df7fe17c65a6d42.png" alt="Cloudbase">
+<div class="item-title">
+腾讯云托管
+</div>
+</a><a class="item" target="_blank" href="https://gitee.com/help/articles/4330"><img src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/cloud_serverless-686cf926ced5d6d2f1d6e606d270b81e.png" alt="Cloud serverless">
+<div class="item-title">
+腾讯云 Serverless
+</div>
+</a><a class="item" href="https://gitee.com/C-11nJxxs-web/study/open_sca"><img src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/logo-9049ced662b2f9936b8001e6f9cc4952.png" alt="Logo">
+<div class="item-title">
+悬镜安全
+</div>
+</a><button class="ui orange basic button quit-button" id="quiting-button">
+我知道了，不再自动展开
+</button>
+</div>
+</div>
+</div>
+<a class="item d-flex d-flex-center " href="https://gitee.com/C-11nJxxs-web/study/settings"><i class="iconfont icon-settings"></i>
+<div class="text ml-05 setting-text">管理</div>
+</a></div>
+</div>
+</div>
+<script>
+  $('.git-project-nav .ui.dropdown').dropdown({ action: 'nothing' });
+  var gitee_reward_config = JSON.parse(localStorage.getItem('gitee_reward_config') || null) || false
+  var $settingText = $('.setting-text')
+  // 如果没有访问过
+  if(!gitee_reward_config) $settingText.addClass('red-dot')
+</script>
+<style>
+  .git-project-nav i.checkmark.icon {
+    color: green;
+  }
+  #quiting-button {
+    display: none;
+  }
+  
+  .git-project-nav .dropdown .menu.hidden:after {
+    visibility: hidden !important;
+  }
+</style>
+<script>
+  isSignIn = true
+  isClickGuide = true
+  $('#git-versions.dropdown').dropdown();
+  $.ajax({
+    url:"/C-11nJxxs-web/study/access/add_access_log",
+    type:"GET"
+  });
+  $('#quiting-button').on('click',function() {
+    $('.git-project-service').click();
+    if (isSignIn) {
+      $.post("/projects/set_service_guide")
+    }
+    $.cookie("Serve_State", true, { expires: 3650, path: '/'})
+    $('#quiting-button').hide();
+  });
+  if (!(isClickGuide || $.cookie("Serve_State") == 'true')) {
+    $('.git-project-service').click()
+    $('#quiting-button').show()
+  }
+</script>
+
+</div>
+<div class="ui container">
+<form action="https://gitee.com/C-11nJxxs-web/study/edit/master/%E6%89%AB%E9%9B%B7(%E5%B7%B2%E4%BC%98%E5%8C%96%EF%BC%89/%E6%89%AB%E9%9B%B7/game.c" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="authenticity_token" value="hXqtm6bWcP3bd5bi88JzvO7IqB6bEtfjNmPRZJV9gq0vkH8cHRknvprdTVGiUNPjQOjO2nIQsgvaix/VmXV3XQ==">
+<link rel="stylesheet" media="all" href="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/editor-44a51c1d9f3a36ad52fc1bbbd61822cc.css">
+<link rel="stylesheet" media="all" href="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/markdown_image_upload-98ec6ef3398753ec82bb.css">
+<div class="ui form blob-form" id="js-blob-form">
+<div class="field blob-form__path-wrapper">
+<div class="blob-form__license-select">
+<div class="ui search dropdown selection"><select id="js-license-select" name="license">
+<option value="no">请选择开源许可证</option>
+<option value="MulanPSL-2.0">MulanPSL-2.0</option>
+<option value="0BSD">0BSD</option>
+<option value="AFL-3.0">AFL-3.0</option>
+<option value="AGPL-3.0">AGPL-3.0</option>
+<option value="Apache-2.0">Apache-2.0</option>
+<option value="Artistic-2.0">Artistic-2.0</option>
+<option value="BSD-2-Clause">BSD-2-Clause</option>
+<option value="BSD-3-Clause">BSD-3-Clause</option>
+<option value="BSD-3-Clause-Clear">BSD-3-Clause-Clear</option>
+<option value="BSL-1.0">BSL-1.0</option>
+<option value="CC-BY-4.0">CC-BY-4.0</option>
+<option value="CC-BY-SA-4.0">CC-BY-SA-4.0</option>
+<option value="CC0-1.0">CC0-1.0</option>
+<option value="ECL-2.0">ECL-2.0</option>
+<option value="EPL-1.0">EPL-1.0</option>
+<option value="EPL-2.0">EPL-2.0</option>
+<option value="EUPL-1.1">EUPL-1.1</option>
+<option value="EUPL-1.2">EUPL-1.2</option>
+<option value="GPL-2.0">GPL-2.0</option>
+<option value="GPL-3.0">GPL-3.0</option>
+<option value="ISC">ISC</option>
+<option value="LGPL-2.1">LGPL-2.1</option>
+<option value="LGPL-3.0">LGPL-3.0</option>
+<option value="LPPL-1.3c">LPPL-1.3c</option>
+<option value="MIT">MIT</option>
+<option value="MPL-2.0">MPL-2.0</option>
+<option value="MS-PL">MS-PL</option>
+<option value="MS-RL">MS-RL</option>
+<option value="MulanPSL-1.0">MulanPSL-1.0</option>
+<option value="MulanPubL-1.0">MulanPubL-1.0</option>
+<option value="MulanPubL-2.0">MulanPubL-2.0</option>
+<option value="NCSA">NCSA</option>
+<option value="OFL-1.1">OFL-1.1</option>
+<option value="OSL-3.0">OSL-3.0</option>
+<option value="PostgreSQL">PostgreSQL</option>
+<option value="UPL-1.0">UPL-1.0</option>
+<option value="Unlicense">Unlicense</option>
+<option value="WTFPL">WTFPL</option>
+<option value="Zlib">Zlib</option>
+
+</select><i class="dropdown icon"></i><input class="search" autocomplete="off" tabindex="0"><div class="text">请选择开源许可证</div><div class="menu" tabindex="-1"><div class="item active selected" data-value="no">请选择开源许可证</div><div class="item" data-value="MulanPSL-2.0">MulanPSL-2.0</div><div class="item" data-value="0BSD">0BSD</div><div class="item" data-value="AFL-3.0">AFL-3.0</div><div class="item" data-value="AGPL-3.0">AGPL-3.0</div><div class="item" data-value="Apache-2.0">Apache-2.0</div><div class="item" data-value="Artistic-2.0">Artistic-2.0</div><div class="item" data-value="BSD-2-Clause">BSD-2-Clause</div><div class="item" data-value="BSD-3-Clause">BSD-3-Clause</div><div class="item" data-value="BSD-3-Clause-Clear">BSD-3-Clause-Clear</div><div class="item" data-value="BSL-1.0">BSL-1.0</div><div class="item" data-value="CC-BY-4.0">CC-BY-4.0</div><div class="item" data-value="CC-BY-SA-4.0">CC-BY-SA-4.0</div><div class="item" data-value="CC0-1.0">CC0-1.0</div><div class="item" data-value="ECL-2.0">ECL-2.0</div><div class="item" data-value="EPL-1.0">EPL-1.0</div><div class="item" data-value="EPL-2.0">EPL-2.0</div><div class="item" data-value="EUPL-1.1">EUPL-1.1</div><div class="item" data-value="EUPL-1.2">EUPL-1.2</div><div class="item" data-value="GPL-2.0">GPL-2.0</div><div class="item" data-value="GPL-3.0">GPL-3.0</div><div class="item" data-value="ISC">ISC</div><div class="item" data-value="LGPL-2.1">LGPL-2.1</div><div class="item" data-value="LGPL-3.0">LGPL-3.0</div><div class="item" data-value="LPPL-1.3c">LPPL-1.3c</div><div class="item" data-value="MIT">MIT</div><div class="item" data-value="MPL-2.0">MPL-2.0</div><div class="item" data-value="MS-PL">MS-PL</div><div class="item" data-value="MS-RL">MS-RL</div><div class="item" data-value="MulanPSL-1.0">MulanPSL-1.0</div><div class="item" data-value="MulanPubL-1.0">MulanPubL-1.0</div><div class="item" data-value="MulanPubL-2.0">MulanPubL-2.0</div><div class="item" data-value="NCSA">NCSA</div><div class="item" data-value="OFL-1.1">OFL-1.1</div><div class="item" data-value="OSL-3.0">OSL-3.0</div><div class="item" data-value="PostgreSQL">PostgreSQL</div><div class="item" data-value="UPL-1.0">UPL-1.0</div><div class="item" data-value="Unlicense">Unlicense</div><div class="item" data-value="WTFPL">WTFPL</div><div class="item" data-value="Zlib">Zlib</div></div></div>
+</div>
+<div class="blob-form__path">
+<i class="iconfont icon-file"></i>
+<a href="https://gitee.com/C-11nJxxs-web/study">study </a>
+<span class="blob-form__dirpath" id="js-file-dirpath">/ 扫雷(已优化） / 扫雷 / </span>
+<input class="blob-form__path-input" id="file_name" name="file_name" placeholder="文件名称或文件路径" value="game.c">
+<span class="ml-1">
+<strong>
+提示:
+</strong>
+输入 / 可以将文件创建到新文件夹下
+</span>
+</div>
+</div>
+<div class="ui warning message blob-form__draft-message">
+上次编辑的内容尚未保存，是否继续编辑？
+<div class="pull-right actions">
+<a class="ui orange button">继续编辑</a>
+<a class="ui blank button">删除草稿</a>
+</div>
+</div>
+<div class="image-upload-container"><h4 class="header">
+    待提交图片列表
+  </h4> <div class="ui basic orange button">
+    上传图片
+  </div> <p class="description">
+    下列图片将在点击“提交”后保存至仓库中
+  </p> <ul class="padding-0"></ul> <!----></div>
+<div>
+<div class="field blob-form__md-editor">
+<textarea id="js-md-editor"></textarea>
+</div>
+<div class="field blob-form__monaco-editor">
+<div class="ui inverted dimmer" id="js-editor-loader">
+<div class="ui text loader">
+正在加载编辑器...
+</div>
+</div>
+<div class="monaco-editor-container" id="js-editor-container" data-keybinding-context="1" data-mode-id="c"><div class="monaco-editor vs" style="width: 1198px; height: 478px;"><div data-mprt="3" class="overflow-guard" style="width: 1198px; height: 478px;"><div class="margin monaco-editor-background" role="presentation" aria-hidden="true" data-transform="translate3d(0px, -3000px, 0px)" style="position: absolute; transform: translate3d(0px, -3000px, 0px); top: 0px; height: 5532px; width: 48px;"><div class="glyph-margin" style="left: 0px; width: 0px; height: 5532px;"></div><div class="margin-view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div><div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; width: 48px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; line-height: 19px; height: 5532px;"><div linenumber="158" style="position:absolute;top:2983px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">158</div></div><div linenumber="159" style="position:absolute;top:3002px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">159</div></div><div linenumber="160" style="position:absolute;top:3021px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">160</div></div><div linenumber="161" style="position:absolute;top:3040px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">161</div></div><div linenumber="162" style="position:absolute;top:3059px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">162</div></div><div linenumber="163" style="position:absolute;top:3078px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">163</div></div><div linenumber="164" style="position:absolute;top:3097px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">164</div></div><div linenumber="165" style="position:absolute;top:3116px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">165</div></div><div linenumber="166" style="position:absolute;top:3135px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">166</div></div><div linenumber="167" style="position:absolute;top:3154px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">167</div></div><div linenumber="168" style="position:absolute;top:3173px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">168</div></div><div linenumber="169" style="position:absolute;top:3192px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">169</div></div><div linenumber="170" style="position:absolute;top:3211px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">170</div></div><div linenumber="171" style="position:absolute;top:3230px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">171</div></div><div linenumber="172" style="position:absolute;top:3249px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">172</div></div><div linenumber="173" style="position:absolute;top:3268px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">173</div></div><div linenumber="174" style="position:absolute;top:3287px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">174</div></div><div linenumber="175" style="position:absolute;top:3306px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">175</div></div><div linenumber="176" style="position:absolute;top:3325px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">176</div></div><div linenumber="177" style="position:absolute;top:3344px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">177</div></div><div linenumber="178" style="position:absolute;top:3363px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">178</div></div><div linenumber="179" style="position:absolute;top:3382px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">179</div></div><div linenumber="180" style="position:absolute;top:3401px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">180</div></div><div linenumber="181" style="position:absolute;top:3420px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">181</div></div><div linenumber="182" style="position:absolute;top:3439px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">182</div></div><div linenumber="183" style="position:absolute;top:3458px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">183</div></div><div linenumber="184" style="position:absolute;top:3477px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">184</div></div></div></div><div class="monaco-scrollable-element editor-scrollable vs" role="presentation" data-mprt="5" style="position: absolute; overflow: hidden; left: 48px; width: 1150px; height: 478px;"><div class="lines-content monaco-editor-background" data-transform="translate3d(0px, -3000px, 0px)" style="position: absolute; overflow: hidden; width: 1e+06px; height: 1e+06px; transform: translate3d(0px, -3000px, 0px); top: 0px; left: 0px;"><div class="view-overlays" role="presentation" aria-hidden="true" style="position: absolute; width: 1483px; height: 0px;"><div linenumber="158" style="position:absolute;top:2983px;width:100%;height:19px;"></div><div linenumber="159" style="position:absolute;top:3002px;width:100%;height:19px;"></div><div linenumber="160" style="position:absolute;top:3021px;width:100%;height:19px;"></div><div linenumber="161" style="position:absolute;top:3040px;width:100%;height:19px;"></div><div linenumber="162" style="position:absolute;top:3059px;width:100%;height:19px;"></div><div linenumber="163" style="position:absolute;top:3078px;width:100%;height:19px;"></div><div linenumber="164" style="position:absolute;top:3097px;width:100%;height:19px;"></div><div linenumber="165" style="position:absolute;top:3116px;width:100%;height:19px;"></div><div linenumber="166" style="position:absolute;top:3135px;width:100%;height:19px;"></div><div linenumber="167" style="position:absolute;top:3154px;width:100%;height:19px;"></div><div linenumber="168" style="position:absolute;top:3173px;width:100%;height:19px;"></div><div linenumber="169" style="position:absolute;top:3192px;width:100%;height:19px;"></div><div linenumber="170" style="position:absolute;top:3211px;width:100%;height:19px;"></div><div linenumber="171" style="position:absolute;top:3230px;width:100%;height:19px;"></div><div linenumber="172" style="position:absolute;top:3249px;width:100%;height:19px;"></div><div linenumber="173" style="position:absolute;top:3268px;width:100%;height:19px;"></div><div linenumber="174" style="position:absolute;top:3287px;width:100%;height:19px;"></div><div linenumber="175" style="position:absolute;top:3306px;width:100%;height:19px;"><div class="current-line" style="width:1483px; height:19px;"></div></div><div linenumber="176" style="position:absolute;top:3325px;width:100%;height:19px;"></div><div linenumber="177" style="position:absolute;top:3344px;width:100%;height:19px;"></div><div linenumber="178" style="position:absolute;top:3363px;width:100%;height:19px;"></div><div linenumber="179" style="position:absolute;top:3382px;width:100%;height:19px;"></div><div linenumber="180" style="position:absolute;top:3401px;width:100%;height:19px;"></div><div linenumber="181" style="position:absolute;top:3420px;width:100%;height:19px;"></div><div linenumber="182" style="position:absolute;top:3439px;width:100%;height:19px;"></div><div linenumber="183" style="position:absolute;top:3458px;width:100%;height:19px;"></div><div linenumber="184" style="position:absolute;top:3477px;width:100%;height:19px;"></div></div><div class="view-rulers"></div><div class="view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div><div class="view-lines" role="presentation" aria-hidden="true" data-mprt="7" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; line-height: 19px; width: 1483px; height: 5532px;"><div linenumber="158" style="top:2983px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Eluminate_(mine,&nbsp;show,&nbsp;ROW,&nbsp;COL);</span></span></div><div linenumber="159" style="top:3002px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(</span><span class="mtk20">"你寄了，看看哪里有炸弹吧！"</span><span class="mtk1">);</span></span></div><div linenumber="160" style="top:3021px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DisPlay(mine,&nbsp;ROW,&nbsp;COL);</span></span></div><div linenumber="161" style="top:3040px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk6">break</span><span class="mtk1">;</span></span></div><div linenumber="162" style="top:3059px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div linenumber="163" style="top:3078px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div linenumber="164" style="top:3097px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk8">//获得坐标后，如果没有炸弹，判断坐标周围的雷的总和,存到count中</span></span></div><div linenumber="165" style="top:3116px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk8">//如果有炸弹，提示失败，退出循环</span></span></div><div linenumber="166" style="top:3135px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk6">else</span><span class="mtk1">&nbsp;</span><span class="mtk6">if</span><span class="mtk1">&nbsp;(mine[x][y]&nbsp;==&nbsp;</span><span class="mtk20">'0'</span><span class="mtk1">&amp;&amp;show[x][y]==</span><span class="mtk20">'*'</span><span class="mtk1">)</span></span></div><div linenumber="167" style="top:3154px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></span></div><div linenumber="168" style="top:3173px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count&nbsp;=&nbsp;CountMine(mine,&nbsp;x,&nbsp;y);</span><span class="mtk8">//因为CountMine没有在主函数中使用，所以不需要函数声明</span></span></div><div linenumber="169" style="top:3192px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show[x][y]&nbsp;=&nbsp;count&nbsp;+&nbsp;</span><span class="mtk20">'0'</span><span class="mtk1">;</span></span></div><div linenumber="170" style="top:3211px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;win++;</span></span></div><div linenumber="171" style="top:3230px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk6">int</span><span class="mtk1">&nbsp;m&nbsp;=&nbsp;</span><span class="mtk7">0</span><span class="mtk1">;</span></span></div><div linenumber="172" style="top:3249px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk6">int</span><span class="mtk1">&nbsp;n&nbsp;=&nbsp;</span><span class="mtk7">0</span><span class="mtk1">;</span></span></div><div linenumber="173" style="top:3268px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk6">if</span><span class="mtk1">&nbsp;(count&nbsp;==&nbsp;</span><span class="mtk7">0</span><span class="mtk1">)</span></span></div><div linenumber="174" style="top:3287px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></span></div><div linenumber="175" style="top:3306px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mine[x][y]&nbsp;=&nbsp;</span><span class="mtk20">'#'</span><span class="mtk1">;</span><span class="mtk8">//防止递归死循环，如果不改变值，此坐标周围的坐标在判断的时候就会检测到此坐标也没有炸弹，搞来搞去没</span><span class="mtk8">完没了</span></span></div><div linenumber="176" style="top:3325px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk6">for</span><span class="mtk1">&nbsp;(m&nbsp;=&nbsp;x&nbsp;-&nbsp;</span><span class="mtk7">1</span><span class="mtk1">;&nbsp;m&nbsp;&lt;&nbsp;x&nbsp;+&nbsp;</span><span class="mtk7">1</span><span class="mtk1">;&nbsp;m++)</span></span></div><div linenumber="177" style="top:3344px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></span></div><div linenumber="178" style="top:3363px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk6">for</span><span class="mtk1">&nbsp;(n&nbsp;=&nbsp;y&nbsp;-&nbsp;</span><span class="mtk7">1</span><span class="mtk1">;&nbsp;n&nbsp;&lt;&nbsp;y&nbsp;+&nbsp;</span><span class="mtk7">1</span><span class="mtk1">;&nbsp;n++)</span></span></div><div linenumber="179" style="top:3382px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></span></div><div linenumber="180" style="top:3401px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk6">if</span><span class="mtk1">&nbsp;(m&nbsp;&gt;=&nbsp;</span><span class="mtk7">1</span><span class="mtk1">&nbsp;&amp;&amp;&nbsp;m&nbsp;&lt;=&nbsp;row&nbsp;&amp;&amp;&nbsp;n&nbsp;&gt;=&nbsp;</span><span class="mtk7">1</span><span class="mtk1">&nbsp;&amp;&amp;&nbsp;n&nbsp;&lt;=&nbsp;col&nbsp;&amp;&amp;&nbsp;mine[m][n]&nbsp;==&nbsp;</span><span class="mtk20">'0'</span><span class="mtk1">&nbsp;&amp;&amp;&nbsp;show[m][n]&nbsp;==&nbsp;</span><span class="mtk20">'*'</span><span class="mtk1">)</span></span></div><div linenumber="181" style="top:3420px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></span></div><div linenumber="182" style="top:3439px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ReJudge(mine,&nbsp;show,&nbsp;m,&nbsp;n,&nbsp;row,&nbsp;col,&nbsp;win);</span></span></div><div linenumber="183" style="top:3458px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div><div linenumber="184" style="top:3477px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></span></div></div><div data-mprt="1" class="contentWidgets" style="position: absolute; top: 0px;"></div><div class="cursors-layer cursor-line-style cursor-solid"><div class="cursor" role="presentation" aria-hidden="true" linenumber="175" column="77" style="height: 19px; top: 3306px; left: 1042px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; line-height: 19px; display: block; visibility: hidden; width: 2px;"></div></div></div><div class="invisible scrollbar horizontal fade" style="position: absolute; transform: translate3d(0px, 0px, 0px); width: 1136px; height: 10px; left: 0px; bottom: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; width: 880px; transform: translate3d(0px, 0px, 0px);"></div></div><canvas class="decorationsOverviewRuler" width="17" height="597" style="position: absolute; top: 0px; right: 0px; width: 14px; height: 478px; transform: translate3d(0px, 0px, 0px);" data-transform="translate3d(0px, 0px, 0px)"></canvas><div class="invisible scrollbar vertical fade" style="position: absolute; transform: translate3d(0px, 0px, 0px); width: 14px; height: 478px; right: 0px; top: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; height: 41px; transform: translate3d(0px, 259px, 0px);"></div></div></div><div class="scroll-decoration" style="width: 1198px;"></div><div data-mprt="4" class="overlayWidgets" style="width: 1198px;"><div class="editor-widget find-widget" aria-hidden="false" widgetid="editor.contrib.findWidget" style="position: absolute;"><div title="切换替换模式" tabindex="-1" class="button toggle left collapse disabled" role="button" aria-label="切换替换模式" aria-expanded="false" aria-disabled="true"></div><div class="find-part"><div class="monaco-findInput disabled" style="width: 221px;"><div class="monaco-inputbox idle"><div class="wrapper"><input class="input" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" wrap="off" aria-label="查找" placeholder="查找" title="查找" disabled="" style="width: 155px;"></div></div><div class="controls"><div title="区分大小写 (Alt+C)" class="custom-checkbox monaco-case-sensitive unchecked" role="checkbox" aria-checked="false" aria-label="区分大小写 (Alt+C)" aria-disabled="true"></div><div title="全字匹配 (Alt+W)" class="custom-checkbox monaco-whole-word unchecked" role="checkbox" aria-checked="false" aria-label="全字匹配 (Alt+W)" aria-disabled="true"></div><div title="使用正则表达式 (Alt+R)" class="custom-checkbox monaco-regex unchecked" role="checkbox" aria-checked="false" aria-label="使用正则表达式 (Alt+R)" aria-disabled="true"></div></div></div><div class="matchesCount" title="" style="min-width: 69px;">无结果</div><div title="上一个匹配 (Shift+F3)" tabindex="-1" class="button previous disabled" role="button" aria-label="上一个匹配 (Shift+F3)" aria-disabled="true"></div><div title="下一个匹配 (F3)" tabindex="-1" class="button next disabled" role="button" aria-label="下一个匹配 (F3)" aria-disabled="true"></div><div class="monaco-checkbox" title="在选定内容中查找"><input type="checkbox" class="checkbox" id="checkbox-0" disabled=""><label class="label" for="checkbox-0"></label></div><div title="关闭 (Escape)" tabindex="-1" class="button close-fw disabled" role="button" aria-label="关闭 (Escape)" aria-disabled="true"></div></div><div class="replace-part"><div class="replace-input" style="width: 221px;"><div class="monaco-inputbox idle"><div class="wrapper"><input class="input" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" wrap="off" aria-label="替换" placeholder="替换" title="替换" disabled=""></div></div></div><div title="替换 (Ctrl+Shift+1)" tabindex="-1" class="button replace disabled" role="button" aria-label="替换 (Ctrl+Shift+1)" aria-disabled="true"></div><div title="全部替换 (Ctrl+Alt+Enter)" tabindex="-1" class="button replace-all disabled" role="button" aria-label="全部替换 (Ctrl+Alt+Enter)" aria-disabled="true"></div></div></div><div class="monaco-editor-background findOptionsWidget" role="presentation" aria-hidden="true" widgetid="editor.contrib.findOptionsWidget" data-editor-restorestyletop="10px" style="display: none; top: 0px; position: absolute; right: 28px;"><div title="区分大小写 (Alt+C)" class="custom-checkbox monaco-case-sensitive unchecked" tabindex="0" role="checkbox" aria-checked="false" aria-label="区分大小写 (Alt+C)"></div><div title="全字匹配 (Alt+W)" class="custom-checkbox monaco-whole-word unchecked" tabindex="0" role="checkbox" aria-checked="false" aria-label="全字匹配 (Alt+W)"></div></div><div class="monaco-editor-hover hidden" aria-hidden="true" role="presentation" widgetid="editor.contrib.modesGlyphHoverWidget" style="position: absolute;"></div><div class="lightbulb-glyph hidden" title="显示修补程序(Ctrl+.)" widgetid="__lightBulbWidget" style="width: 21px; height: 20px; position: absolute;"></div></div><textarea data-mprt="6" class="inputarea" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="编辑器内容" role="textbox" aria-multiline="true" aria-haspopup="false" aria-autocomplete="both" style="top: 0px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; line-height: 19px;"></textarea><div class="monaco-editor-background line-numbers textAreaCover" style="position: absolute; width: 1px; height: 1px; top: 0px; left: 0px;"></div></div><div data-mprt="2" class="overflowingContentWidgets"><div class="monaco-editor-hover hidden" tabindex="0" widgetid="editor.contrib.modesContentHoverWidget" style="position: absolute; max-width: 1536px; visibility: hidden;"><div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;"><div class="monaco-editor-hover-content" style="overflow: hidden; font-size: 14px; line-height: 19px; max-height: 250px;"></div><div class="invisible scrollbar horizontal" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px;"></div></div><div class="invisible scrollbar vertical" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px;"></div></div><div class="shadow"></div><div class="shadow"></div><div class="shadow top-left-corner"></div></div></div><div class="editor-widget parameter-hints-widget" widgetid="editor.widget.parameterHintsWidget" style="font-size: 14px; max-height: 250px; position: absolute; max-width: 1536px; visibility: hidden;"><div class="wrapper"><div class="buttons"><div class="button previous"></div><div class="button next"></div></div><div class="overloads"></div><div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;"><div class="body" style="overflow: hidden;"><div class="signature"></div><div class="docs"></div></div><div class="invisible scrollbar horizontal" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px;"></div></div><div class="invisible scrollbar vertical" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px;"></div></div><div class="shadow"></div><div class="shadow"></div><div class="shadow top-left-corner"></div></div></div></div><div class="monaco-editor rename-box" widgetid="__renameInputWidget" style="height: 19px; position: absolute; max-width: 1536px; visibility: hidden;"><input class="rename-input" type="text" aria-label="重命名输入。键入新名称并按 &quot;Enter&quot; 提交。" style="font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px;"></div><div class="editor-widget suggest-widget" widgetid="editor.widget.suggestWidget" style="position: absolute; max-width: 1536px; visibility: hidden; line-height: 19px; height: 228px; top: 198px; left: 917.8px;"><div class="message" style="display: none;"></div><div class="tree"><div class="monaco-list" role="tree" tabindex="0"><div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;"><div class="monaco-list-rows" style="overflow: hidden; height: 0px; transform: translate3d(0px, 0px, 0px);"></div><div class="invisible scrollbar horizontal" style="position: absolute; width: 0px; height: 0px; left: 0px; bottom: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; width: 0px;"></div></div><div class="invisible scrollbar vertical fade" style="position: absolute; width: 10px; height: 228px; right: 0px; top: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; height: 228px;"></div></div></div></div></div><div class="details" style="font-size: 14px; display: none;"><div class="header"><span class="title" style="font-family: Consolas, &quot;Courier New&quot;, monospace;"><span class="monaco-highlighted-label"></span></span><span class="go-back" title="返回" style="height: 19px; width: 19px;"></span></div><div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;"><div class="body" style="overflow: hidden;"><p class="type" style="font-family: Consolas, &quot;Courier New&quot;, monospace;"></p><p class="docs"></p></div><div class="invisible scrollbar horizontal" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px;"></div></div><div class="invisible scrollbar vertical" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px;"></div></div><div class="shadow"></div><div class="shadow"></div><div class="shadow top-left-corner"></div></div></div></div></div><div class="context-view builder-hidden" aria-hidden="true"></div></div></div>
+</div>
+<div class="field blob-form__commit">
+<div class="field commit-message-container">
+<label for="commit_message"><span class="text required-icon">提交信息</span>
+<i class="iconfont icon-help-circle text-green js-popup-default" data-popup-hoverable="1"></i>
+<div class="ui popup">
+<a target="blank" href="https://gitee.com/help/articles/4231">了解更多：Git Commit Message 编写指南</a>
+</div>
+</label><div class="ui input">
+<input type="text" name="commit_message_header" id="commit_message_header" placeholder="必填，描述主要修改类型和内容。（相当于 Git Commit message 的 Header）">
+</div>
+</div>
+<div class="field commit_message-group">
+<label for="extended_information">扩展信息
+</label><textarea name="extended_information" id="extended_information" placeholder="此处可填写为什么修改，做了什么样的修改，以及开发的思路等更加详细的提交信息。（相当于 Git Commit message 的 Body）" rows="2"></textarea>
+<div class="signed-off-by">
+<div class="ui checkbox checked" id="signed-off-by-checkbox">
+<input name="signed_off_by" type="checkbox" tabindex="0" class="hidden"><label>
+添加署名
+<i class="iconfont icon-help-circle text-green signed-off-by-tips-popup"></i>
+<div class="ui popup">
+相当于在 git commit 时使用 “--signoff” 参数（简写为 “-s”），将在 Commit Message 末尾添加你的署名
+</div>
+</label></div>
+<div class="signed-off-by-text">
+Signed-off-by: 不止于过去 &lt;c_11njxxsmailbox@sina.com&gt;
+<a class="signed-off-by-change-email" href="https://gitee.com/profile/emails" target="_blank">
+更换邮箱
+</a>
+</div>
+</div>
+</div>
+<div class="field commit-branch">
+<label for="branch_name">目标分支
+</label><input type="text" name="branch_name" id="branch_name" value="master" placeholder="指定将此次更改提交到哪个分支">
+</div>
+<script>
+  $('.signed-off-by-tips-popup').popup({
+    on: 'hover',
+    position: 'right center',
+    hoverable: true
+  })
+  
+  $("#signed-off-by-checkbox").checkbox('check');
+</script>
+
+</div>
+<div class="field blob-form__actions">
+<input type="hidden" name="file_path" id="file_path" value="扫雷(已优化）/扫雷/game.c">
+<input type="hidden" name="content" id="js-blob-content" value="#define _CRT_SECURE_NO_WARNINGS
+#include&quot;game.h&quot;
+//初始化棋盘，根据set的值来确定如何初始化
+void InitBoard(char board[ROWS][COLS], int rows, int cols, char set)
+{
+	int i = rows;
+	int j = cols;
+	for (i = 0; i &lt; rows; i++)
+	{
+		for (j = 0; j &lt; rows; j++)
+		{
+			board[i][j] = set;
+		}
+	}
+}
+//埋雷
+void SetMine(char board[ROWS][COLS], int row, int col)//只需要处理可能埋雷区，不需要传rows，cols
+{
+	int count = NUM_MINE;
+	while(count)
+	{ 
+		//生成随机数字范围是1到9，即rand随机值对9求余数得到0-8再加1
+		int x = rand() % row + 1;//rand（）需要stdlib.h  再用srand初始化 ,time需要time.h
+		int y = rand() % col + 1;
+		//判断此处是否已经有雷
+		if (board[x][y] != &#39;1&#39;)
+		{
+			board[x][y] = &#39;1&#39;;//需要循环，埋满NUM_MINE个雷
+			count -= 1;
+		}
+	}
+}
+//展示棋盘
+ void DisPlay(char board[ROWS][COLS], int row, int col)
+{
+	 int i = row;
+	 int j = col;
+	 printf(&quot;--------这是一条分界线--------\n&quot;);
+	 for (i = 0; i &lt;= col; i++)
+	 {
+		 printf(&quot;%d &quot;, i);
+	 }
+	 printf(&quot;\n&quot;);
+	 for (i = 1; i &lt;= row; i++)
+	 {
+		 printf(&quot;%d &quot;, i);
+		 for (j = 1; j &lt;=col; j++)
+		 {
+			 printf(&quot;%c &quot;, board[i][j]);
+		 }
+		 printf(&quot;\n&quot;);
+	 }
+	 printf(&quot;--------这是一条分界线--------\n&quot;);
+}
+ //计算坐标附近雷的个数
+ int CountMine(char board[ROWS][COLS], int x, int y)
+ {
+	 int count_ = 0;
+	 int i = 0;
+	 int j = 0;
+	 for (i = x - 1; i &lt;= x+1; i++)
+	 {
+		 for (j = y - 1; j &lt;= y+1; j++)
+		 {
+			 if (board[i][j] == &#39;1&#39;)
+			 {
+				 count_ += 1;
+			 }
+		 }
+	 }
+	 return count_;
+	 //return (board[x - 1][y] +
+		// board[x - 1][y - 1] +
+		// board[x][y - 1] +
+		// board[x + 1][y - 1] +
+		// board[x + 1][y] +
+		// board[x + 1][y + 1] +
+		// board[x][y + 1] +
+		// board[x - 1][y + 1] - 8 * &#39;0&#39;);//先统计周围所有的ASCII码之和，再减去总共8个‘0’的ASCII码得到的就是几个一相加
+ }
+ //该坐标周围都没有炸弹，展开一片
+ void ReJudge(char mine[ROWS][COLS], char show[ROWS][COLS], int x, int y,int row,int col,int win)
+ {
+	 int count = 0;
+	 count = CountMine(mine, x, y);//因为CountMine没有在主函数中使用，所以不需要函数声明
+	 show[x][y] = count + &#39;0&#39;;
+	 win++;
+	 int m = 0;
+	 int n = 0;
+	 if (count == 0)//当该坐标周围都没有炸弹，展开一片，如果其中之一有炸弹就不能随意展开
+	 {
+		 mine[x][y] = &#39;#&#39;;
+		 for (m = x - 1; m &lt; x + 1; m++)
+		 {
+			 for (n = y - 1; n &lt; y + 1; n++)
+			 {
+				 if (m &gt;= 1 &amp;&amp; m &lt;= row &amp;&amp; n &gt;= 1 &amp;&amp; n &lt;= col &amp;&amp; mine[m][n] == &#39;0&#39; &amp;&amp; show[m][n] == &#39;*&#39;)//设置递归条件,新的坐标不能超出棋盘，而且新坐标没有炸弹，并且新坐标在show棋盘里仍是未知量*
+				 {
+					 ReJudge(mine, show, m, n, row, col, win);//递归!!!
+				 }
+			 }
+		 }
+	 }
+ }
+ //查找雷
+ void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
+ {
+	 int life = Life;
+	 int win = 0;
+	 while (win &lt; row * col - NUM_MINE)
+	 {
+		 int input = 3;
+		 do
+		 {
+			 printf(&quot;输入1来排查坐标，输入0来标注此处有可能有雷,输入-1来解除标注\n&quot;);
+			 scanf(&quot;%d&quot;, &amp;input);
+			 CLEAR_BUF
+		 } while (input != 1 &amp;&amp; input != 0 &amp;&amp; input !=-1);
+		 //获取排查点的坐标
+		 int x = 0;
+		 int y = 0;
+		 if (input == 1)//排查坐标
+		 {
+			int count = 0;
+			again: do
+			 {
+				 printf(&quot;请输入要排查的坐标(输入两个合法数字)\n&quot;);
+				 scanf(&quot;%d%d&quot;, &amp;x, &amp;y);
+				 CLEAR_BUF
+			 } while (x&lt;1 || x&gt;row || y&lt;1 || y&gt;col);
+			 if (mine[x][y] == &#39;1&#39;)
+			 { 
+				 life -= 1;
+				 printf(&quot;啊哦不小心踩雷了！可以复活！请输入作者的幸运数字&gt;&quot;);
+				 int LuckyNum = 0;
+				 int CsLuckyNum = 3;
+				 scanf(&quot;%d&quot;, &amp;LuckyNum);
+				 if (LuckyNum == CsLuckyNum)
+				 {
+					 if (life == 0)
+					 {
+						 printf(&quot;BOOMMMMMMM\n&quot;);
+						 Eluminate_(mine, show, ROW, COL);
+						 printf(&quot;虽然你输对了数字但是命没了，寄了，看看哪里有炸弹吧！\n&quot;);
+						 DisPlay(mine, ROW, COL);
+						 break;
+					 }
+					 else
+					 {
+						 printf(&quot;复活！你还有%d条命\n&quot;, life);
+						 goto again;
+					 }
+					
+				 }
+				 else
+				 {
+					 printf(&quot;BOOMMMMMMM\n&quot;);
+					 Eluminate_(mine, show, ROW, COL);
+					 printf(&quot;你寄了，看看哪里有炸弹吧！&quot;);
+					 DisPlay(mine, ROW, COL);
+					 break;
+				 }
+			 }
+			 //获得坐标后，如果没有炸弹，判断坐标周围的雷的总和,存到count中
+			 //如果有炸弹，提示失败，退出循环
+			 else if (mine[x][y] == &#39;0&#39;&amp;&amp;show[x][y]==&#39;*&#39;)
+			 {
+				 count = CountMine(mine, x, y);//因为CountMine没有在主函数中使用，所以不需要函数声明
+				 show[x][y] = count + &#39;0&#39;;
+				 win++;
+				 int m = 0;
+				 int n = 0;
+				 if (count == 0)
+				 {
+					 mine[x][y] = &#39;#&#39;;
+					 for (m = x - 1; m &lt; x + 1; m++)
+					 {
+						 for (n = y - 1; n &lt; y + 1; n++)
+						 {
+							 if (m &gt;= 1 &amp;&amp; m &lt;= row &amp;&amp; n &gt;= 1 &amp;&amp; n &lt;= col &amp;&amp; mine[m][n] == &#39;0&#39; &amp;&amp; show[m][n] == &#39;*&#39;)
+							 {
+								 ReJudge(mine, show, m, n, row, col, win);
+							 }
+						 }
+					 }
+				 }
+				 DisPlay(show, ROW, COL);
+			 }
+			 else
+			 {
+				 printf(&quot;这里已经被查过了哦！\n&quot;);
+			 }
+		 }
+		 //!!!此处还需修改，只能在第一次标记雷！！！而且标记后就直接退出game函数了！
+		 //修改完成，把上述所有操作全部放到循环中，只要排雷没结束，就要一直输入input，再根据input进行相对应的操作
+		 else if (input == 0)//标记坐标
+		 {
+			 do
+			 {
+				 printf(&quot;请输入要标记的坐标(输入两个合法数字)\n&quot;);
+				 scanf(&quot;%d%d&quot;, &amp;x, &amp;y);
+				 CLEAR_BUF
+			 } while (x&lt;1 || x&gt;row || y&lt;1 || y&gt;col);
+			 //获得坐标后，标记此处为！
+			 if (show[x][y] == &#39;*&#39;)
+			 {
+				 show[x][y] = &#39;!&#39;;
+				 DisPlay(show, ROW, COL);
+			 }
+			 else if (show[x][y] == &#39;!&#39;)
+			 {
+				 printf(&quot;已经标记过了哦\n&quot;);
+			 }
+			 else
+			 {
+				 printf(&quot;这里没炸弹看看数字吧！判断周围炸弹哦！\n&quot;);
+			 }
+		 }
+		 else if (input == -1)
+		 {
+			 do
+			 {
+				 printf(&quot;请输入要解除标记的坐标(输入两个合法数字)\n&quot;);
+				 scanf(&quot;%d%d&quot;, &amp;x, &amp;y);
+				 CLEAR_BUF
+			 } while (x&lt;1 || x&gt;row || y&lt;1 || y&gt;col);
+			 //获得坐标后，标记此处为*
+			 if (show[x][y] == &#39;!&#39;)
+			 {
+				 show[x][y] = &#39;*&#39;;
+				 DisPlay(show, ROW, COL);
+			 }
+			 else if (show[x][y] == &#39;*&#39;)
+			 {
+				 printf(&quot;这里没标记过哦！\n&quot;);
+			 }
+			 else
+			 {
+				 printf(&quot;这里没炸弹看看数字吧！判断周围炸弹哦！\n&quot;);
+			 }
+			
+		 }
+	 }
+	 if (win == row * col - NUM_MINE)
+	 {
+		 printf(&quot;Win！！！！！！！！\n&quot;);
+		 Eluminate_(mine, show, ROW, COL);
+		 printf(&quot;你赢了！来看看炸弹分布吧！\n&quot;);
+		 DisPlay(mine, ROW, COL);
+	 }
+ }
+ //因为在上面优化过程中，使用了#所以在最后输出时，清除这些#号
+ void Eluminate_(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
+ {
+	 int i = 0;
+	 int j = 0;
+	 for (i = 1; i &lt;= row; i++)
+	 {
+		 for (j = 1; j &lt;= col; j++)
+		 {
+			 if (mine[i][j] == &#39;#&#39;)
+			 {
+				 mine[i][j] = &#39;0&#39;;
+			 }
+		 }
+	 }
+ }">
+<button name="button" type="submit" id="js-commit-button" class="ui large submit orange button mr-2">提交</button>
+<a class="btn-cancel" data-confirm="内容尚未保存，取消将会丢失，确认取消？" href="https://gitee.com/C-11nJxxs-web/study/blob/master/%E6%89%AB%E9%9B%B7(%E5%B7%B2%E4%BC%98%E5%8C%96%EF%BC%89/%E6%89%AB%E9%9B%B7/game.c">取消</a>
+<div class="ui error message"></div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/editor-91a7fee54429bdb842fa07d9924719a5.js.下载"></script>
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/loader.js.下载"></script>
+<template id="image-upload-dropdown-template"></template>
+<script>
+  $.extend(window.gon, {
+    editBlobPath: "/扫雷(已优化）/扫雷/",
+    fileTreePath: "/C-11nJxxs-web/study/file_tree?ref=master",
+    fileListPath: "/C-11nJxxs-web/study/file_list?ref=master",
+    blobSizePath: "/C-11nJxxs-web/study/blob_size?ref=master",
+  })
+</script>
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/vendors_lib-7ff466a6da368d391eda.js.下载"></script>
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/markdown_image_upload-8b8a4d752f4b06122c2e.bundle.js.下载"></script>
+
+<input type="hidden" name="eol_crlf" id="eol_crlf" value="false">
+<input type="hidden" name="last_commit_sha" id="last_commit_sha" value="641a93c8e1a6540e6109806b3411d5f1050a9f35">
+</form>
+
+<script>
+  Gitee.initBlobForm({
+    type: "code",
+    content: "#define _CRT_SECURE_NO_WARNINGS\n#include\"game.h\"\n//初始化棋盘，根据set的值来确定如何初始化\nvoid InitBoard(char board[ROWS][COLS], int rows, int cols, char set)\n{\n	int i = rows;\n	int j = cols;\n	for (i = 0; i < rows; i++)\n	{\n		for (j = 0; j < rows; j++)\n		{\n			board[i][j] = set;\n		}\n	}\n}\n//埋雷\nvoid SetMine(char board[ROWS][COLS], int row, int col)//只需要处理可能埋雷区，不需要传rows，cols\n{\n	int count = NUM_MINE;\n	while(count)\n	{ \n		//生成随机数字范围是1到9，即rand随机值对9求余数得到0-8再加1\n		int x = rand() % row + 1;//rand（）需要stdlib.h  再用srand初始化 ,time需要time.h\n		int y = rand() % col + 1;\n		//判断此处是否已经有雷\n		if (board[x][y] != \'1\')\n		{\n			board[x][y] = \'1\';//需要循环，埋满NUM_MINE个雷\n			count -= 1;\n		}\n	}\n}\n//展示棋盘\n void DisPlay(char board[ROWS][COLS], int row, int col)\n{\n	 int i = row;\n	 int j = col;\n	 printf(\"--------这是一条分界线--------\\n\");\n	 for (i = 0; i <= col; i++)\n	 {\n		 printf(\"%d \", i);\n	 }\n	 printf(\"\\n\");\n	 for (i = 1; i <= row; i++)\n	 {\n		 printf(\"%d \", i);\n		 for (j = 1; j <=col; j++)\n		 {\n			 printf(\"%c \", board[i][j]);\n		 }\n		 printf(\"\\n\");\n	 }\n	 printf(\"--------这是一条分界线--------\\n\");\n}\n //计算坐标附近雷的个数\n int CountMine(char board[ROWS][COLS], int x, int y)\n {\n	 int count_ = 0;\n	 int i = 0;\n	 int j = 0;\n	 for (i = x - 1; i <= x+1; i++)\n	 {\n		 for (j = y - 1; j <= y+1; j++)\n		 {\n			 if (board[i][j] == \'1\')\n			 {\n				 count_ += 1;\n			 }\n		 }\n	 }\n	 return count_;\n	 //return (board[x - 1][y] +\n		// board[x - 1][y - 1] +\n		// board[x][y - 1] +\n		// board[x + 1][y - 1] +\n		// board[x + 1][y] +\n		// board[x + 1][y + 1] +\n		// board[x][y + 1] +\n		// board[x - 1][y + 1] - 8 * \'0\');//先统计周围所有的ASCII码之和，再减去总共8个‘0’的ASCII码得到的就是几个一相加\n }\n //该坐标周围都没有炸弹，展开一片\n void ReJudge(char mine[ROWS][COLS], char show[ROWS][COLS], int x, int y,int row,int col,int win)\n {\n	 int count = 0;\n	 count = CountMine(mine, x, y);//因为CountMine没有在主函数中使用，所以不需要函数声明\n	 show[x][y] = count + \'0\';\n	 win++;\n	 int m = 0;\n	 int n = 0;\n	 if (count == 0)//当该坐标周围都没有炸弹，展开一片，如果其中之一有炸弹就不能随意展开\n	 {\n		 mine[x][y] = \'#\';\n		 for (m = x - 1; m < x + 1; m++)\n		 {\n			 for (n = y - 1; n < y + 1; n++)\n			 {\n				 if (m >= 1 && m <= row && n >= 1 && n <= col && mine[m][n] == \'0\' && show[m][n] == \'*\')//设置递归条件,新的坐标不能超出棋盘，而且新坐标没有炸弹，并且新坐标在show棋盘里仍是未知量*\n				 {\n					 ReJudge(mine, show, m, n, row, col, win);//递归!!!\n				 }\n			 }\n		 }\n	 }\n }\n //查找雷\n void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)\n {\n	 int life = Life;\n	 int win = 0;\n	 while (win < row * col - NUM_MINE)\n	 {\n		 int input = 3;\n		 do\n		 {\n			 printf(\"输入1来排查坐标，输入0来标注此处有可能有雷,输入-1来解除标注\\n\");\n			 scanf(\"%d\", &input);\n			 CLEAR_BUF\n		 } while (input != 1 && input != 0 && input !=-1);\n		 //获取排查点的坐标\n		 int x = 0;\n		 int y = 0;\n		 if (input == 1)//排查坐标\n		 {\n			int count = 0;\n			again: do\n			 {\n				 printf(\"请输入要排查的坐标(输入两个合法数字)\\n\");\n				 scanf(\"%d%d\", &x, &y);\n				 CLEAR_BUF\n			 } while (x<1 || x>row || y<1 || y>col);\n			 if (mine[x][y] == \'1\')\n			 { \n				 life -= 1;\n				 printf(\"啊哦不小心踩雷了！可以复活！请输入作者的幸运数字>\");\n				 int LuckyNum = 0;\n				 int CsLuckyNum = 3;\n				 scanf(\"%d\", &LuckyNum);\n				 if (LuckyNum == CsLuckyNum)\n				 {\n					 if (life == 0)\n					 {\n						 printf(\"BOOMMMMMMM\\n\");\n						 Eluminate_(mine, show, ROW, COL);\n						 printf(\"虽然你输对了数字但是命没了，寄了，看看哪里有炸弹吧！\\n\");\n						 DisPlay(mine, ROW, COL);\n						 break;\n					 }\n					 else\n					 {\n						 printf(\"复活！你还有%d条命\\n\", life);\n						 goto again;\n					 }\n					\n				 }\n				 else\n				 {\n					 printf(\"BOOMMMMMMM\\n\");\n					 Eluminate_(mine, show, ROW, COL);\n					 printf(\"你寄了，看看哪里有炸弹吧！\");\n					 DisPlay(mine, ROW, COL);\n					 break;\n				 }\n			 }\n			 //获得坐标后，如果没有炸弹，判断坐标周围的雷的总和,存到count中\n			 //如果有炸弹，提示失败，退出循环\n			 else if (mine[x][y] == \'0\'&&show[x][y]==\'*\')\n			 {\n				 count = CountMine(mine, x, y);//因为CountMine没有在主函数中使用，所以不需要函数声明\n				 show[x][y] = count + \'0\';\n				 win++;\n				 int m = 0;\n				 int n = 0;\n				 if (count == 0)\n				 {\n					 mine[x][y] = \'#\';\n					 for (m = x - 1; m < x + 1; m++)\n					 {\n						 for (n = y - 1; n < y + 1; n++)\n						 {\n							 if (m >= 1 && m <= row && n >= 1 && n <= col && mine[m][n] == \'0\' && show[m][n] == \'*\')\n							 {\n								 ReJudge(mine, show, m, n, row, col, win);\n							 }\n						 }\n					 }\n				 }\n				 DisPlay(show, ROW, COL);\n			 }\n			 else\n			 {\n				 printf(\"这里已经被查过了哦！\\n\");\n			 }\n		 }\n		 //!!!此处还需修改，只能在第一次标记雷！！！而且标记后就直接退出game函数了！\n		 //修改完成，把上述所有操作全部放到循环中，只要排雷没结束，就要一直输入input，再根据input进行相对应的操作\n		 else if (input == 0)//标记坐标\n		 {\n			 do\n			 {\n				 printf(\"请输入要标记的坐标(输入两个合法数字)\\n\");\n				 scanf(\"%d%d\", &x, &y);\n				 CLEAR_BUF\n			 } while (x<1 || x>row || y<1 || y>col);\n			 //获得坐标后，标记此处为！\n			 if (show[x][y] == \'*\')\n			 {\n				 show[x][y] = \'!\';\n				 DisPlay(show, ROW, COL);\n			 }\n			 else if (show[x][y] == \'!\')\n			 {\n				 printf(\"已经标记过了哦\\n\");\n			 }\n			 else\n			 {\n				 printf(\"这里没炸弹看看数字吧！判断周围炸弹哦！\\n\");\n			 }\n		 }\n		 else if (input == -1)\n		 {\n			 do\n			 {\n				 printf(\"请输入要解除标记的坐标(输入两个合法数字)\\n\");\n				 scanf(\"%d%d\", &x, &y);\n				 CLEAR_BUF\n			 } while (x<1 || x>row || y<1 || y>col);\n			 //获得坐标后，标记此处为*\n			 if (show[x][y] == \'!\')\n			 {\n				 show[x][y] = \'*\';\n				 DisPlay(show, ROW, COL);\n			 }\n			 else if (show[x][y] == \'*\')\n			 {\n				 printf(\"这里没标记过哦！\\n\");\n			 }\n			 else\n			 {\n				 printf(\"这里没炸弹看看数字吧！判断周围炸弹哦！\\n\");\n			 }\n			\n		 }\n	 }\n	 if (win == row * col - NUM_MINE)\n	 {\n		 printf(\"Win！！！！！！！！\\n\");\n		 Eluminate_(mine, show, ROW, COL);\n		 printf(\"你赢了！来看看炸弹分布吧！\\n\");\n		 DisPlay(mine, ROW, COL);\n	 }\n }\n //因为在上面优化过程中，使用了#所以在最后输出时，清除这些#号\n void Eluminate_(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)\n {\n	 int i = 0;\n	 int j = 0;\n	 for (i = 1; i <= row; i++)\n	 {\n		 for (j = 1; j <= col; j++)\n		 {\n			 if (mine[i][j] == \'#\')\n			 {\n				 mine[i][j] = \'0\';\n			 }\n		 }\n	 }\n }",
+    locale: 'zh-cn',
+    checkLicensePath: '/C-11nJxxs-web/study/check_license',
+    message: {
+      notChange: '文件内容未更改'
+    },
+    form: {
+      on: 'blur',
+      fields: {
+        file_name: {
+          identifier: 'file_name',
+          rules: [
+            {
+              type: 'empty',
+              prompt: '文件名不能为空'
+            }
+          ]
+        },
+        commit_message_header: {
+          identifier: 'commit_message_header',
+          rules: [
+            {
+              type: 'empty',
+              prompt: '提交信息不能为空'
+            },
+            {
+              type: 'maxLength[100]',
+              prompt: '提交信息长度不应该超过 100 个字符，请尽可能简单的描述此次改动'
+            }
+          ]
+        }
+      }
+    },
+    action: 'edit'
+  });
+</script>
+
+</div>
+<script>
+  (function() {
+    var donateModal;
+  
+    Gitee.modalHelper = new GiteeModalHelper({
+      alertText: '提示',
+      okText: '确定'
+    });
+  
+    donateModal = new ProjectDonateModal({
+      el: '#project-donate-modal',
+      alipayUrl: '/C-11nJxxs-web/study/alipay',
+      wepayUrl: '/C-11nJxxs-web/study/wepay',
+      nameIsBlank: '名称不能为空',
+      nameTooLong: '名称过长（最多为 36 个字符）',
+      modalHelper: Gitee.modalHelper
+    });
+  
+    if (null === 'true') {
+      donateModal.show();
+    }
+  
+    $('#project-donate').on('click', function() {
+      return donateModal.show();
+    });
+  
+  }).call(this);
+</script>
+<script>
+  Tree.initHighlightTheme('black')
+</script>
+
+
+</div>
+<div class="gitee-project-extension">
+<div class="extension public">0</div>
+<div class="extension https">https://gitee.com/C-11nJxxs-web/study.git</div>
+<div class="extension ssh">git@gitee.com:C-11nJxxs-web/study.git</div>
+<div class="extension namespace">C-11nJxxs-web</div>
+<div class="extension repo">study</div>
+<div class="extension name">study </div>
+<div class="extension branch">master</div>
+</div>
+
+<script>
+  $(function() {
+    GitLab.GfmAutoComplete.dataSource = "/C-11nJxxs-web/study/autocomplete_sources"
+    GitLab.GfmAutoComplete.Emoji.assetBase = '/assets/emoji'
+    GitLab.GfmAutoComplete.setup();
+  });
+</script>
+
+<footer id="git-footer-main">
+<div class="ui container">
+<div class="logo-row">
+<a href="https://gitee.com/"><img alt="Gitee — 基于 Git 的代码托管和研发协作平台" class="logo-img" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/logo-black(1).svg">
+</a></div>
+<div class="name-important">
+深圳市奥思网络科技有限公司版权所有
+</div>
+<div class="ui two column grid d-flex-center">
+<div class="nine wide column git-footer-left">
+<div class="ui four column grid" id="footer-left">
+<div class="column">
+<div class="ui link list">
+<div class="item">
+<a class="item" href="https://gitee.com/all-about-git">Git 大全</a>
+</div>
+<div class="item">
+<a class="item" rel="nofollow" href="https://oschina.gitee.io/learn-git-branching/">Git 命令学习</a>
+</div>
+<div class="item">
+<a class="item" rel="nofollow" href="https://copycat.gitee.com/">CopyCat 代码克隆检测</a>
+</div>
+<div class="item">
+<a class="item" href="https://gitee.com/appclient">APP与插件下载</a>
+</div>
+</div>
+</div>
+<div class="column">
+<div class="ui link list">
+<div class="item">
+<a class="item" href="https://gitee.com/gitee_reward">Gitee Reward</a>
+</div>
+<div class="item">
+<a class="item" href="https://gitee.com/gitee-stars">Gitee 封面人物</a>
+</div>
+<div class="item">
+<a class="item" href="https://gitee.com/gvp">GVP 项目</a>
+</div>
+<div class="item">
+<a class="item" rel="nofollow" href="https://blog.gitee.com/">Gitee 博客</a>
+</div>
+<div class="item">
+<a class="item" href="https://gitee.com/enterprises#nonprofit-plan">Gitee 公益计划</a>
+</div>
+<div class="item">
+<a class="item" href="https://gitee.com/features/gitee-go">Gitee 持续集成</a>
+</div>
+</div>
+</div>
+<div class="column">
+<div class="ui link list">
+<div class="item">
+<a class="item" href="https://gitee.com/api/v5/swagger">OpenAPI</a>
+</div>
+<div class="item">
+<a class="item" href="https://gitee.com/help">帮助文档</a>
+</div>
+<div class="item">
+<a class="item" href="https://gitee.com/self_services">在线自助服务</a>
+</div>
+<div class="item">
+<a class="item" href="https://gitee.com/help/articles/4378">更新日志</a>
+</div>
+</div>
+</div>
+<div class="column">
+<div class="ui link list">
+<div class="item">
+<a class="item" href="https://gitee.com/about_us">关于我们</a>
+</div>
+<div class="item">
+<a class="item" rel="nofollow" href="https://www.oschina.net/news/131099/oschina-hiring">加入我们</a>
+</div>
+<div class="item">
+<a class="item" href="https://gitee.com/terms">使用条款</a>
+</div>
+<div class="item">
+<a class="item" href="https://gitee.com/oschina/git-osc/issues">意见建议</a>
+</div>
+<div class="item">
+<a class="item" href="https://gitee.com/links.html">合作伙伴</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="seven wide column right aligned followus git-footer-right">
+<div class="qrcode mini_app">
+<img alt="微信小程序" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/mini_app-e5eee5a21c552b69ae6bf2cf87406b59.jpg">
+<p class="mini_app-text">微信小程序</p>
+</div>
+<div class="qrcode weixin">
+<img alt="微信服务号" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/qrcode-weixin-9e7cfb27165143d2b8e8b268a52ea822.jpg">
+<p class="weixin-text">微信服务号</p>
+</div>
+<div class="phone-and-qq column">
+<div class="ui list official-support-container">
+<div class="item">
+<a class="icon-popup" title="点击加入 Gitee 官方群" rel="nofollow" href="https://qm.qq.com/cgi-bin/qm/qr?k=FOdoYurYb10aXeAiViAgsqWX0fsgykNZ"><i class="iconfont icon-logo-qq"></i>
+<span>官方技术交流QQ群：777320883</span>
+</a></div>
+<div class="item mail-and-zhihu">
+<a rel="nofollow" href="mailto:%20git@oschina.cn"><i class="iconfont icon-msg-mail"></i>
+<span id="git-footer-email">git@oschina.cn</span>
+</a></div>
+<div class="item mail-and-zhihu">
+<a target="_blank" rel="nofollow" href="https://www.zhihu.com/org/ma-yun-osc/"><i class="iconfont icon-zhihu"></i>
+<span>Gitee</span>
+</a></div>
+<div class="item tel">
+<a>
+<i class="iconfont icon-tel"></i>
+<span>售前及售后使用咨询：400-606-0201</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bottombar">
+<div class="ui container">
+<div class="ui d-flex d-flex-between">
+<div class="seven wide column partner d-flex">
+<div class="open-atom d-flex-center">
+<img class="logo-openatom mr-1" alt="开放原子开源基金会" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/logo-openatom-d083391cc8a54e283529f3fc11cc38ca.svg">
+<a target="_blank" rel="nofollow" href="https://www.openatom.org/">开放原子开源基金会</a>
+<div class="sub-title ml-1">合作代码托管平台</div>
+</div>
+<div class="report-12377 d-flex-center ml-3">
+<img class="report-12377__logo mr-1" alt="违法和不良信息举报中心" src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/12377@2x-1aa42ed2d2256f82a61ecf57be1ec244.png">
+<a target="_blank" rel="nofollow" href="https://12377.cn/">违法和不良信息举报中心</a>
+</div>
+<div class="copyright ml-3">
+<a rel="nofollow" href="http://beian.miit.gov.cn/">粤ICP备12009483号</a>
+</div>
+</div>
+<div class="nine wide column right aligned">
+<i class="icon world"></i>
+<a href="https://gitee.com/language/zh-CN">简 体</a>
+/
+<a href="https://gitee.com/language/zh-TW">繁 體</a>
+/
+<a href="https://gitee.com/language/en">English</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+  var officialEmail = $('#git-footer-email').text()
+  $('#git-footer-main .icon-popup').popup({ position: 'bottom center' })
+  $('#git-footer-email').text(officialEmail.replace('#', '@'))
+  window.gon.popover_card_locale = {
+    follow:"关注",
+    unfollow:"已关注",
+    gvp_title: "GVP - Gitee 最有价值开源项目",
+    project: "项目",
+    org: "开源组织",
+    member: "",
+    author: "作者",
+    user_blocked: "该用户已被屏蔽或已注销",
+    net_error: "网络错误",
+    unknown_exception: "未知异常"
+  }
+  window.gon.select_message = {
+    placeholder: "请输入个人空间地址或完整的邮箱地址"
+  }
+</script>
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/popover_card-b829a7d0b8f9c8896f85.bundle.js.下载"></script>
+<link rel="stylesheet" media="all" href="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/gitee_nps-69491f94919350b0258c.css">
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/gitee_nps-fd068f5b290ac29bce32.bundle.js.下载"></script>
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/gitee_icons-344178ef7600cbe43e4a.bundle.js.下载"></script>
+
+
+<div class="side-toolbar">
+<div class="button toolbar-help">
+<i class="iconfont icon-help"></i>
+</div>
+<div class="ui popup left center dark">点此查找更多帮助</div>
+<div class="toolbar-help-dialog">
+<div class="toolbar-dialog-header">
+<h3 class="toolbar-dialog-title">搜索帮助</h3>
+<form class="toolbar-help-search-form" action="https://gitee.com/help/load_keywords_data" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+<div class="ui icon input fluid toolbar-help-search">
+<input name="keywords" placeholder="请输入产品名称或问题" type="text">
+<i class="icon search"></i>
+</div>
+</form>
+
+<i class="iconfont icon-close toolbar-dialog-close-icon"></i>
+</div>
+<div class="toolbar-dialog-content">
+<div class="toolbar-help-hot-search">
+<div class="toolbar-roll">
+<a class="" title="Git 命令在线学习" href="https://oschina.gitee.io/learn-git-branching/?utm_source==gitee-help-widget"><i class="Blue icon icon-command iconfont"></i>
+<span>Git 命令在线学习</span>
+</a><a class="active" title="如何在 Gitee 导入 GitHub 仓库" href="https://gitee.com/help/articles/4261?utm_source==gitee-help-widget"><i class="icon icon-clipboard iconfont orange"></i>
+<span>如何在 Gitee 导入 GitHub 仓库</span>
+</a></div>
+<div class="toolbar-list">
+<div class="toolbar-list-item">
+<a href="https://gitee.com/help/articles/4114">Git 仓库基础操作</a>
+</div>
+<div class="toolbar-list-item">
+<a href="https://gitee.com/help/articles/4166">企业版和社区版功能对比</a>
+</div>
+<div class="toolbar-list-item">
+<a href="https://gitee.com/help/articles/4191">SSH 公钥设置</a>
+</div>
+<div class="toolbar-list-item">
+<a href="https://gitee.com/help/articles/4194">如何处理代码冲突</a>
+</div>
+<div class="toolbar-list-item">
+<a href="https://gitee.com/help/articles/4232">仓库体积过大，如何减小？</a>
+</div>
+<div class="toolbar-list-item">
+<a href="https://gitee.com/help/articles/4279">如何找回被删除的仓库数据</a>
+</div>
+<div class="toolbar-list-item">
+<a href="https://gitee.com/help/articles/4283">Gitee 产品配额说明</a>
+</div>
+<div class="toolbar-list-item">
+<a href="https://gitee.com/help/articles/4284">GitHub仓库快速导入Gitee及同步更新</a>
+</div>
+<div class="toolbar-list-item">
+<a href="https://gitee.com/help/articles/4328">什么是 Release（发行版）</a>
+</div>
+<div class="toolbar-list-item">
+<a href="https://gitee.com/help/articles/4354">将 PHP 项目自动发布到 packagist.org</a>
+</div>
+</div>
+</div>
+<div class="toolbar-help-search-reseult">
+<div class="toolbar-help-flex-column">
+<div class="ui centered inline loader toolbar-help-loader"></div>
+<div class="toolbar-list"></div>
+<div class="toolbar-help-link-to-help">
+<a target="_blank" href="https://gitee.com/C-11nJxxs-web/study/edit/master/%E6%89%AB%E9%9B%B7(%E5%B7%B2%E4%BC%98%E5%8C%96%EF%BC%89/%E6%89%AB%E9%9B%B7/game.c">查看更多搜索结果</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  var opt = { position: 'left center'};
+  var $helpSideToolbar = $('.button.toolbar-help');
+  var $toolbarRoll = $('.toolbar-roll');
+  
+  $(function() {
+    if (true) {
+      $helpSideToolbar.popup(opt).popup({lastResort:'left center'})
+    } else {
+      $helpSideToolbar.popup({lastResort:'left center'}).popup('show', opt);
+      setTimeout(function() {
+        $helpSideToolbar.popup('hide', opt);
+      }, 3000);
+    }
+  
+    if ($toolbarRoll.length) {
+      setInterval(function() {
+        var $nextActiveLink = $toolbarRoll.find('a.active').next();
+        if (!$nextActiveLink.length) {
+          $nextActiveLink = $toolbarRoll.find('a:first-child');
+        }
+        $nextActiveLink.attr('class', 'active').siblings().removeClass('active init');
+      }, 5000);
+    }
+  })
+</script>
+
+<div class="ui popup dark left center transition hidden js-feedback-popup">发送反馈</div>
+<div class="button" id="feedback-btn">
+<i class="iconfont icon-feedback"></i>
+</div>
+<div class="popup button" id="home-comment">
+<i class="iconfont icon-comment"></i>
+</div>
+<div class="ui popup dark">评论</div>
+<div class="button gotop popup" id="gotop">
+<i class="iconfont icon-top"></i>
+</div>
+<div class="ui popup dark">回到顶部</div>
+</div>
+<style>
+  .side-toolbar .bdsharebuttonbox a {
+    font-size: 24px;
+    color: white !important;
+    opacity: 0.9;
+    margin: 6px 6px 0px 6px;
+    background-image: none;
+    text-indent: 0;
+    height: auto;
+    width: auto;
+  }
+</style>
+<style>
+  #udesk_btn a {
+    margin: 0px 20px 217px 0px !important;
+  }
+  #ent-sale-img-wrap {
+    margin: 0px 15px 294px 0px !important;
+  }
+</style>
+<script>
+  (function() {
+    $('#project-user-message').popup({
+      position: 'left center'
+    });
+  
+  }).call(this);
+</script>
+<script>
+  Gitee.initSideToolbar({
+    hasComment: true,
+    commentUrl: '/C-11nJxxs-web/study#tree_comm_title'
+  })
+</script>
+<link rel="stylesheet" media="all" href="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/side_toolbar_feedback-5dcc1be9cca438cc952f.css">
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/side_toolbar_feedback-8ca8aad39a5fbe2b547f.bundle.js.下载"></script>
+
+
+
+
+
+<script>
+  (function() {
+    this.__gac = {
+      domain: 'www.oschina.net'
+    };
+  
+  }).call(this);
+</script>
+
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/build_status-a3ee4cc8489b2defc1a8.bundle.js.下载"></script>
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/scan_status-1d795d76088c50df71cb.bundle.js.下载"></script>
+<script src="./扫雷(已优化）_扫雷_game.c · 编辑文件 · 不止于过去_study - Gitee.com_files/mermaid_render-80437a0d645e9044f9e8.bundle.js.下载"></script>
+
+
+<div class="star-collection-popup d-none" style="display: none;">
+                  <div class="star-collection-popup__header d-flex-between">
+                    <div class="star-collection-popup__header__left">已成功 Star，添加到以下星选集：</div>
+                    <div class="star-collection-popup__header__right"><i class="iconfont icon-close js-close-popup cursor-pointer hover-color"></i></div>
+                  </div>
+                  <div class="star-collection-popup__body">
+                    <div class="blank-message d-none">点击下方新建星选集</div>
+                    <div class="star-collection-popup__search ui input small icon">
+                      <input type="text" class="js-star-collection-search" placeholder="快速搜索">
+                      <i class="iconfont icon-search"></i>
+                    </div>
+                    <div class="star-collection-popup__scroll">
+                      <div class="star-collection-popup__list js-star-collection-popup__list">
+
+                      </div>
+                    </div>                    
+                  </div>
+                  <div class="star-collection-popup__footer js-star-collection-popup__footer">
+                    <div class="star-collection-popup__footer--normal js-new-star-collection-btn cursor-pointer hover-color">新建星选集</div>
+                    <div class="star-collection-popup__footer--new d-flex-between">
+                      <input class="star-collection-popup__footer__new-input js-star-collection-popup__footer__new-input" maxlength="35" type="text" placeholder="请输入星选集名称">
+                      <div class="star-collection-popup__footer__add-btn js-star-collection-popup__footer__add-btn cursor-pointer hover-color disabled">新建</div>
+                    </div>
+                  </div>
+                 </div><div class="ui dimmer modals page"><div class="ui small modal long" id="modal-fork-project">
+<i class="icon-close iconfont close"></i>
+<div class="header">
+Fork 仓库
+</div>
+<div class="content fork-project-content">
+<div class="fork-info-content">
+<div class="ui segment fork_project_loader">
+<div class="ui active inverted dimmer">
+<div class="ui text loader">加载中</div>
+</div>
+</div>
+</div>
+</div>
+<div class="actions fork-action d-flex-between hide">
+<div>
+<div class="ui checkbox team-member-checkbox">
+<input type="checkbox" name="members" id="members" value="1" tabindex="0" class="hidden">
+<label>邀请此仓库成员？</label>
+</div>
+</div>
+<div>
+<a class="cancel"> 取消 </a>
+<div class="ui disabled button orange ok"> 确认 </div>
+</div>
+</div>
+</div></div><div class="feedback-screenshot-tip">按下并拖动鼠标开始截图</div><div></div></body></html>
