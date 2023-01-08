@@ -11,3 +11,5 @@ Click here-->[**My gitee repository**](https://gitee.com/C-11nJxxs-web/study)
   - *Click here*--> [details](https://github.com/C11NJXX/My-firsy-repository/blob/main/Record/2023.1.5.md)
 - **2023.1.6** :blush:
   - *Click here*--> [details](https://github.com/C11NJXX/My-firsy-repository/blob/main/Record/2023.1.6.md)
+- **2023.1.8** :blush:
+  - *Click here* -->[details](https://github.com/C11NJXX/My-firsy-repository/blob/main/Record/2023.1.8.md)
