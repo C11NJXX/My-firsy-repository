@@ -1,0 +1,8 @@
+﻿  menu.cpp
+boss.obj : error LNK2001: 无法解析的外部符号 "public: static class Boss * * Information::m_boss" (?m_boss@Information@@2PAPAVBoss@@A)
+test.obj : error LNK2001: 无法解析的外部符号 "public: static class Boss * * Information::m_boss" (?m_boss@Information@@2PAPAVBoss@@A)
+boss.obj : error LNK2001: 无法解析的外部符号 "public: static class Manager * * Information::m_manager" (?m_manager@Information@@2PAPAVManager@@A)
+boss.obj : error LNK2001: 无法解析的外部符号 "public: static int Information::bossNumber" (?bossNumber@Information@@2HA)
+test.obj : error LNK2001: 无法解析的外部符号 "public: static int Information::bossNumber" (?bossNumber@Information@@2HA)
+boss.obj : error LNK2001: 无法解析的外部符号 "public: static int Information::manageNumber" (?manageNumber@Information@@2HA)
+C:\Code_github\small games\Management\Project1\Debug\Management System.exe : fatal error LNK1120: 4 个无法解析的外部命令
