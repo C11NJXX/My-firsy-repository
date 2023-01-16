@@ -4,6 +4,7 @@ This is my  first repository on github ~ hello world ~
 I'm learning **cpp** at present~  
 keep on learning~ :blush:   
 I'm going to uplode my project which is **meaningful** on this github repository(e.g. a complete project)  
+Clike here-->[**go to code_branch**](https://github.com/C11NJXX/My-firsy-repository/tree/master)  
 and the rest of my code(**when studying**) will be uploded to **my gitee repositories**   
 Click here-->[**My gitee repository**](https://gitee.com/C-11nJxxs-web/study)  
 ## Catalogue  
