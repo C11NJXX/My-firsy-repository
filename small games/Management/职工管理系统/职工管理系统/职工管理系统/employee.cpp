@@ -15,7 +15,7 @@ void Employee::showInfo()
 	cout << "职工编号 ：" << this->workerId
 		<< "\t职工姓名 " << this->workerName
 		<< "\t职工岗位 " << this->getDeptName()
-		<< "\t 工作内容是管理整个公司" << endl;
+		<< "\t 打工人一位~" << endl;
 }
 
 //获取岗位名称 1->Employee

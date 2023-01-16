@@ -38,16 +38,22 @@ int main()
 			wm.addWorker();
 			break;
 		case 2: //显示职工
+			wm.showWorker();
 			break;
 		case 3: //删除职工
+			wm.deleteWorker();
 			break;
 		case 4: //修改职工
+			wm.modifyWoker();
 			break;
 		case 5: //查找职工
+			wm.searchWorker();
 			break;
 		case 6: //排序职工
+			wm.id_sort();
 			break;
 		case 7: //清空文件
+			wm.clearWorker();
 			break;
 		default:
 			system("cls");
