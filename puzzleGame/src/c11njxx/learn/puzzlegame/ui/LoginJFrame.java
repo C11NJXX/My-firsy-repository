@@ -1,17 +1,247 @@
 package c11njxx.learn.puzzlegame.ui;
 
+import c11njxx.learn.puzzlegame.domain.User;
+import c11njxx.learn.puzzlegame.Util.CodeUtil;
 import javax.swing.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
 
-public class LoginJFrame extends JFrame {
+public class LoginJFrame extends JFrame implements MouseListener {
+
+    static ArrayList<User> allUsers = new ArrayList<>();
+    static {
+        allUsers.add(new User("zhangsan","123"));
+        allUsers.add(new User("lisi","1234"));
+    }
+
+
+    JButton login = new JButton();
+    JButton register = new JButton();
+
+    JTextField username = new JTextField();
+    //JTextField password = new JTextField();
+    JPasswordField password = new JPasswordField();
+    JTextField code = new JTextField();
+
+    //ÕıÈ·µÄÑéÖ¤Âë
+    JLabel rightCode = new JLabel();
+
+
     public LoginJFrame() {
-        this.setSize(488,430);
-        //è®¾ç½®çª—å£çš„æ ‡é¢˜
-        this.setTitle("Login v1.0");
-        //è®¾ç½®çª—å£ç½®é¡¶
-        this.setAlwaysOnTop(true);
-        //è®¾ç½®å…³é—­æ¨¡å¼
-        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        //³õÊ¼»¯½çÃæ
+        initJFrame();
 
+        //ÔÚÕâ¸ö½çÃæÖĞÌí¼ÓÄÚÈİ
+        initView();
+
+
+        //ÈÃµ±Ç°½çÃæÏÔÊ¾³öÀ´
         this.setVisible(true);
     }
+
+    public void initView() {
+        //1. Ìí¼ÓÓÃ»§ÃûÎÄ×Ö
+        JLabel usernameText = new JLabel(new ImageIcon("C:\\Code_github\\puzzleGame\\image\\login\\ÓÃ»§Ãû.png"));
+        usernameText.setBounds(116, 135, 47, 17);
+        this.getContentPane().add(usernameText);
+
+        //2.Ìí¼ÓÓÃ»§ÃûÊäÈë¿ò
+
+        username.setBounds(195, 134, 200, 30);
+        this.getContentPane().add(username);
+
+        //3.Ìí¼ÓÃÜÂëÎÄ×Ö
+        JLabel passwordText = new JLabel(new ImageIcon("C:\\Code_github\\puzzleGame\\image\\login\\ÃÜÂë.png"));
+        passwordText.setBounds(130, 195, 32, 16);
+        this.getContentPane().add(passwordText);
+
+        //4.ÃÜÂëÊäÈë¿ò
+        password.setBounds(195, 195, 200, 30);
+        this.getContentPane().add(password);
+
+
+        //ÑéÖ¤ÂëÌáÊ¾
+        JLabel codeText = new JLabel(new ImageIcon("C:\\Code_github\\puzzleGame\\image\\login\\ÑéÖ¤Âë.png"));
+        codeText.setBounds(133, 256, 50, 30);
+        this.getContentPane().add(codeText);
+
+        //ÑéÖ¤ÂëµÄÊäÈë¿ò
+        code.setBounds(195, 256, 100, 30);
+        this.getContentPane().add(code);
+
+
+        String codeStr = CodeUtil.getCode();
+        //ÉèÖÃÄÚÈİ
+        rightCode.setText(codeStr);
+        //°ó¶¨Êó±êÊÂ¼ş
+        rightCode.addMouseListener(this);
+        //Î»ÖÃºÍ¿í¸ß
+        rightCode.setBounds(300, 256, 50, 30);
+        //Ìí¼Óµ½½çÃæ
+        this.getContentPane().add(rightCode);
+
+        //5.Ìí¼ÓµÇÂ¼°´Å¥
+        login.setBounds(123, 310, 128, 47);
+        login.setIcon(new ImageIcon("C:\\Code_github\\puzzleGame\\image\\login\\µÇÂ¼°´Å¥.png"));
+        //È¥³ı°´Å¥µÄ±ß¿ò
+        login.setBorderPainted(false);
+        //È¥³ı°´Å¥µÄ±³¾°
+        login.setContentAreaFilled(false);
+        //¸øµÇÂ¼°´Å¥°ó¶¨Êó±êÊÂ¼ş
+        login.addMouseListener(this);
+        this.getContentPane().add(login);
+
+        //6.Ìí¼Ó×¢²á°´Å¥
+        register.setBounds(256, 310, 128, 47);
+        register.setIcon(new ImageIcon("C:\\Code_github\\puzzleGame\\image\\login\\×¢²á°´Å¥.png"));
+        //È¥³ı°´Å¥µÄ±ß¿ò
+        register.setBorderPainted(false);
+        //È¥³ı°´Å¥µÄ±³¾°
+        register.setContentAreaFilled(false);
+        //¸ø×¢²á°´Å¥°ó¶¨Êó±êÊÂ¼ş
+        register.addMouseListener(this);
+        this.getContentPane().add(register);
+
+
+        //7.Ìí¼Ó±³¾°Í¼Æ¬
+        JLabel background = new JLabel(new ImageIcon("C:\\Code_github\\puzzleGame\\image\\login\\background.png"));
+        background.setBounds(0, 0, 470, 390);
+        this.getContentPane().add(background);
+
+    }
+
+
+    public void initJFrame() {
+        this.setSize(488, 430);//ÉèÖÃ¿í¸ß
+        this.setTitle("Æ´Í¼ÓÎÏ· V1.0µÇÂ¼");//ÉèÖÃ±êÌâ
+        this.setDefaultCloseOperation(3);//ÉèÖÃ¹Ø±ÕÄ£Ê½
+        this.setLocationRelativeTo(null);//¾ÓÖĞ
+        this.setAlwaysOnTop(true);//ÖÃ¶¥
+        this.setLayout(null);//È¡ÏûÄÚ²¿Ä¬ÈÏ²¼¾Ö
+    }
+
+
+
+    //µã»÷
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        if (e.getSource() == login) {
+            System.out.println("µã»÷ÁËµÇÂ¼°´Å¥");
+            //»ñÈ¡Á½¸öÎÄ±¾ÊäÈë¿òÖĞµÄÄÚÈİ
+            String usernameInput = username.getText();
+            String passwordInput = password.getText();
+            //»ñÈ¡ÓÃ»§ÊäÈëµÄÑéÖ¤Âë
+            String codeInput = code.getText();
+
+            //´´½¨Ò»¸öUser¶ÔÏó
+            User userInfo = new User(usernameInput, passwordInput);
+            System.out.println("ÓÃ»§ÊäÈëµÄÓÃ»§ÃûÎª" + usernameInput);
+            System.out.println("ÓÃ»§ÊäÈëµÄÃÜÂëÎª" + passwordInput);
+
+            if (codeInput.length() == 0) {
+                showJDialog("ÑéÖ¤Âë²»ÄÜÎª¿Õ");
+            } else if (usernameInput.length() == 0 || passwordInput.length() == 0) {
+                //Ğ£ÑéÓÃ»§ÃûºÍÃÜÂëÊÇ·ñÎª¿Õ
+                System.out.println("ÓÃ»§Ãû»òÕßÃÜÂëÎª¿Õ");
+
+                //µ÷ÓÃshowJDialog·½·¨²¢Õ¹Ê¾µ¯¿ò
+                showJDialog("ÓÃ»§Ãû»òÕßÃÜÂëÎª¿Õ");
+
+
+            } else if (!codeInput.equalsIgnoreCase(rightCode.getText())) {
+                showJDialog("ÑéÖ¤ÂëÊäÈë´íÎó");
+            } else if (contains(userInfo)) {
+                System.out.println("ÓÃ»§ÃûºÍÃÜÂëÕıÈ·¿ÉÒÔ¿ªÊ¼ÍæÓÎÏ·ÁË");
+                //¹Ø±Õµ±Ç°µÇÂ¼½çÃæ
+                this.setVisible(false);
+                //´ò¿ªÓÎÏ·µÄÖ÷½çÃæ
+                //ĞèÒª°Ñµ±Ç°µÇÂ¼µÄÓÃ»§Ãû´«µİ¸øÓÎÏ·½çÃæ
+                new GameJFrame();
+            } else {
+                System.out.println("ÓÃ»§Ãû»òÃÜÂë´íÎó");
+                showJDialog("ÓÃ»§Ãû»òÃÜÂë´íÎó");
+            }
+        } else if (e.getSource() == register) {
+            System.out.println("µã»÷ÁË×¢²á°´Å¥");
+        } else if (e.getSource() == rightCode) {
+            System.out.println("¸ü»»ÑéÖ¤Âë");
+            //»ñÈ¡Ò»¸öĞÂµÄÑéÖ¤Âë
+            String code = CodeUtil.getCode();
+            rightCode.setText(code);
+        }
+    }
+
+
+    public void showJDialog(String content) {
+        //´´½¨Ò»¸öµ¯¿ò¶ÔÏó
+        JDialog jDialog = new JDialog();
+        //¸øµ¯¿òÉèÖÃ´óĞ¡
+        jDialog.setSize(200, 150);
+        //ÈÃµ¯¿òÖÃ¶¥
+        jDialog.setAlwaysOnTop(true);
+        //ÈÃµ¯¿ò¾ÓÖĞ
+        jDialog.setLocationRelativeTo(null);
+        //µ¯¿ò²»¹Ø±ÕÓÀÔ¶ÎŞ·¨²Ù×÷ÏÂÃæµÄ½çÃæ
+        jDialog.setModal(true);
+
+        //´´½¨Jlabel¶ÔÏó¹ÜÀíÎÄ×Ö²¢Ìí¼Óµ½µ¯¿òµ±ÖĞ
+        JLabel warning = new JLabel(content);
+        warning.setBounds(0, 0, 200, 150);
+        jDialog.getContentPane().add(warning);
+
+        //ÈÃµ¯¿òÕ¹Ê¾³öÀ´
+        jDialog.setVisible(true);
+    }
+
+    //°´ÏÂ²»ËÉ
+    @Override
+    public void mousePressed(MouseEvent e) {
+        if (e.getSource() == login) {
+            login.setIcon(new ImageIcon("C:\\Code_github\\puzzleGame\\image\\login\\µÇÂ¼°´ÏÂ.png"));
+        } else if (e.getSource() == register) {
+            register.setIcon(new ImageIcon("C:\\Code_github\\puzzleGame\\image\\login\\×¢²á°´ÏÂ.png"));
+        }
+    }
+
+
+    //ËÉ¿ª°´Å¥
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        if (e.getSource() == login) {
+            login.setIcon(new ImageIcon("C:\\Code_github\\puzzleGame\\image\\login\\µÇÂ¼°´Å¥.png"));
+        } else if (e.getSource() == register) {
+            register.setIcon(new ImageIcon("C:\\Code_github\\puzzleGame\\image\\login\\×¢²á°´Å¥.png"));
+        }
+    }
+
+    //Êó±ê»®Èë
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    //Êó±ê»®³ö
+    @Override
+    public void mouseExited(MouseEvent e) {
+
+    }
+
+    //ÅĞ¶ÏÓÃ»§ÔÚ¼¯ºÏÖĞÊÇ·ñ´æÔÚ
+    public boolean contains(User userInput){
+        for (int i = 0; i < allUsers.size(); i++) {
+            User rightUser = allUsers.get(i);
+            if(userInput.getUsername().equals(rightUser.getUsername()) && userInput.getPassword().equals(rightUser.getPassword())){
+                //ÓĞÏàÍ¬µÄ´ú±í´æÔÚ£¬·µ»Øtrue£¬ºóÃæµÄ²»ĞèÒªÔÙ±ÈÁË
+                return true;
+            }
+        }
+        //Ñ­»·½áÊøÖ®ºó»¹Ã»ÓĞÕÒµ½¾Í±íÊ¾²»´æÔÚ
+        return false;
+    }
+
+
 }
