@@ -19,11 +19,11 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
     //定义一个String变量，记录路径,换图片时不用再到处修改
     String path = "C:\\Code_github\\puzzleGame\\image\\sport\\sport3\\";
     //定义一个正确数组，用于后期比较
-    int[][] win = new int[][] {
-        {1,2,3,4},
-        {5,6,7,8},
-        {9,10,11,12},
-        {13,14,15,0}
+    int[][] win = new int[][]{
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 0}
     };
     //定义变量记录步数
     int step = 0;
@@ -33,6 +33,10 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
     JMenuItem reLoginItem = new JMenuItem("reLogin");
     JMenuItem closeItem = new JMenuItem("close");
     JMenuItem qrCode = new JMenuItem("qrCode");
+    //创建更换图片下，嵌套的三种图片
+    JMenuItem girlMenu = new JMenuItem("Girl");
+    JMenuItem animalMenu = new JMenuItem("animal");
+    JMenuItem sportMenu = new JMenuItem("sport");
 
     public GameJFrame() {
         //初始化界面
@@ -47,6 +51,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
         this.setVisible(true);
 
     }
+
     //初始化数据（打乱图片）
     private void initData() {
         //创建一维数组
@@ -72,7 +77,8 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             if (tempArr[i] == 0) {
                 x = i / 4;
                 y = i % 4;
-            }data[i / 4][i % 4] = tempArr[i];
+            }
+            data[i / 4][i % 4] = tempArr[i];
 //            else {
 //                data[i / 4][i % 4] = tempArr[i];
 //            }                        这里代码有问题，导致后期重新开始游戏的时候，有图片不能重新赋值，导致没有空白图片，不需要else让所有的都得到记录
@@ -87,16 +93,16 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
         this.getContentPane().removeAll();
 
         //每次重新初始化图片时,都判断是否胜利
-        if(isVictory()) {
+        if (isVictory()) {
             //添加胜利图标
             JLabel winJLabel = new JLabel(new ImageIcon("C:\\Code_github\\puzzleGame\\image\\win.png"));
-            winJLabel.setBounds(203,283,197,73);
+            winJLabel.setBounds(203, 283, 197, 73);
             this.getContentPane().add(winJLabel);
         }
 
         //显示步数信息
         JLabel stepCount = new JLabel("step = " + step);
-        stepCount.setBounds(50,30,100,20);
+        stepCount.setBounds(50, 30, 100, 20);
         this.getContentPane().add(stepCount);
 
         //利用循环添加图片
@@ -130,6 +136,8 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
         //创建JMenu对象
         JMenu functionMenu = new JMenu("Function");
         JMenu aboutUsMenu = new JMenu("aboutUs");
+        //更换图片JMenu
+        JMenu changeImage = new JMenu("changeImage");
 
 
         //给条目绑定事件
@@ -138,7 +146,17 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
         closeItem.addActionListener(this);
         qrCode.addActionListener(this);
 
+        girlMenu.addActionListener(this);
+        animalMenu.addActionListener(this);
+        sportMenu.addActionListener(this);
+
         //逐层添加
+        functionMenu.add(changeImage);
+        //replay下三种图片添加
+        changeImage.add(girlMenu);
+        changeImage.add(animalMenu);
+        changeImage.add(sportMenu);
+
         functionMenu.add(replayItem);
         functionMenu.add(reLoginItem);
         functionMenu.add(closeItem);
@@ -179,7 +197,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
         int keycode = e.getKeyCode();
         if (keycode == 65) {
             //胜利后结束，不能再进行显示完整图片操作
-            if(isVictory()){
+            if (isVictory()) {
                 return;
             }
             //把界面所有图片删除
@@ -202,7 +220,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
     @Override
     public void keyReleased(KeyEvent e) {
         //胜利后结束，不能再进行移动操作
-        if(isVictory()){
+        if (isVictory()) {
             return;
         }
         //对上下左右进行判断，左：37 上：38 右：39 下：40
@@ -278,11 +296,11 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             case 87 -> {
                 //作弊码W
                 //直接改变二维数组
-                data = new int[][] {
-                        {1,2,3,4},
-                        {5,6,7,8},
-                        {9,10,11,12},
-                        {13,14,15,0}
+                data = new int[][]{
+                        {1, 2, 3, 4},
+                        {5, 6, 7, 8},
+                        {9, 10, 11, 12},
+                        {13, 14, 15, 0}
                 };
                 //x,y位置改变
                 x = 3;
@@ -297,7 +315,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
     public boolean isVictory() {
         for (int i = 0; i < data.length; i++) {
             for (int j = 0; j < data[i].length; j++) {
-                if(data[i][j] != win[i][j]) {
+                if (data[i][j] != win[i][j]) {
                     //只要有一个数据不一样返回false
                     return false;
                 }
@@ -311,7 +329,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
     public void actionPerformed(ActionEvent e) {
         //获取当前被点击的对象
         Object obj = e.getSource();
-        if(obj == replayItem){
+        if (obj == replayItem) {
             System.out.println("replay");
             //重新游戏
             //计步器清零（注意顺序）
@@ -321,25 +339,25 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             //重新加载图片
             initImage();
 
-        }else if(obj == reLoginItem) {
+        } else if (obj == reLoginItem) {
             System.out.println("reLogin");
             //关闭当前界面（设置不可见）
             this.setVisible(false);
             //打开登陆界面
             new LoginJFrame();
-        }else if(obj == closeItem) {
+        } else if (obj == closeItem) {
             System.out.println("Exit");
             //关闭虚拟机
             System.exit(0);
-        }else if(obj == qrCode) {
+        } else if (obj == qrCode) {
             System.out.println("show qrCode");
             //创建弹框对象
             JDialog jDialog = new JDialog();
             JLabel jLabel = new JLabel(new ImageIcon("C:\\Code_github\\puzzleGame\\image\\about.png"));
-            jLabel.setBounds(0,0,258,258);
+            jLabel.setBounds(0, 0, 258, 258);
             jDialog.getContentPane().add(jLabel);
             //给弹框设置大小
-            jDialog.setSize(344,344);
+            jDialog.setSize(344, 344);
             //弹框置顶
             jDialog.setAlwaysOnTop(true);
             //弹框居中
@@ -348,6 +366,39 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             jDialog.setModal(true);
             //显示弹框
             jDialog.setVisible(true);
+        } else if (obj == girlMenu) {
+            System.out.println("exchange girl image");
+            //更改path，大目录为girl，后面用随机值随机生成图片
+            Random r = new Random();
+            int num = r.nextInt(13) + 1;
+            System.out.println("change to girl " + num);
+            path = "C:\\Code_github\\puzzleGame\\image\\girl\\girl" + num + "\\";
+            //重新初始化图片
+            initImage();
+        } else if (obj == animalMenu) {
+            System.out.println("exchange animalMenu image");
+            //更改path，大目录为animal，后面用随机值随机生成图片
+            Random r = new Random();
+            int num = r.nextInt(13) + 1;
+            System.out.println("change to animal " + num);
+            path = "C:\\Code_github\\puzzleGame\\image\\animal\\animal" + num + "\\";
+            //重新初始化图片
+            initImage();
+        } else if (obj == sportMenu) {
+            System.out.println("exchange sport image");
+            //更改path，大目录为girl，后面用随机值随机生成图片
+            Random r = new Random();
+            int num = r.nextInt(13) + 1;
+            System.out.println("change to sport " + num);
+            path = "C:\\Code_github\\puzzleGame\\image\\sport\\sport" + num + "\\";
+            //重新初始化图片
+            initImage();
+        } else if (obj == reLoginItem) {
+            System.out.println("重新登录");
+            //关闭当前的游戏界面
+            this.setVisible(false);
+            //打开登录界面
+            new LoginJFrame();
         }
     }
 }

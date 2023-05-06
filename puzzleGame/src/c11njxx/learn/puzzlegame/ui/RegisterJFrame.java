@@ -13,5 +13,7 @@ public class RegisterJFrame extends JFrame {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         this.setVisible(true);
+
+        getContentPane();
     }
 }
